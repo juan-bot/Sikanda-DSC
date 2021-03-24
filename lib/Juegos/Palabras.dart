@@ -1,6 +1,9 @@
 import 'package:audioplayers/audio_cache.dart';
 import 'package:audioplayers/audioplayers.dart';
+import 'package:achievement_view/achievement_view.dart';
 import 'package:flutter/material.dart';
+import 'package:rompecabezas_sika/AlertasEmergentes/AlertaGanadorRompecabezas.dart';
+
 import 'package:rompecabezas_sika/AlertasEmergentes/AlertaGanadorPalabras.dart';
 import 'package:rompecabezas_sika/ContenidoIdioma/Intrucciones.dart';
 import '../Audio.dart';
@@ -14,12 +17,20 @@ class Relacionable extends StatefulWidget {
   final String correcta;
   final List<String> imagenes;
 
-  Relacionable({this.imagenes, this.mostrar, this.opciones, this.correcta, this.imagen,this.audio} );
+  Relacionable(
+      {this.imagenes,
+      this.mostrar,
+      this.opciones,
+      this.correcta,
+      this.imagen,
+      this.audio});
   @override
   _RelacionableState createState() => _RelacionableState();
 }
+
 class _RelacionableState extends State<Relacionable> {
   bool ready = false;
+  double anchot = 0;
   bool correct = false;
   bool dragg = false;
   String actual = "";
@@ -41,12 +52,17 @@ class _RelacionableState extends State<Relacionable> {
       //print(element);
     });
     int i = 0;
+    int max = 0;
+
     widget.opciones.forEach((element) {
+      max = max < element.length ? element.length : max;
       options
           .add(buildDragObjet(opciones(element, widget.imagenes[i]), element));
       //print(element);
       i++;
     });
+    print(max);
+    anchot = 12.0 * max;
     setState(() {
       ready = true;
     });
@@ -54,27 +70,27 @@ class _RelacionableState extends State<Relacionable> {
 
   Container opciones(String opcion, String img) {
     return Container(
-      //child: //Padding(
-      //padding: const EdgeInsets.all(2.0),
-      // ignore: deprecated_member_use
+        //child: //Padding(
+        //padding: const EdgeInsets.all(2.0),
+        // ignore: deprecated_member_use
         child: RaisedButton.icon(
-          icon: Image.asset(
-            img,
-            height: 30,
-          ),
-          color: new Color(0xffeadffd),
-          label: Text(
-            opcion,
-            style: TextStyle(
-              color: new Color(0xff6200ee),
-            ),
-          ),
-          onPressed: () {},
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(30.0),
-            //)
-          ),
-        ));
+      icon: Image.asset(
+        img,
+        height: 30,
+      ),
+      color: new Color(0xffeadffd),
+      label: Text(
+        opcion,
+        style: TextStyle(
+          color: new Color(0xff6200ee),
+        ),
+      ),
+      onPressed: () {},
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(30.0),
+        //)
+      ),
+    ));
   }
 
   //palabras
@@ -82,6 +98,7 @@ class _RelacionableState extends State<Relacionable> {
     return Container(
       child: Text(
         nombre,
+        textAlign: TextAlign.center,
         style: TextStyle(
           fontSize: 20.0,
           fontWeight: FontWeight.bold,
@@ -115,60 +132,70 @@ class _RelacionableState extends State<Relacionable> {
           dragg = false;
         });
         actual = data;
+        print(id);
+        print(data);
         if (id == data)
           setState(() {
             correct = true;
+          });
+        else
+          setState(() {
+            show(context, "Prueba otra vez", Colors.red[100],
+                "images/confundido.png");
           });
       },
       builder: (BuildContext context, List<String> candidateData,
           List<dynamic> rejectedData) {
         return candidateData.isEmpty
             ? Container(
-          //margin: const EdgeInsets.only(bottom: 10.0),
-          // ignore: deprecated_member_use
+                //margin: const EdgeInsets.only(bottom: 10.0),
+                // ignore: deprecated_member_use
 
-          //
-
-          child: Text(
-            actual,
-            style: TextStyle(
-              fontSize: 20.0,
-              fontWeight: FontWeight.bold,
-              color: Colors.green,
-            ),
-          ),
-
-          //width: 120,
-          height: 30,
-          //decoration: BoxDecoration(border: Border.all(width: 1))
-        )
-            : Opacity(
-          opacity: 0.7,
-          child: Container(
-            margin: const EdgeInsets.only(bottom: 10.0),
-            // ignore: deprecated_member_use
-            child: RaisedButton(
-                padding:
-                const EdgeInsets.only(left: 5, right: 4, bottom: 15),
-                color: Colors.green,
-                child: Text(
-                  "_" * id.length,
-                  style: TextStyle(
-                    fontSize: 20.0,
-                    fontWeight: FontWeight.bold,
-                    color: new Color(0xff6200ee),
+                //
+                width: anchot,
+                child: Center(
+                  child: Text(
+                    actual,
+                    style: TextStyle(
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.green,
+                    ),
                   ),
                 ),
-                onPressed: () {},
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(30.0),
-                  //)
-                )),
-            //width: 120,
-            height: 30,
-            //decoration: BoxDecoration(border: Border.all(width: 1))
-          ),
-        );
+
+                //width: 120,
+                height: 30,
+                //decoration: BoxDecoration(border: Border.all(width: 1))
+              )
+            : Opacity(
+                opacity: 0.7,
+                child: Container(
+                  width: anchot,
+                  margin: const EdgeInsets.only(bottom: 10.0),
+                  //ignore: deprecated_member_use
+                  child: RaisedButton(
+                      padding:
+                          const EdgeInsets.only(left: 5, right: 4, bottom: 15),
+                      color: Colors.green,
+                      child: Text(
+                        "_" * id.length,
+                        style: TextStyle(
+                          fontSize: 20.0,
+                          fontWeight: FontWeight.bold,
+                          color: new Color(0xff6200ee),
+                        ),
+                      ),
+                      onPressed: () {},
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30.0),
+                        //)
+                      )),
+                  //width: 120,
+                  height: 30,
+                  //decoration: BoxDecoration(border: Border.all(width: 1))
+                ),
+              );
       },
     );
   }
@@ -215,61 +242,58 @@ class _RelacionableState extends State<Relacionable> {
       body: !ready
           ? Container()
           : correct
-          ? ShowAlertAndAutoDismiss()
-          : Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          //Offer heading
-          Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Container(
-                  //width: SizeConfig.safeBlockHorizontal * 10, //10 for example
-                    width: MediaQuery.of(context).size.width * 0.5,
-                    child: Padding(
-                      padding: const EdgeInsets.all(16.0),
-                      child: FittedBox(
-                        child: Image.asset(widget.imagen),
-                        fit: BoxFit.fill,
-                      ),
-                    )),
-              ]),
-          Container(
-              child: Row(children: [
-                BotonAudio(widget.audio)
-              ])),
-          SizedBox(
-            height: 30,
-          ),
+              ? Center(child: Ganador())
+              : Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    //Offer heading
+                    Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Container(
+                              width: MediaQuery.of(context).size.width * 0.5,
+                              child: Padding(
+                                padding: const EdgeInsets.all(16.0),
+                                child: FittedBox(
+                                  child: Image.asset(widget.imagen),
+                                  fit: BoxFit.fill,
+                                ),
+                              )),
+                        ]),
+                    Container(child: Row(children: [BotonAudio(widget.audio)])),
+                    SizedBox(
+                      height: 30,
+                    ),
 
-          Wrap(
-            direction: Axis.horizontal,
-            spacing: 10.0,
-            runSpacing: 5.0,
-            children: contenido,
-          ),
-          Container(
-            height: 30,
-          ),
-          separador(),
-          Container(
-            height: 30,
-          ),
-          Wrap(
-            direction: Axis.horizontal,
-            spacing: 10.0,
-            runSpacing: 15.0,
-            children: options,
-          ),
-        ],
-      ),
+                    Wrap(
+                      direction: Axis.horizontal,
+                      spacing: 10.0,
+                      runSpacing: 5.0,
+                      children: contenido,
+                    ),
+                    Container(
+                      height: 30,
+                    ),
+                    separador(),
+                    Container(
+                      height: 30,
+                    ),
+                    Wrap(
+                      direction: Axis.horizontal,
+                      spacing: 10.0,
+                      runSpacing: 15.0,
+                      children: options,
+                    ),
+                  ],
+                ),
     );
   }
+
   Future<void> _showMyDialog() async {
     AudioCache cache;
     cache = AudioCache(fixedPlayer: reproduceInstrucciones);
     cache.loop(intruccionesAux[3]);
-    auxAudioInstrucciones=true;
+    auxAudioInstrucciones = true;
     return showDialog<void>(
       context: context,
       barrierDismissible: false, // user must tap button!
@@ -287,7 +311,7 @@ class _RelacionableState extends State<Relacionable> {
             TextButton(
               child: Text('cerrar'),
               onPressed: () {
-                auxAudioInstrucciones=false;
+                auxAudioInstrucciones = false;
                 reproduceInstrucciones.stop();
                 Navigator.of(context).pop();
               },
@@ -296,5 +320,22 @@ class _RelacionableState extends State<Relacionable> {
         );
       },
     );
+  }
+
+  void show(BuildContext context, String msj, Color col, String img) {
+    AchievementView(
+      context,
+      icon: Image.asset(img),
+      color: col,
+      title: msj,
+      subTitle: " ",
+      textStyleTitle: TextStyle(
+        fontSize: 25,
+      ),
+      isCircle: true,
+      listener: (status) {
+        print(status);
+      },
+    )..show();
   }
 }
