@@ -39,84 +39,98 @@ class RadialExpansionDemo extends StatelessWidget {
   }
 
   static Widget _buildPage(BuildContext context, String imageName, String description, Color fondo,String audio) {
-    return Container(
-      color: fondo,
-      child: Center(
-        child: Card(
-          elevation: 8.0,
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              SizedBox(
-                child: Hero(
-                  tag: imageName,
-                  child: Photo(
-                    photo: imageName,
-                    onTap: () {
-                      Navigator.of(context).pop();
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.orange[900],
+        title: Text('Volver',
+          style: TextStyle(
+            fontSize: 30,
+            fontFamily: "Love",
+            color: Colors.white,
+            letterSpacing: 0.5,
+          ),
+        ),
+        //leading: IconButton(icon: icon, onPressed: onPressed),
+      ),
+      body: Container(
+        color: fondo,
+        child: Center(
+          child: Card(
+            elevation: 8.0,
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                SizedBox(
+                  child: Hero(
+                    tag: imageName,
+                    child: Photo(
+                      photo: imageName,
+                      onTap: () {
+                        Navigator.of(context).pop();
                       },
+                    ),
                   ),
                 ),
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                  description,
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                  textScaleFactor: 3.0,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      description,
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                      textScaleFactor: 3.0,
+                    ),
+                    BotonAudio(audio),
+                  ],
                 ),
-                BotonAudio(audio),
-                ],
-              ),
 
-              TextButton(
-                style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all<Color>(Colors.orange[900]),
-                      padding: MaterialStateProperty.all<EdgeInsets>(EdgeInsets.all(10)),
-                      foregroundColor: MaterialStateProperty.all<Color>(Colors.orange[800]),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                          RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(40.0),
-                              side: BorderSide(color: Colors.orange)
-                          )
-                      )
-                  ),
-                child: Text('Explorar $description',
-                    style: TextStyle(
-                      fontFamily: "Love",
-                      color: Colors.white,
-                      letterSpacing: 0.5,
-                      fontSize: 30,
-                    )
+                TextButton(
+                    style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all<Color>(Colors.orange[900]),
+                        padding: MaterialStateProperty.all<EdgeInsets>(EdgeInsets.all(10)),
+                        foregroundColor: MaterialStateProperty.all<Color>(Colors.orange[800]),
+                        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                            RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(40.0),
+                                side: BorderSide(color: Colors.orange)
+                            )
+                        )
+                    ),
+                    child: Text('Explorar $description',
+                        style: TextStyle(
+                          fontFamily: "Love",
+                          color: Colors.white,
+                          letterSpacing: 0.5,
+                          fontSize: 30,
+                        )
+                    ),
+                    onPressed: () {
+                      print("$description");
+                      if(description=="Cocina")
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) =>
+                              ListarObjetosCocina(fondo)
+                          ),
+                        );
+                      else if(description=="Baño")
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) =>
+                              ListarObjetosBanio(fondo)
+                          ),
+                        );
+                      else
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) =>
+                              ListarObjetosRecamara(fondo)
+                          ),
+                        );
+                    }
                 ),
-                  onPressed: () {
-                    print("$description");
-                    if(description=="Cocina")
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) =>
-                            ListarObjetosCocina(fondo)
-                        ),
-                      );
-                    else if(description=="Baño")
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) =>
-                            ListarObjetosBanio(fondo)
-                        ),
-                      );
-                    else
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) =>
-                            ListarObjetosRecamara(fondo)
-                        ),
-                      );
-                  }
-              ),
-              const SizedBox(height: 16.0),
-            ],
+                const SizedBox(height: 16.0),
+              ],
+            ),
           ),
         ),
       ),
