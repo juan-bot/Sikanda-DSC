@@ -345,7 +345,7 @@ List<Banio> objetos = [
         "assets/images/banio/shampoo.png--jabon--bano",
         "assets/images/recamara/cobertor.png--cobertor--recamara",
         "assets/images/banio/pasta.png--pasta dental--bano",
-        "assets/images/banio/cepillo.png--inodoro--bano",
+        "assets/images/banio/cepillo.png--cepillo--bano",
         "assets/images/cocina/fresa.png--fresa--cocina",
         "assets/images/banio/labavo.png--lavabo--bano",
        ],

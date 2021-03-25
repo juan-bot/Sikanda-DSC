@@ -1,23 +1,40 @@
 import 'package:flutter/material.dart';
 
 class Cocina {
-  final String image, title,imagen,mostrar,correcta;
-  final int size, id;
+  final String image,
+      title,
+      imagen,
+      mostrar,
+      correcta,
+      imgcorrecta,
+      objeto,
+      frase,
+      imglugar,
+      lugar;
+  final int size, id, validos;
   final Color color;
-  final List<String> opciones,imagenes;
-  Cocina({
-    this.id,
-    this.image,
-    this.title,
-    this.size,
-    this.color,
-    this.imagen,
-    this.mostrar,
-    this.imagenes,
-    this.opciones,
-    this.correcta
-  });
+  final List<String> opciones, imagenes, imagenes2, imagenes3;
+  Cocina(
+      {this.id,
+      this.image,
+      this.title,
+      this.size,
+      this.color,
+      this.imagen,
+      this.mostrar,
+      this.imagenes,
+      this.imagenes2,
+      this.imagenes3,
+      this.validos,
+      this.lugar,
+      this.frase,
+      this.imglugar,
+      this.opciones,
+      this.imgcorrecta,
+      this.objeto,
+      this.correcta});
 }
+
 List<Cocina> objetos = [
   Cocina(
       id: 1,
@@ -46,7 +63,33 @@ List<Cocina> objetos = [
         "assets/images/banio/cepillo.png",
       ],
       correcta: "uvas",
-  ),
+      //////////Juego Tobjetos/////
+      imagenes2: [
+        "assets/images/cocina/plato.png--plato",
+        "assets/images/banio/shampoo.png--shampoo",
+        "assets/images/recamara/cobertor.png--cobertor",
+        "assets/images/cocina/taza.png--taza",
+        "assets/images/cocina/uva.png--uva",
+        "assets/images/banio/cepillo.png--cepillo dental",
+        "assets/images/recamara/espejo.png--espejo",
+        "assets/images/cocina/fresa.png--fresa",
+        "assets/images/banio/inodoro.png--inodoro",
+      ],
+      objeto: "la uva",
+      imgcorrecta: "assets/images/cocina/uva.png",
+      ///////////////////juego AdondePertenecen////////////////
+      imagenes3: [
+        "assets/images/cocina/plato.png--plato--cocina",
+        "assets/images/recamara/cobertor.png--cobertor--recamara",
+        "assets/images/cocina/brocoli.png--brocoli--cocina",
+        "assets/images/banio/cepillo.png--cepillo--bano",
+        "assets/images/cocina/uvas.png--uvas--cocina",
+        "assets/images/banio/labavo.png--lavabo--bano",
+      ],
+      validos: 3,
+      lugar: "cocina",
+      frase: "la cocina ",
+      imglugar: "assets/images/cocina2.gif"),
   Cocina(
       id: 2,
       title: "Brocoli",
@@ -72,7 +115,33 @@ List<Cocina> objetos = [
         "assets/images/cocina/uva.png",
       ],
       correcta: "brocoli",
-  ),
+      //////////Juego Tobjetos/////
+      imagenes2: [
+        "assets/images/cocina/manzana.png--manzana",
+        "assets/images/banio/pasta.png--pasta",
+        "assets/images/recamara/espejo.png--espejo",
+        "assets/images/cocina/taza.png--taza",
+        "assets/images/cocina/uva.png--uva",
+        "assets/images/banio/cepillo.png--cepillo dental",
+        "assets/images/recamara/armario.png--armario",
+        "assets/images/cocina/brocoli.png--brocoli",
+        "assets/images/banio/inodoro.png--inodoro",
+      ],
+      objeto: "el brocoli",
+      imgcorrecta: "assets/images/cocina/brocoli.png",
+      ///////////////////juego AdondePertenecen////////////////
+      imagenes3: [
+        "assets/images/cocina/cuchara.png--cuchara--cocina",
+        "assets/images/recamara/cobertor.png--cobertor--recamara",
+        "assets/images/cocina/brocoli.png--brocoli--cocina",
+        "assets/images/banio/inodoro.png--inodoro--bano",
+        "assets/images/cocina/fresa.png--fresa--cocina",
+        "assets/images/banio/labavo.png--lavabo--bano",
+      ],
+      validos: 3,
+      lugar: "cocina",
+      frase: "la cocina ",
+      imglugar: "assets/images/cocina2.gif"),
   Cocina(
       id: 3,
       title: "Cuchara",
@@ -98,7 +167,33 @@ List<Cocina> objetos = [
         "assets/images/cocina/uva.png",
       ],
       correcta: "cuchara",
-  ),
+      //////////Juego Tobjetos/////
+      imagenes2: [
+        "assets/images/cocina/platano.png--platano",
+        "assets/images/banio/pasta.png--pasta",
+        "assets/images/recamara/cobertor.png--cobertor",
+        "assets/images/cocina/cuchara.png--cuchara",
+        "assets/images/cocina/fresa.png--fresa",
+        "assets/images/banio/cepillo.png--cepillo dental",
+        "assets/images/recamara/espejo.png--espejo",
+        "assets/images/cocina/fresa.png--fresa",
+        "assets/images/banio/jabon.png--jabon",
+      ],
+      objeto: "la cuchara",
+      imgcorrecta: "assets/images/cocina/cuchara.png",
+      ///////////////////juego AdondePertenecen////////////////
+      imagenes3: [
+        "assets/images/cocina/platano.png--platano--cocina",
+        "assets/images/recamara/cama.png--cama--recamara",
+        "assets/images/cocina/brocoli.png--brocoli--cocina",
+        "assets/images/banio/pasta.png--pasta--bano",
+        "assets/images/cocina/fresa.png--fresa--cocina",
+        "assets/images/cocina/taza.png--taza--cocina",
+      ],
+      validos: 4,
+      lugar: "cocina",
+      frase: "la cocina ",
+      imglugar: "assets/images/cocina2.gif"),
   Cocina(
       id: 4,
       title: "Fresa",
@@ -123,8 +218,34 @@ List<Cocina> objetos = [
         "assets/images/cocina/fresa.png",
         "assets/images/cocina/uva.png",
       ],
-      correcta: "fresa"
-  ),
+      correcta: "fresa",
+      //////////Juego Tobjetos/////
+      imagenes2: [
+        "assets/images/cocina/plato.png--plato",
+        "assets/images/banio/shampoo.png--shampoo",
+        "assets/images/recamara/almohada.png--almohada",
+        "assets/images/cocina/taza.png--taza",
+        "assets/images/cocina/uva.png--uva",
+        "assets/images/banio/cepillo.png--cepillo dental",
+        "assets/images/recamara/cama.png--cama",
+        "assets/images/cocina/fresa.png--fresa",
+        "assets/images/banio/labavo.png--lavabo",
+      ],
+      objeto: "la fresa",
+      imgcorrecta: "assets/images/cocina/fresa.png",
+      ///////////////////juego AdondePertenecen////////////////
+      imagenes3: [
+        "assets/images/cocina/fresa.png--fresa--cocina",
+        "assets/images/recamara/cama.png--cama--recamara",
+        "assets/images/cocina/brocoli.png--brocoli--cocina",
+        "assets/images/banio/pasta.png--pasta--bano",
+        "assets/images/cocina/uvas.png--uvas--cocina",
+        "assets/images/banio/shampoo.png--shampoo--bano",
+      ],
+      validos: 3,
+      lugar: "cocina",
+      frase: "la cocina ",
+      imglugar: "assets/images/cocina2.gif"),
   Cocina(
       id: 5,
       title: "Platano",
@@ -152,7 +273,33 @@ List<Cocina> objetos = [
         "assets/images/banio/platano.png",
       ],
       correcta: "platano",
-  ),
+      //////////Juego Tobjetos/////
+      imagenes2: [
+        "assets/images/cocina/plato.png--plato",
+        "assets/images/banio/shampoo.png--shampoo",
+        "assets/images/recamara/almohada.png--almohada",
+        "assets/images/cocina/platano.png--platano",
+        "assets/images/cocina/taza.png--taza",
+        "assets/images/banio/pasta.png--pasta",
+        "assets/images/recamara/espejo.png--espejo",
+        "assets/images/cocina/uva.png--uva",
+        "assets/images/banio/inodoro.png--inodoro",
+      ],
+      objeto: "el platano",
+      imgcorrecta: "assets/images/cocina/platano.png",
+      ///////////////////juego AdondePertenecen////////////////
+      imagenes3: [
+        "assets/images/cocina/taza.png--taza--cocina",
+        "assets/images/recamara/cobertor.png--cobertor--recamara",
+        "assets/images/cocina/plato.png--plato--cocina",
+        "assets/images/banio/cepillo.png--inodoro--bano",
+        "assets/images/banio/labavo.png--lavabo--bano",
+        "assets/images/cocina/platano.png--platano--cocina",
+      ],
+      validos: 3,
+      lugar: "cocina",
+      frase: "la cocina ",
+      imglugar: "assets/images/cocina2.gif"),
   Cocina(
       id: 6,
       title: "Plato",
@@ -178,6 +325,31 @@ List<Cocina> objetos = [
         "assets/images/cocina/sandia.png",
       ],
       correcta: "plato",
-  ),
+      //////////Juego Tobjetos/////
+      imagenes2: [
+        "assets/images/banio/labavo.png--lavabo",
+        "assets/images/recamara/espejo.png--espejo",
+        "assets/images/cocina/taza.png--taza",
+        "assets/images/cocina/uva.png--uva",
+        "assets/images/banio/cepillo.png--cepillo dental",
+        "assets/images/recamara/lampara.png--lampara",
+        "assets/images/cocina/fresa.png--fresa",
+        "assets/images/cocina/plato.png--plato",
+        "assets/images/banio/inodoro.png--inodoro",
+      ],
+      objeto: "el plato",
+      imgcorrecta: "assets/images/cocina/plato.png",
+      ///////////////////juego AdondePertenecen////////////////
+      imagenes3: [
+        "assets/images/recamara/cobertor.png--cobertor--recamara",
+        "assets/images/cocina/cucahra.png--cuchara--cocina",
+        "assets/images/banio/cepillo.png--inodoro--bano",
+        "assets/images/cocina/fresa.png--fresa--cocina",
+        "assets/images/banio/labavo.png--lavabo--bano",
+        "assets/images/cocina/plato.png--plato--cocina",
+      ],
+      validos: 3,
+      lugar: "cocina",
+      frase: "la cocina ",
+      imglugar: "assets/images/cocina2.gif"),
 ];
-

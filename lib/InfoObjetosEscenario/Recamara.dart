@@ -1,23 +1,40 @@
 import 'package:flutter/material.dart';
 
 class Recamara {
-  final String image, title,imagen,mostrar,correcta;
-  final int size, id;
+  final String image,
+      title,
+      imagen,
+      mostrar,
+      correcta,
+      imgcorrecta,
+      objeto,
+      frase,
+      imglugar,
+      lugar;
+  final int size, id, validos;
   final Color color;
-  final List<String> opciones,imagenes;
-  Recamara({
-    this.id,
-    this.image,
-    this.title,
-    this.size,
-    this.color,
-    this.imagen,
-    this.mostrar,
-    this.imagenes,
-    this.opciones,
-    this.correcta
-  });
+  final List<String> opciones, imagenes, imagenes2, imagenes3;
+  Recamara(
+      {this.id,
+      this.image,
+      this.title,
+      this.size,
+      this.color,
+      this.imagen,
+      this.mostrar,
+      this.imagenes,
+      this.imagenes2,
+      this.imagenes3,
+      this.validos,
+      this.lugar,
+      this.frase,
+      this.imglugar,
+      this.opciones,
+      this.imgcorrecta,
+      this.objeto,
+      this.correcta});
 }
+
 List<Recamara> objetos = [
   Recamara(
       id: 1,
@@ -44,7 +61,33 @@ List<Recamara> objetos = [
         "assets/images/banio/cepillo.png",
       ],
       correcta: "almohada",
-  ),
+      //////////Juego Tobjetos/////
+      imagenes2: [
+        "assets/images/cocina/plato.png--plato",
+        "assets/images/banio/shampoo.png--shampoo",
+        "assets/images/recamara/cobertor.png--cobertor",
+        "assets/images/cocina/taza.png--taza",
+        "assets/images/recamara/almohada.png--almohada",
+        "assets/images/cocina/uva.png--uva",
+        "assets/images/banio/cepillo.png--cepillo dental",
+        "assets/images/banio/inodoro.png--inodoro",
+        "assets/images/cocina/fresa.png--fresa",
+      ],
+      objeto: "la almohada",
+      imgcorrecta: "assets/imagesrecamara/almohada.png",
+      ///////////////////juego AdondePertenecen////////////////
+      imagenes3: [
+        "assets/images/recamara/espejo.png--espejo--recamara",
+        "assets/images/banio/jabon.png--jabon--banio",
+        "assets/images/recamara/cama.png--cama--recamara",
+        "assets/images/cocina/plato.png--plato--cocina",
+        "assets/images/recamara/almohada.png--almohada--recamara",
+        "assets/images/cocina/brocoli.png--brocoli--cocina",
+      ],
+      validos: 3,
+      lugar: "recamara",
+      frase: "la recamara ",
+      imglugar: "assets/images/recamara2.gif"),
   Recamara(
       id: 2,
       title: "Armario",
@@ -71,7 +114,34 @@ List<Recamara> objetos = [
         "assets/images/recamara/armario.png",
       ],
       correcta: "armario",
-  ),
+
+      //////////Juego Tobjetos/////
+      imagenes2: [
+        "assets/images/cocina/platano.png--platano",
+        "assets/images/banio/shampoo.png--shampoo",
+        "assets/images/cocina/taza.png--taza",
+        "assets/images/recamara/almohada.png--almohada",
+        "assets/images/cocina/fresa.png--fresa",
+        "assets/images/recamara/armario.png-armario",
+        "assets/images/banio/labavo.png--lavabo",
+        "assets/images/cocina/fresa.png--fresa",
+        "assets/images/banio/pasta.png--pasta",
+      ],
+      objeto: "el armario",
+      imgcorrecta: "assets/images/recamara/armario.png",
+      ///////////////////juego AdondePertenecen////////////////
+      imagenes3: [
+        "assets/images/recamara/espejo.png--espejo--recamara",
+        "assets/images/banio/cepillo.png--cepillo dental--banio",
+        "assets/images/recamara/cama.png--cama--recamara",
+        "assets/images/cocina/platano.png--platano--cocina",
+        "assets/images/recamara/almohada.png--almohada--recamara",
+        "assets/images/recamara/armario.png--armario--recamara",
+      ],
+      validos: 4,
+      lugar: "recamara",
+      frase: "la recamara ",
+      imglugar: "assets/images/recamara2.gif"),
   Recamara(
       id: 3,
       title: "Cama",
@@ -98,7 +168,33 @@ List<Recamara> objetos = [
         "assets/images/banio/cepillo.png",
       ],
       correcta: "cama",
-  ),
+      //////////Juego Tobjetos/////
+      imagenes2: [
+        "assets/images/cocina/fresa.png--fresa",
+        "assets/images/banio/shampoo.png--shampoo",
+        "assets/images/recamara/lampara.png--lampara",
+        "assets/images/cocina/taza.png--taza",
+        "assets/images/cocina/uva.png--uva",
+        "assets/images/banio/cepillo.png--cepillo dental",
+        "assets/images/recamara/recamara.png--cama",
+        "assets/images/banio/labavo.png--lavabo",
+        "assets/images/cocina/platano.png--platano",
+      ],
+      objeto: "la cama",
+      imgcorrecta: "assets/images/recamara/cama.png",
+      ///////////////////juego AdondePertenecen////////////////
+      imagenes3: [
+        "assets/images/banio/jabon.png--jabon--banio",
+        "assets/images/recamara/cobertor.png--cobertor--recamara",
+        "assets/images/cocina/platano.png--platano--cocina",
+        "assets/images/recamara/espejo.png--espejo--recamara",
+        "assets/images/cocina/brocoli.png--brocoli--cocina",
+        "assets/images/recamara/cama.png--cama--cama",
+      ],
+      validos: 3,
+      lugar: "recamara",
+      frase: "la recamara ",
+      imglugar: "assets/images/recamara2.gif"),
   Recamara(
       id: 4,
       title: "Cobija",
@@ -124,7 +220,33 @@ List<Recamara> objetos = [
         "assets/images/cocina/uva.png",
       ],
       correcta: "cobertor",
-  ),
+      //////////Juego Tobjetos/////
+      imagenes2: [
+        "assets/images/cocina/plato.png--plato",
+        "assets/images/banio/shampoo.png--shampoo",
+        "assets/images/recamara/cobertor.png--cobertor",
+        "assets/images/cocina/lechuga.png--lechuga",
+        "assets/images/recamara/cama.png--cama",
+        "assets/images/cocina/uva.png--uva",
+        "assets/images/banio/cepillo.png--cepillo dental",
+        "assets/images/banio/pasta.png--pasta dental",
+        "assets/images/cocina/brocoli.png--brocoli",
+      ],
+      objeto: "el cobertor",
+      imgcorrecta: "assets/images/recamara/cobertor.png",
+      ///////////////////juego AdondePertenecen////////////////
+      imagenes3: [
+        "assets/images/recamara/cobertor.png--cobertor--recamara",
+        "assets/images/banio/cepillo.png--cepillo--banio",
+        "assets/images/recamara/lampara.png--lampara--recamara",
+        "assets/images/recamara/almohada.png--almohada--recamara",
+        "assets/images/cocina/brocoli.png--brocoli--cocina",
+        "assets/images/recamara/cama.png--cama--recamara",
+      ],
+      validos: 4,
+      lugar: "recamara",
+      frase: "la recamara ",
+      imglugar: "assets/images/recamara2.gif"),
   Recamara(
       id: 5,
       title: "Espejo",
@@ -150,32 +272,83 @@ List<Recamara> objetos = [
         "assets/images/recamara/espejo.png",
       ],
       correcta: "espejo",
-  ),
+      //////////Juego Tobjetos/////
+      imagenes2: [
+        "assets/images/cocina/sandia.png--sandia",
+        "assets/images/banio/pasta.png--pasta",
+        "assets/images/recamara/cobertor.png--cobertor",
+        "assets/images/cocina/taza.png--taza",
+        "assets/images/recamara/espejo.png--espejo",
+        "assets/images/cocina/uva.png--uva",
+        "assets/images/banio/cepillo.png--cepillo dental",
+        "assets/images/banio/toalla.png--toalla",
+        "assets/images/cocina/fresa.png--fresa",
+      ],
+      objeto: "el espejo",
+      imgcorrecta: "assets/images/recamara/espejo.png",
+      ///////////////////juego AdondePertenecen////////////////
+      imagenes3: [
+        "assets/images/banio/cepillo.png--cepillo--banio",
+        "assets/images/recamara/cama.png--cama--recamara",
+        "assets/images/cocina/plato.png--plato--cocina",
+        "assets/images/recamara/almohada.png--almohada--recamara",
+        "assets/images/cocina/uva.png--uva--cocina",
+        "assets/images/recamara/espejo.png--espejo--recamara",
+      ],
+      validos: 3,
+      lugar: "recamara",
+      frase: "la recamara ",
+      imglugar: "assets/images/recamara2.gif"),
   Recamara(
-    id: 6,
-    title: "Lampara",
-    size: 12,
-    image: "assets/images/recamara/lampara.png",
-    color: Color(0xFFAEAEAE),
-    imagen: "assets/images/recamara/accion/6.jpg",
-    mostrar: "Carmen estudia con una --",
-    opciones: [
-      "uva",
-      "shampooo ",
-      "cobija",
-      "lampara",
-      "plato",
-      "cuchara",
-    ],
-    imagenes: [
-      "assets/images/cocina/uva.png",
-      "assets/images/banio/shampoo.png",
-      "assets/images/recamara/cobertor.png",
-      "assets/images/recamara/lampara.png",
-      "assets/images/recamara/armario.png",
-      "assets/images/cocina/cuchara.png",
-    ],
-    correcta: "lampara",
-  ),
+      id: 6,
+      title: "Lampara",
+      size: 12,
+      image: "assets/images/recamara/lampara.png",
+      color: Color(0xFFAEAEAE),
+      imagen: "assets/images/recamara/accion/6.jpg",
+      mostrar: "Carmen estudia con una --",
+      opciones: [
+        "uva",
+        "shampooo ",
+        "cobija",
+        "lampara",
+        "plato",
+        "cuchara",
+      ],
+      imagenes: [
+        "assets/images/cocina/uva.png",
+        "assets/images/banio/shampoo.png",
+        "assets/images/recamara/cobertor.png",
+        "assets/images/recamara/lampara.png",
+        "assets/images/recamara/armario.png",
+        "assets/images/cocina/cuchara.png",
+      ],
+      correcta: "lampara",
+      //////////Juego Tobjetos/////
+      imagenes2: [
+        "assets/images/cocina/brocoli.png--brocoli",
+        "assets/images/recamara/lampara.png--lampara",
+        "assets/images/banio/shampoo.png--shampoo",
+        "assets/images/cocina/taza.png--taza",
+        "assets/images/recamara/almohada.png--almohada",
+        "assets/images/cocina/manzana.png--manzana",
+        "assets/images/banio/pasta.png--pasta dental",
+        "assets/images/banio/inodoro.png--inodoro",
+        "assets/images/cocina/fresa.png--fresa",
+      ],
+      objeto: "la almohada",
+      imgcorrecta: "assets/images/recamara/lampara.png",
+      ///////////////////juego AdondePertenecen////////////////
+      imagenes3: [
+        "assets/images/recamara/cobertor.png--cobertor--recamara",
+        "assets/images/banio/shampoo.png--shampoo--banio",
+        "assets/images/recamara/almohada.png--almohada--recamara",
+        "assets/images/cocina/platano.png--platano--cocina",
+        "assets/images/recamara/lampara.png--lamapra--recamara",
+        "assets/images/cocina/taza.png--taza--cocina",
+      ],
+      validos: 3,
+      lugar: "recamara",
+      frase: "la recamara ",
+      imglugar: "assets/images/recamara2.gif"),
 ];
-
