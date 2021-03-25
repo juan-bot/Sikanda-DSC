@@ -1,5 +1,4 @@
 import 'package:audioplayers/audio_cache.dart';
-import 'package:audioplayers/audioplayers.dart';
 import 'package:floating_text/floating_text.dart';
 import 'package:flutter/material.dart';
 import 'AlertasEmergentes/AlertaMenuEscenarios.dart';
@@ -12,7 +11,6 @@ import 'ContenidoIdioma/Recamara.dart';
 class Idiomas extends StatefulWidget{
   Principal createState()=> Principal();
 }
-//pagina de seleccion de idioma StatelessWidget
 class Principal extends State<Idiomas> with WidgetsBindingObserver{
   TextEditingController controller;
   static AudioCache back= AudioCache(fixedPlayer: reproduceFondo);
@@ -42,7 +40,6 @@ class Principal extends State<Idiomas> with WidgetsBindingObserver{
   }
   @override
   Widget build(BuildContext context) {
-    reproduceFondo.setVolume(0.3);
     back.loop("audio/musicaFondo.mp3");
     reproduceFondo.setVolume(0.3);
     return Scaffold(
@@ -169,15 +166,15 @@ class Principal extends State<Idiomas> with WidgetsBindingObserver{
                               fontSize: 40,
                             )),
                         onPressed: () {
-                          AudioBanio=sonidoObjetosEspaniolBanio;
-                          AudioCocina=sonidoObjetosEspaniolCocina;
-                          AudioRecamara=sonidoObjetosEspaniolRecamara;
+                          AudioBanio=sonidoObjetosZapotecoBanio;
+                          AudioCocina=sonidoObjetosZapotecoCocina;
+                          AudioRecamara=sonidoObjetosZapotecoRecamara;
 
                           intruccionesAux=intruccionesZapoteco;
 
-                          AudioBanioFrases=FrasesBanioEsp;
-                          AudioRecamaraFrases=FrasesRecamaraEsp;
-                          AudioCocinaFrases=FrasesCocinaEsp;
+                          AudioBanioFrases=FrasesBanioZapoteco;
+                          AudioRecamaraFrases=FrasesRecamaraZapoteco;
+                          AudioCocinaFrases=FrasesCocinaZapoteco;
                           Navigator.of(context).push(createRoute());
                         })
                   ])),
