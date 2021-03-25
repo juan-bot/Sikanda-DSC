@@ -74,7 +74,9 @@ class _EstaEnState extends State<EstaEn> {
               ],
             ),
             contv >= widget.validos
-                ? Ganador()
+                ? Container(
+                    height: 300,
+                    child: FittedBox(fit: BoxFit.fill, child: Ganador()))
                 : Wrap(
                     alignment: WrapAlignment.center,
                     direction: Axis.horizontal,
