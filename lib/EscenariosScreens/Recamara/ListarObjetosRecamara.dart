@@ -63,7 +63,7 @@ class ObjetosRecamara extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: kDefaultPaddin),
+          padding: EdgeInsets.only(top : 15.0,left: 40,bottom: 15),
           child: Text(
             "Recamara",
             style: Theme.of(context)
