@@ -1,5 +1,5 @@
+import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import '../../AlertasEmergentes/AlertaInstruccionesProductos.dart';
 import '../../Constantes.dart';
 import 'ItemCardObjetosBanio.dart';
@@ -63,7 +63,8 @@ class ObjetosBanio extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: kDefaultPaddin),
+          //padding: const EdgeInsets.all(16.0),//EdgeInsets.only(top : 15.0),
+          padding: EdgeInsets.only(top : 15.0,left: 40,bottom: 15),
           child: Text(
             "Baño",
             style: Theme.of(context)
