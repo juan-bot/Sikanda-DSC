@@ -208,9 +208,9 @@ class RadialExpansionDemo extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: kDefaultPaddin),
             child: Column(
               children: [
-                mundo(context, 'assets/images/cocina2.gif', 'Cocina',Colors.orange[800],"audio/espaniol/cocina/13.m4a"),
-                mundo(context, 'assets/images/baño2.gif', 'Baño',Color(0xFFFFC400),"audio/espaniol/banio/8.m4a"),
-                mundo(context, 'assets/images/recamara2.gif', 'Recamara',Color(0xFF304FFE),"audio/espaniol/recamara/7.m4a"),
+                mundo(context, 'assets/images/cocina2.gif', 'Cocina',Colors.orange[800],escenarios[0]),
+                mundo(context, 'assets/images/baño2.gif', 'Baño',Color(0xFFFFC400),escenarios[1]),
+                mundo(context, 'assets/images/recamara2.gif', 'Recamara',Color(0xFF304FFE),escenarios[2]),
               ],
             ),
           ),
