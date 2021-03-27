@@ -26,7 +26,7 @@ class Banio {
     this.correcta
   });
 }
-List<Banio> objetos = [
+List<Banio> objetosBanio = [
   Banio(
       id: 1,
       title: "Cepillo Dental",
@@ -66,7 +66,7 @@ List<Banio> objetos = [
         "assets/images/banio/labavo.png--lavabo",
        ] ,
        objeto: "el cepillo dental",
-       imgcorrecta: "assets/images/banio/cepillo.png",
+       imgcorrecta: "cepillo dental",
     ///////////////////juego AdondePertenecen////////////////
        imagenes3:[
         "assets/images/banio/jabon.png--jabon--bano",
@@ -109,7 +109,7 @@ List<Banio> objetos = [
       correcta: "inodoro",
          //////////Juego Tobjetos/////
        imagenes2:[
-        "assets/images/cocina/uvas.png--uvas",
+        "assets/images/cocina/uva.png--uvas",
         "assets/images/banio/jabon.png--jabon",
         "assets/images/recamara/espejo.png--espejo",
         "assets/images/cocina/platano.png--platano",
@@ -121,14 +121,14 @@ List<Banio> objetos = [
 
        ] ,
        objeto: "el inodoro",
-       imgcorrecta: "assets/images/banio/inodoro.png",
+       imgcorrecta: "inodoro",
     ///////////////////juego AdondePertenecen////////////////
        imagenes3:[
         "assets/images/banio/jabon.png--jabon--bano",
         "assets/images/recamara/cobertor.png--cobertor--recamara",
         "assets/images/banio/inodoro.png--inodoro--bano",
         "assets/imagesrecamara/lampara.png--lampara--bano",
-        "assets/images/cocina/uvas.png--uvas--cocina",
+        "assets/images/cocina/uva.png--uvas--cocina",
         "assets/images/banio/labavo.png--lavabo--bano",
        ],
        validos:3,
@@ -177,7 +177,7 @@ List<Banio> objetos = [
         "assets/images/banio/labavo.png--lavabo",
        ] ,
        objeto: "el jabon ",
-       imgcorrecta: "assets/images/banio/jabon.png",
+       imgcorrecta: "jabon",
     ///////////////////juego AdondePertenecen////////////////
        imagenes3:[
         "assets/images/banio/jabon.png--jabon--bano",
@@ -231,7 +231,7 @@ List<Banio> objetos = [
         "assets/images/banio/labavo.png--lavabo",
        ] ,
        objeto: "el lavabo",
-       imgcorrecta: "assets/images/banio/lavabo.png",
+       imgcorrecta: "lavabo",
     ///////////////////juego AdondePertenecen////////////////
        imagenes3:[
         "assets/images/banio/cepillo.png--cepillo dental--bano",
@@ -285,7 +285,7 @@ List<Banio> objetos = [
         "assets/images/banio/labavo.png--lavabo",
        ] ,
        objeto: "la pasta dental",
-       imgcorrecta: "assets/images/banio/pasta.png",
+       imgcorrecta: "pasta dental",
     ///////////////////juego AdondePertenecen////////////////
        imagenes3:[
         "assets/images/banio/jabon.png--jabon--bano",
@@ -339,7 +339,7 @@ List<Banio> objetos = [
         "assets/images/banio/labavo.png--lavabo",
        ] ,
        objeto: "el shampoo",
-       imgcorrecta: "assets/images/banio/shampoo.png",
+       imgcorrecta: "shampoo",
     ///////////////////juego AdondePertenecen////////////////
        imagenes3:[
         "assets/images/banio/shampoo.png--jabon--bano",

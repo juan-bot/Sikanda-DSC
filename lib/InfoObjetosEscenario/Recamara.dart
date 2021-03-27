@@ -35,7 +35,7 @@ class Recamara {
       this.correcta});
 }
 
-List<Recamara> objetos = [
+List<Recamara> objetosRecam = [
   Recamara(
       id: 1,
       title: "Almohada",
@@ -74,7 +74,7 @@ List<Recamara> objetos = [
         "assets/images/cocina/fresa.png--fresa",
       ],
       objeto: "la almohada",
-      imgcorrecta: "assets/imagesrecamara/almohada.png",
+      imgcorrecta: "almohada",
       ///////////////////juego AdondePertenecen////////////////
       imagenes3: [
         "assets/images/recamara/espejo.png--espejo--recamara",
@@ -128,7 +128,7 @@ List<Recamara> objetos = [
         "assets/images/banio/pasta.png--pasta",
       ],
       objeto: "el armario",
-      imgcorrecta: "assets/images/recamara/armario.png",
+      imgcorrecta: "armario",
       ///////////////////juego AdondePertenecen////////////////
       imagenes3: [
         "assets/images/recamara/espejo.png--espejo--recamara",
@@ -181,7 +181,7 @@ List<Recamara> objetos = [
         "assets/images/cocina/platano.png--platano",
       ],
       objeto: "la cama",
-      imgcorrecta: "assets/images/recamara/cama.png",
+      imgcorrecta: "cama",
       ///////////////////juego AdondePertenecen////////////////
       imagenes3: [
         "assets/images/banio/jabon.png--jabon--banio",
@@ -233,7 +233,7 @@ List<Recamara> objetos = [
         "assets/images/cocina/brocoli.png--brocoli",
       ],
       objeto: "el cobertor",
-      imgcorrecta: "assets/images/recamara/cobertor.png",
+      imgcorrecta: "cobertor",
       ///////////////////juego AdondePertenecen////////////////
       imagenes3: [
         "assets/images/recamara/cobertor.png--cobertor--recamara",
@@ -285,7 +285,7 @@ List<Recamara> objetos = [
         "assets/images/cocina/fresa.png--fresa",
       ],
       objeto: "el espejo",
-      imgcorrecta: "assets/images/recamara/espejo.png",
+      imgcorrecta: "espejo",
       ///////////////////juego AdondePertenecen////////////////
       imagenes3: [
         "assets/images/banio/cepillo.png--cepillo--banio",
@@ -337,7 +337,7 @@ List<Recamara> objetos = [
         "assets/images/cocina/fresa.png--fresa",
       ],
       objeto: "la almohada",
-      imgcorrecta: "assets/images/recamara/lampara.png",
+      imgcorrecta: "lampara",
       ///////////////////juego AdondePertenecen////////////////
       imagenes3: [
         "assets/images/recamara/cobertor.png--cobertor--recamara",

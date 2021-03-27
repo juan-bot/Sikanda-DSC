@@ -69,21 +69,21 @@ List<Cocina> objetos = [
         "assets/images/banio/shampoo.png--shampoo",
         "assets/images/recamara/cobertor.png--cobertor",
         "assets/images/cocina/taza.png--taza",
-        "assets/images/cocina/uva.png--uva",
+        "assets/images/cocina/uva.png--uvas",
         "assets/images/banio/cepillo.png--cepillo dental",
         "assets/images/recamara/espejo.png--espejo",
         "assets/images/cocina/fresa.png--fresa",
         "assets/images/banio/inodoro.png--inodoro",
       ],
-      objeto: "la uva",
-      imgcorrecta: "assets/images/cocina/uva.png",
+      objeto: "las uvas",
+      imgcorrecta: "uvas",
       ///////////////////juego AdondePertenecen////////////////
       imagenes3: [
         "assets/images/cocina/plato.png--plato--cocina",
         "assets/images/recamara/cobertor.png--cobertor--recamara",
         "assets/images/cocina/brocoli.png--brocoli--cocina",
         "assets/images/banio/cepillo.png--cepillo--bano",
-        "assets/images/cocina/uvas.png--uvas--cocina",
+        "assets/images/cocina/uva.png--uvas--cocina",
         "assets/images/banio/labavo.png--lavabo--bano",
       ],
       validos: 3,
@@ -128,7 +128,7 @@ List<Cocina> objetos = [
         "assets/images/banio/inodoro.png--inodoro",
       ],
       objeto: "el brocoli",
-      imgcorrecta: "assets/images/cocina/brocoli.png",
+      imgcorrecta: "brocoli",
       ///////////////////juego AdondePertenecen////////////////
       imagenes3: [
         "assets/images/cocina/cuchara.png--cuchara--cocina",
@@ -180,7 +180,7 @@ List<Cocina> objetos = [
         "assets/images/banio/jabon.png--jabon",
       ],
       objeto: "la cuchara",
-      imgcorrecta: "assets/images/cocina/cuchara.png",
+      imgcorrecta: "cuchara",
       ///////////////////juego AdondePertenecen////////////////
       imagenes3: [
         "assets/images/cocina/platano.png--platano--cocina",
@@ -232,14 +232,14 @@ List<Cocina> objetos = [
         "assets/images/banio/labavo.png--lavabo",
       ],
       objeto: "la fresa",
-      imgcorrecta: "assets/images/cocina/fresa.png",
+      imgcorrecta: "fresa",
       ///////////////////juego AdondePertenecen////////////////
       imagenes3: [
         "assets/images/cocina/fresa.png--fresa--cocina",
         "assets/images/recamara/cama.png--cama--recamara",
         "assets/images/cocina/brocoli.png--brocoli--cocina",
         "assets/images/banio/pasta.png--pasta--bano",
-        "assets/images/cocina/uvas.png--uvas--cocina",
+        "assets/images/cocina/uva.png--uvas--cocina",
         "assets/images/banio/shampoo.png--shampoo--bano",
       ],
       validos: 3,
@@ -270,7 +270,7 @@ List<Cocina> objetos = [
         "assets/images/cocina/tomate.png",
         "assets/images/cocina/plato.png",
         "assets/images/cocina/uva.png",
-        "assets/images/banio/platano.png",
+        "assets/images/cocina/platano.png",
       ],
       correcta: "platano",
       //////////Juego Tobjetos/////
@@ -286,7 +286,7 @@ List<Cocina> objetos = [
         "assets/images/banio/inodoro.png--inodoro",
       ],
       objeto: "el platano",
-      imgcorrecta: "assets/images/cocina/platano.png",
+      imgcorrecta: "platano",
       ///////////////////juego AdondePertenecen////////////////
       imagenes3: [
         "assets/images/cocina/taza.png--taza--cocina",
@@ -338,7 +338,7 @@ List<Cocina> objetos = [
         "assets/images/banio/inodoro.png--inodoro",
       ],
       objeto: "el plato",
-      imgcorrecta: "assets/images/cocina/plato.png",
+      imgcorrecta: "plato",
       ///////////////////juego AdondePertenecen////////////////
       imagenes3: [
         "assets/images/recamara/cobertor.png--cobertor--recamara",
