@@ -85,6 +85,12 @@ flutter:
     - assets/audio/espaniol/frasesJuegoPalabras/Banio/
     - assets/audio/espaniol/frasesJuegoPalabras/Cocina/
     - assets/audio/espaniol/frasesJuegoPalabras/Recamara/
+    - assets/audio/mixteco/frasesJuegoPalabras/Banio/
+    - assets/audio/mixteco/frasesJuegoPalabras/Cocina/
+    - assets/audio/mixteco/frasesJuegoPalabras/Recamara/
+    - assets/audio/zapoteco/frasesJuegoPalabras/Banio/
+    - assets/audio/zapoteco/frasesJuegoPalabras/Cocina/
+    - assets/audio/zapoteco/frasesJuegoPalabras/Recamara/
 
   fonts:
     - family: Love
