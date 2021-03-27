@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../AlertasEmergentes/AlertaInstruccionesProductos.dart';
@@ -63,7 +64,7 @@ class ObjetosRecamara extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Padding(
-          padding: EdgeInsets.only(top : 15.0,left: 40,bottom: 15),
+          padding: const EdgeInsets.symmetric(horizontal: kDefaultPaddin),
           child: Text(
             "Recamara",
             style: Theme.of(context)
@@ -76,7 +77,7 @@ class ObjetosRecamara extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: kDefaultPaddin),
             child: GridView.builder(
-                itemCount: objetos.length,
+                itemCount: objetosRecam.length,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,//numero de columnas
                   mainAxisSpacing: kDefaultPaddin,
@@ -84,7 +85,7 @@ class ObjetosRecamara extends StatelessWidget {
                   childAspectRatio: 0.75,
                 ),
                 itemBuilder: (context, index) => ItemCardRecamara(
-                  recamara: objetos[index],
+                  recamara: objetosRecam[index],
                 )),
           ),
         ),
