@@ -1,9 +1,6 @@
 import 'package:audioplayers/audio_cache.dart';
-import 'package:audioplayers/audioplayers.dart';
 import 'package:achievement_view/achievement_view.dart';
 import 'package:flutter/material.dart';
-import 'package:rompecabezas_sika/AlertasEmergentes/AlertaGanador.dart';
-
 import 'package:rompecabezas_sika/AlertasEmergentes/AlertaGanadorNiveles.dart';
 import 'package:rompecabezas_sika/ContenidoIdioma/Intrucciones.dart';
 import '../Audio.dart';
@@ -21,13 +18,13 @@ class Relacionable extends StatefulWidget {
 
   Relacionable(
       {this.imagenes,
-      this.id_escenario,
-      this.id,
-      this.mostrar,
-      this.opciones,
-      this.correcta,
-      this.imagen,
-      this.audio});
+        this.id_escenario,
+        this.id,
+        this.mostrar,
+        this.opciones,
+        this.correcta,
+        this.imagen,
+        this.audio});
   @override
   _RelacionableState createState() => _RelacionableState();
 }
@@ -74,27 +71,27 @@ class _RelacionableState extends State<Relacionable> {
 
   Container opciones(String opcion, String img) {
     return Container(
-        //child: //Padding(
-        //padding: const EdgeInsets.all(2.0),
-        // ignore: deprecated_member_use
+      //child: //Padding(
+      //padding: const EdgeInsets.all(2.0),
+      // ignore: deprecated_member_use
         child: RaisedButton.icon(
-      icon: Image.asset(
-        img,
-        height: 30,
-      ),
-      color: new Color(0xffeadffd),
-      label: Text(
-        opcion,
-        style: TextStyle(
-          color: new Color(0xff6200ee),
-        ),
-      ),
-      onPressed: () {},
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(30.0),
-        //)
-      ),
-    ));
+          icon: Image.asset(
+            img,
+            height: 30,
+          ),
+          color: new Color(0xffeadffd),
+          label: Text(
+            opcion,
+            style: TextStyle(
+              color: new Color(0xff6200ee),
+            ),
+          ),
+          onPressed: () {},
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(30.0),
+            //)
+          ),
+        ));
   }
 
   //palabras
@@ -145,61 +142,52 @@ class _RelacionableState extends State<Relacionable> {
         else
           setState(() {
             show(context, "Prueba otra vez", Colors.red[100],
-                "images/confundido.png");
+                "assets/images/confundido.png");
           });
       },
       builder: (BuildContext context, List<String> candidateData,
           List<dynamic> rejectedData) {
         return candidateData.isEmpty
             ? Container(
-                //margin: const EdgeInsets.only(bottom: 10.0),
-                // ignore: deprecated_member_use
-
-                //
-                width: anchot,
-                child: Center(
-                  child: Text(
-                    actual,
-                    style: TextStyle(
-                      fontSize: 20.0,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.green,
-                    ),
+          width: anchot,
+          child: Center(
+            child: Text(
+              actual,
+              style: TextStyle(
+                fontSize: 20.0,
+                fontWeight: FontWeight.bold,
+                color: Colors.green,
+              ),
+            ),
+          ),
+          height: 30,
+        )
+            : Opacity(
+          opacity: 0.7,
+          child: Container(
+            width: anchot,
+            margin: const EdgeInsets.only(bottom: 10.0),
+            //ignore: deprecated_member_use
+            child: RaisedButton(
+                padding:
+                const EdgeInsets.only(left: 5, right: 4, bottom: 15),
+                color: Colors.green,
+                child: Text(
+                  "_" * id.length,
+                  style: TextStyle(
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.bold,
+                    color: new Color(0xff6200ee),
                   ),
                 ),
-
-                //width: 120,
-                height: 30,
-                //decoration: BoxDecoration(border: Border.all(width: 1))
-              )
-            : Opacity(
-                opacity: 0.7,
-                child: Container(
-                  width: anchot,
-                  margin: const EdgeInsets.only(bottom: 10.0),
-                  //ignore: deprecated_member_use
-                  child: RaisedButton(
-                      padding:
-                          const EdgeInsets.only(left: 5, right: 4, bottom: 15),
-                      color: Colors.green,
-                      child: Text(
-                        "_" * id.length,
-                        style: TextStyle(
-                          fontSize: 20.0,
-                          fontWeight: FontWeight.bold,
-                          color: new Color(0xff6200ee),
-                        ),
-                      ),
-                      onPressed: () {},
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30.0),
-                        //)
-                      )),
-                  //width: 120,
-                  height: 30,
-                  //decoration: BoxDecoration(border: Border.all(width: 1))
-                ),
-              );
+                onPressed: () {},
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(30.0),
+                  //)
+                )),
+            height: 30,
+          ),
+        );
       },
     );
   }
@@ -246,50 +234,56 @@ class _RelacionableState extends State<Relacionable> {
       body: !ready
           ? Container()
           : correct
-              ? Center(child: GanadorNivel())
-              : Column(
+          ? Center(child: GanadorNivel())
+          : Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          //Offer heading
+          Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Container(
+                    width: MediaQuery.of(context).size.width * 0.5,
+                    child: Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: FittedBox(
+                        child: Image.asset(widget.imagen),
+                        fit: BoxFit.fill,
+                      ),
+                    )),
+              ]),
+          Container(
+              child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    //Offer heading
-                    Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Container(
-                              width: MediaQuery.of(context).size.width * 0.5,
-                              child: Padding(
-                                padding: const EdgeInsets.all(16.0),
-                                child: FittedBox(
-                                  child: Image.asset(widget.imagen),
-                                  fit: BoxFit.fill,
-                                ),
-                              )),
-                        ]),
-                    Container(child: Row(children: [BotonAudio(widget.audio)])),
-                    SizedBox(
-                      height: 30,
-                    ),
-
-                    Wrap(
-                      direction: Axis.horizontal,
-                      spacing: 10.0,
-                      runSpacing: 5.0,
-                      children: contenido,
-                    ),
-                    Container(
-                      height: 30,
-                    ),
-                    separador(),
-                    Container(
-                      height: 30,
-                    ),
-                    Wrap(
-                      direction: Axis.horizontal,
-                      spacing: 10.0,
-                      runSpacing: 15.0,
-                      children: options,
-                    ),
-                  ],
-                ),
+                  children: [
+                    BotonAudio(juegoPalabras[widget.id])
+                  ]
+              )
+          ),   //    audio de la accion
+          SizedBox(
+            height: 30,
+          ),
+          Wrap(
+            direction: Axis.horizontal,
+            spacing: 10.0,
+            runSpacing: 5.0,
+            children: contenido,
+          ),
+          Container(
+            height: 30,
+          ),
+          separador(),
+          Container(
+            height: 30,
+          ),
+          Wrap(
+            direction: Axis.horizontal,
+            spacing: 10.0,
+            runSpacing: 15.0,
+            children: options,
+          ),
+        ],
+      ),
     );
   }
 
