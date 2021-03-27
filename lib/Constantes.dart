@@ -8,6 +8,8 @@ import 'package:flutter/material.dart';
   AudioPlayer reproduceInstrucciones = AudioPlayer();
   AudioPlayer reproduceFrases = AudioPlayer();
 
+  List<String> juegoPalabras;
+
   List<String> escenarios;
 
   List<String> AudioBanio;

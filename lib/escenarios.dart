@@ -105,27 +105,33 @@ class RadialExpansionDemo extends StatelessWidget {
                     ),
                     onPressed: () {
                       print("$description");
-                      if(description=="Cocina")
+                      if(description=="Cocina"){
+                        juegoPalabras=AudioCocinaFrases;
                         Navigator.push(
                           context,
                           MaterialPageRoute(builder: (context) =>
                               ListarObjetosCocina(fondo)
                           ),
                         );
-                      else if(description=="Baño")
+                      }
+                      else if(description=="Baño"){
+                        juegoPalabras=AudioBanioFrases;
                         Navigator.push(
                           context,
                           MaterialPageRoute(builder: (context) =>
                               ListarObjetosBanio(fondo)
                           ),
                         );
-                      else
+                      }
+                      else{
+                        juegoPalabras=AudioRecamaraFrases;
                         Navigator.push(
                           context,
                           MaterialPageRoute(builder: (context) =>
                               ListarObjetosRecamara(fondo)
                           ),
                         );
+                      }
                     }
                 ),
                 const SizedBox(height: 16.0),
@@ -151,17 +157,17 @@ class RadialExpansionDemo extends StatelessWidget {
             ),
             child: Column(
               children: [
-               Row(
-                 mainAxisAlignment: MainAxisAlignment.center,
-                 children: [
-                   Text(
-                     name,
-                     style:
-                     TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
-                   ),
-                   BotonAudio(audio),
-                 ],
-               ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      name,
+                      style:
+                      TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+                    ),
+                    BotonAudio(audio),
+                  ],
+                ),
                 Hero(
                   createRectTween: _createRectTween,
                   tag: imageName,

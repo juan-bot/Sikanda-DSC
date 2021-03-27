@@ -100,9 +100,8 @@ class Principal extends State<Idiomas> with WidgetsBindingObserver{
                           AudioBanio=sonidoObjetosEspaniolBanio;
                           AudioCocina=sonidoObjetosEspaniolCocina;
                           AudioRecamara=sonidoObjetosEspaniolRecamara;
-
+                          escenarios=escenariosEsp;
                           intruccionesAux=intruccionesEsp;
-
                           AudioBanioFrases=FrasesBanioEsp;
                           AudioRecamaraFrases=FrasesRecamaraEsp;
                           AudioCocinaFrases=FrasesCocinaEsp;
@@ -135,12 +134,11 @@ class Principal extends State<Idiomas> with WidgetsBindingObserver{
                           AudioBanio=sonidoObjetosMixtecoBanio;
                           AudioCocina=sonidoObjetosMixtecoCocina;
                           AudioRecamara=sonidoObjetosMixtecoRecamara;
-
+                          escenarios=escenariosMixteco;
                           intruccionesAux=intruccionesMixteco;
-
-                          AudioBanioFrases=FrasesBanioEsp;
-                          AudioRecamaraFrases=FrasesRecamaraEsp;
-                          AudioCocinaFrases=FrasesCocinaEsp;
+                          AudioBanioFrases=FrasesBanioMixteco;
+                          AudioRecamaraFrases=FrasesRecamaraMixteco;
+                          AudioCocinaFrases=FrasesCocinaMixteco;
                           Navigator.of(context).push(createRoute());
                         }),
                     SizedBox(
@@ -169,9 +167,8 @@ class Principal extends State<Idiomas> with WidgetsBindingObserver{
                           AudioBanio=sonidoObjetosZapotecoBanio;
                           AudioCocina=sonidoObjetosZapotecoCocina;
                           AudioRecamara=sonidoObjetosZapotecoRecamara;
-
+                          escenarios=escenariosZapoteco;
                           intruccionesAux=intruccionesZapoteco;
-
                           AudioBanioFrases=FrasesBanioZapoteco;
                           AudioRecamaraFrases=FrasesRecamaraZapoteco;
                           AudioCocinaFrases=FrasesCocinaZapoteco;
