@@ -53,8 +53,8 @@ List<Banio> objetosBanio = [
         "assets/images/banio/cepillo.png",
       ],
       correcta: "cepillo dental",
-    //////////Juego Tobjetos/////
-       imagenes2:[
+      //////////Juego Tobjetos/////
+      imagenes2:[
         "assets/images/cocina/manzana.png--manzana",
         "assets/images/banio/jabon.png--jabon",
         "assets/images/recamara/cobertor.png--cobertor",
@@ -64,22 +64,22 @@ List<Banio> objetosBanio = [
         "assets/images/recamara/lampara.png--lampara",
         "assets/images/cocina/brocoli.png--brocoli",
         "assets/images/banio/labavo.png--lavabo",
-       ] ,
-       objeto: "el cepillo dental",
-       imgcorrecta: "cepillo dental",
-    ///////////////////juego AdondePertenecen////////////////
-       imagenes3:[
+      ] ,
+      objeto: "el cepillo dental",
+      imgcorrecta: "cepillo dental",
+      ///////////////////juego AdondePertenecen////////////////
+      imagenes3:[
         "assets/images/banio/jabon.png--jabon--bano",
         "assets/images/recamara/cobertor.png--cobertor--recamara",
         "assets/images/banio/pasta.png--pasta dental--bano",
         "assets/images/banio/cepillo.png--cepillo dental--bano",
         "assets/images/cocina/brocoli.png--brocoli--cocina",
         "assets/images/banio/labavo.png--lavabo--bano",
-       ],
-       validos:4,
-       lugar:"bano",
-       frase:"el baño",
-       imglugar: "assets/images/baño2.gif"
+      ],
+      validos:4,
+      lugar:"bano",
+      frase:"el baño",
+      imglugar: "assets/images/baño2.gif"
 
   ),
   Banio(
@@ -107,8 +107,8 @@ List<Banio> objetosBanio = [
         "assets/images/cocina/fresa.png",
       ],
       correcta: "inodoro",
-         //////////Juego Tobjetos/////
-       imagenes2:[
+      //////////Juego Tobjetos/////
+      imagenes2:[
         "assets/images/cocina/uva.png--uvas",
         "assets/images/banio/jabon.png--jabon",
         "assets/images/recamara/espejo.png--espejo",
@@ -119,24 +119,24 @@ List<Banio> objetosBanio = [
         "assets/images/banio/inodoro.png--inodoro",
         "assets/images/cocina/plato.png--plato",
 
-       ] ,
-       objeto: "el inodoro",
-       imgcorrecta: "inodoro",
-    ///////////////////juego AdondePertenecen////////////////
-       imagenes3:[
+      ] ,
+      objeto: "el inodoro",
+      imgcorrecta: "inodoro",
+      ///////////////////juego AdondePertenecen////////////////
+      imagenes3:[
         "assets/images/banio/jabon.png--jabon--bano",
         "assets/images/recamara/cobertor.png--cobertor--recamara",
         "assets/images/banio/inodoro.png--inodoro--bano",
         "assets/imagesrecamara/lampara.png--lampara--bano",
         "assets/images/cocina/uva.png--uvas--cocina",
         "assets/images/banio/labavo.png--lavabo--bano",
-       ],
-       validos:3,
-       lugar:"bano",
-       frase:"el baño",
-       imglugar: "assets/images/baño2.gif"
+      ],
+      validos:3,
+      lugar:"bano",
+      frase:"el baño",
+      imglugar: "assets/images/baño2.gif"
 
-      
+
   ),
   Banio(
       id: 3,
@@ -164,8 +164,8 @@ List<Banio> objetosBanio = [
         "assets/images/banio/cepillo.png",
       ],
       correcta: "jabon",
-         //////////Juego Tobjetos/////
-       imagenes2:[
+      //////////Juego Tobjetos/////
+      imagenes2:[
         "assets/images/cocina/fresa.png--fresa",
         "assets/images/banio/jabon.png--jabon",
         "assets/images/recamara/cama.png--cama",
@@ -175,22 +175,22 @@ List<Banio> objetosBanio = [
         "assets/images/recamara/lampara.png--lampara",
         "assets/images/cocina/platano.png--platano",
         "assets/images/banio/labavo.png--lavabo",
-       ] ,
-       objeto: "el jabon ",
-       imgcorrecta: "jabon",
-    ///////////////////juego AdondePertenecen////////////////
-       imagenes3:[
+      ] ,
+      objeto: "el jabon ",
+      imgcorrecta: "jabon",
+      ///////////////////juego AdondePertenecen////////////////
+      imagenes3:[
         "assets/images/banio/jabon.png--jabon--bano",
         "assets/images/recamara/cobertor.png--cobertor--recamara",
         "assets/images/banio/inodoro.png--inodoro--bano",
         "assets/images/cocina/fresa.png--fresa--cocina",
         "assets/images/banio/pasta.png--pasta dental--bano",
         "assets/images/banio/shampoo.png--shampoo--bano",
-       ],
-       validos:4,
-       lugar:"bano",
-       frase:"el baño",
-       imglugar: "assets/images/baño2.gif"
+      ],
+      validos:4,
+      lugar:"bano",
+      frase:"el baño",
+      imglugar: "assets/images/baño2.gif"
 
   ),
   Banio(
@@ -218,8 +218,8 @@ List<Banio> objetosBanio = [
         "assets/images/cocina/uva.png",
       ],
       correcta: "lavabo",
-         //////////Juego Tobjetos/////
-       imagenes2:[
+      //////////Juego Tobjetos/////
+      imagenes2:[
         "assets/images/cocina/manzana.png--manzana",
         "assets/images/banio/jabon.png--jabon",
         "assets/images/recamara/almohada.png--almohada",
@@ -229,22 +229,22 @@ List<Banio> objetosBanio = [
         "assets/images/recamara/lampara.png--lampara",
         "assets/images/cocina/brocoli.png--brocoli",
         "assets/images/banio/labavo.png--lavabo",
-       ] ,
-       objeto: "el lavabo",
-       imgcorrecta: "lavabo",
-    ///////////////////juego AdondePertenecen////////////////
-       imagenes3:[
+      ] ,
+      objeto: "el lavabo",
+      imgcorrecta: "lavabo",
+      ///////////////////juego AdondePertenecen////////////////
+      imagenes3:[
         "assets/images/banio/cepillo.png--cepillo dental--bano",
         "assets/images/recamara/espejo.png--espejo--recamara",
         "assets/images/banio/shampoo.png--shampoo--bano",
         "assets/images/recamara/armario.png--armario --recamara",
         "assets/images/cocina/brocoli.png--brocoli--cocina",
         "assets/images/banio/labavo.png--lavabo--bano",
-       ],
-       validos:3,
-       lugar:"bano",
-       frase:"el baño",
-       imglugar: "assets/images/baño2.gif"
+      ],
+      validos:3,
+      lugar:"bano",
+      frase:"el baño",
+      imglugar: "assets/images/baño2.gif"
 
   ),
   Banio(
@@ -272,8 +272,8 @@ List<Banio> objetosBanio = [
         "assets/images/recamara/espejo.png",
       ],
       correcta: "pasta dental",
-         //////////Juego Tobjetos/////
-       imagenes2:[
+      //////////Juego Tobjetos/////
+      imagenes2:[
         "assets/images/cocina/sandia.png--sandia",
         "assets/images/banio/cepillo.png--cepillo dental",
         "assets/images/recamara/armario.png--armario",
@@ -283,51 +283,51 @@ List<Banio> objetosBanio = [
         "assets/images/recamara/lampara.png--lampara",
         "assets/images/cocina/platano.png--platano",
         "assets/images/banio/labavo.png--lavabo",
-       ] ,
-       objeto: "la pasta dental",
-       imgcorrecta: "pasta dental",
-    ///////////////////juego AdondePertenecen////////////////
-       imagenes3:[
+      ] ,
+      objeto: "la pasta dental",
+      imgcorrecta: "pasta dental",
+      ///////////////////juego AdondePertenecen////////////////
+      imagenes3:[
         "assets/images/banio/jabon.png--jabon--bano",
         "assets/images/recamara/cobertor.png--cobertor--recamara",
         "assets/images/cocina/lechuga.png--lechuga--cocina",
         "assets/images/banio/pasta.png--pasta dental--bano",
         "assets/images/cocina/brocoli.png--brocoli--cocina",
         "assets/images/banio/labavo.png--lavabo--bano",
-       ],
-       validos:3,
-       lugar:"bano",
-       frase:"el baño",
-       imglugar: "assets/images/baño2.gif"
+      ],
+      validos:3,
+      lugar:"bano",
+      frase:"el baño",
+      imglugar: "assets/images/baño2.gif"
 
   ),
   Banio(
-    id: 6,
-    title: "Shampoo",
-    size: 12,
-    image: "assets/images/banio/shampoo.png",
-    color: Color(0xFFAEAEAE),
-    imagen: "assets/images/banio/accion/6.png",
-    mostrar: "Sara se lava el cabello con --",
-    opciones: [
-      "uva",
-      "shampoo",
-      "cobija",
-      "taza",
-      "plato",
-      "cuchara",
-    ],
-    imagenes: [
-      "assets/images/cocina/uva.png",
-      "assets/images/banio/shampoo.png",
-      "assets/images/recamara/cobertor.png",
-      "assets/images/cocina/taza.png",
-      "assets/images/cocina/plato.png",
-      "assets/images/cocina/cuchara.png",
-    ],
-    correcta: "shampoo",
-       //////////Juego Tobjetos/////
-       imagenes2:[
+      id: 6,
+      title: "Shampoo",
+      size: 12,
+      image: "assets/images/banio/shampoo.png",
+      color: Color(0xFFAEAEAE),
+      imagen: "assets/images/banio/accion/6.png",
+      mostrar: "Sara se lava el cabello con --",
+      opciones: [
+        "uva",
+        "shampoo",
+        "cobija",
+        "taza",
+        "plato",
+        "cuchara",
+      ],
+      imagenes: [
+        "assets/images/cocina/uva.png",
+        "assets/images/banio/shampoo.png",
+        "assets/images/recamara/cobertor.png",
+        "assets/images/cocina/taza.png",
+        "assets/images/cocina/plato.png",
+        "assets/images/cocina/cuchara.png",
+      ],
+      correcta: "shampoo",
+      //////////Juego Tobjetos/////
+      imagenes2:[
         "assets/images/cocina/plato.png--plato",
         "assets/images/banio/shampoo.png--shampoo",
         "assets/images/recamara/cobertor.png--cobertor",
@@ -337,23 +337,22 @@ List<Banio> objetosBanio = [
         "assets/images/recamara/lampara.png--lampara",
         "assets/images/cocina/fresa.png--fresa",
         "assets/images/banio/labavo.png--lavabo",
-       ] ,
-       objeto: "el shampoo",
-       imgcorrecta: "shampoo",
-    ///////////////////juego AdondePertenecen////////////////
-       imagenes3:[
+      ] ,
+      objeto: "el shampoo",
+      imgcorrecta: "shampoo",
+      ///////////////////juego AdondePertenecen////////////////
+      imagenes3:[
         "assets/images/banio/shampoo.png--jabon--bano",
         "assets/images/recamara/cobertor.png--cobertor--recamara",
         "assets/images/banio/pasta.png--pasta dental--bano",
         "assets/images/banio/cepillo.png--cepillo--bano",
         "assets/images/cocina/fresa.png--fresa--cocina",
         "assets/images/banio/labavo.png--lavabo--bano",
-       ],
-       validos:4,
-       lugar:"bano",
-       frase:"el baño",
-       imglugar: "assets/images/baño2.gif"
+      ],
+      validos:4,
+      lugar:"bano",
+      frase:"el baño",
+      imglugar: "assets/images/baño2.gif"
 
   ),
 ];
-

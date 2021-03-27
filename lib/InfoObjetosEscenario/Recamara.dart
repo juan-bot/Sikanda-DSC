@@ -16,23 +16,23 @@ class Recamara {
   final List<String> opciones, imagenes, imagenes2, imagenes3;
   Recamara(
       {this.id,
-      this.image,
-      this.title,
-      this.size,
-      this.color,
-      this.imagen,
-      this.mostrar,
-      this.imagenes,
-      this.imagenes2,
-      this.imagenes3,
-      this.validos,
-      this.lugar,
-      this.frase,
-      this.imglugar,
-      this.opciones,
-      this.imgcorrecta,
-      this.objeto,
-      this.correcta});
+        this.image,
+        this.title,
+        this.size,
+        this.color,
+        this.imagen,
+        this.mostrar,
+        this.imagenes,
+        this.imagenes2,
+        this.imagenes3,
+        this.validos,
+        this.lugar,
+        this.frase,
+        this.imglugar,
+        this.opciones,
+        this.imgcorrecta,
+        this.objeto,
+        this.correcta});
 }
 
 List<Recamara> objetosRecam = [
