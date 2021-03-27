@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:achievement_view/achievement_view.dart';
-import 'package:rompecabezas_sika/AlertasEmergentes/AlertaGanadorRompecabezas.dart';
+import 'package:rompecabezas_sika/AlertasEmergentes/AlertaGanador.dart';
 
 class EstaEn extends StatefulWidget {
+  final int id_escenario;
+  final int id;
   final List<String> imagenes;
   final int validos;
   final String lugar;
@@ -11,6 +13,8 @@ class EstaEn extends StatefulWidget {
 
   const EstaEn(
       {Key key,
+      this.id_escenario,
+      this.id,
       this.imglugar,
       this.validos,
       this.lugar,
@@ -76,7 +80,11 @@ class _EstaEnState extends State<EstaEn> {
             contv >= widget.validos
                 ? Container(
                     height: 300,
-                    child: FittedBox(fit: BoxFit.fill, child: Ganador()))
+                    child: FittedBox(fit: BoxFit.fill, 
+                    child: Ganador(
+                      id: widget.id, 
+                      id_game: 3,
+                      id_escenario:widget.id_escenario)))
                 : Wrap(
                     alignment: WrapAlignment.center,
                     direction: Axis.horizontal,
@@ -243,4 +251,49 @@ class _EstaEnState extends State<EstaEn> {
       },
     );
   }
+  void show(BuildContext context, String msj, Color col, String img) {
+    AchievementView(
+      context,
+      icon: Image.asset(img),
+      color: col,
+      title: msj,
+      subTitle: " ",
+      textStyleTitle: TextStyle(fontSize: 25,),
+      isCircle: true,
+      listener: (status) {
+        print(status);
+      },
+    )..show();
+  }
+
+  Future<void> showMyDialog(BuildContext context) async {
+    return showDialog<void>(
+      context: context,
+      barrierDismissible: false, // user must tap button!
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text('Instrucciones'),
+          content: SingleChildScrollView(
+            child: ListBody(
+              children: <Widget>[
+                Text(
+                    '1._Toca una de las areas de la casa que te llame la atencion'),
+                Text(
+                    '2._cada uno de ellos tiene objetos diferentes por explorar'),
+              ],
+            ),
+          ),
+          actions: <Widget>[
+            TextButton(
+              child: Text('cerrar'),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
+
 }

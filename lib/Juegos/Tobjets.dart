@@ -2,14 +2,16 @@
 
 import 'package:achievement_view/achievement_view.dart';
 import 'package:flutter/material.dart';
-import 'package:rompecabezas_sika/AlertasEmergentes/AlertaGanadorRompecabezas.dart';
+import 'package:rompecabezas_sika/AlertasEmergentes/AlertaGanador.dart';
 
 class BuscaObjeto extends StatefulWidget {
   final List<String> imagenes;
+  final int id_escenario;
+  final int id;
   final String imgcorrecta;
   final String objeto;
   const BuscaObjeto(
-      {this.objeto,  this.imgcorrecta,  this.imagenes})
+      {this.objeto,  this.imgcorrecta,  this.imagenes, this.id, this.id_escenario})
       : super();
 
   @override
@@ -118,7 +120,7 @@ class _BuscaObjetoState extends State<BuscaObjeto> {
         ]),
         acertado
             ? Center(
-                child: Ganador()
+                child: Ganador(id:widget.id,id_game: 2, id_escenario: widget.id_escenario)
                   
               )
             : Wrap(

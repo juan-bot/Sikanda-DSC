@@ -7,8 +7,11 @@ import 'package:flutter/services.dart';
 import 'package:image/image.dart' as imglib;
 import 'package:rompecabezas_sika/ContenidoIdioma/Intrucciones.dart';
 import 'package:achievement_view/achievement_view.dart';
+import 'package:rompecabezas_sika/InfoObjetosEscenario/Banio.dart';
+import 'package:rompecabezas_sika/InfoObjetosEscenario/Cocina.dart';
+import 'package:rompecabezas_sika/InfoObjetosEscenario/Recamara.dart';
 
-import '../AlertasEmergentes/AlertaGanadorRompecabezas.dart';
+import '../AlertasEmergentes/AlertaGanador.dart';
 import '../Audio.dart';
 import '../Constantes.dart';
 
@@ -16,6 +19,8 @@ import '../Constantes.dart';
 class Rompecabezas extends StatefulWidget {
   //------Estos indentificadores indican que tarjeta esta en cada
   //------posicion sirven para saber si estan correctos o no.
+  final int id_escenario;
+  final int id;
   final String imgn; //imagen ganador
   final String imagen; //imagen a armar
   final Color color;
@@ -23,12 +28,14 @@ class Rompecabezas extends StatefulWidget {
   final int ren, col; //0
   Rompecabezas(
       {this.imagen,
+      this.id_escenario,
       this.ren,
       this.col,
       this.audio,
       this.nombre,
       this.color,
-      this.imgn});
+      this.imgn,
+      this.id});
 
   @override
   _RompecabezasState createState() => _RompecabezasState(
@@ -41,7 +48,7 @@ class _RompecabezasState extends State<Rompecabezas> {
   final String audio;
   final String nombre;
   final Color fondo;
-  _RompecabezasState({this.img, this.audio, this.nombre, this.fondo});
+  _RompecabezasState({this.img, this.audio, this.nombre, this.fondo,});
 
   List<Image> output = List<Image>.empty(growable: true);
   List<int> bytes = [];
@@ -239,6 +246,7 @@ class _RompecabezasState extends State<Rompecabezas> {
                           ),
                           Container(
                               child: Row(
+
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   children: [
                                     Container(
@@ -246,6 +254,7 @@ class _RompecabezasState extends State<Rompecabezas> {
                                         margin: const EdgeInsets.all(5),
                                         child: Image.asset(img)),
                                     Container(
+
                                         child: Column(
                                             mainAxisAlignment:
                                                 MainAxisAlignment.start,
@@ -253,7 +262,7 @@ class _RompecabezasState extends State<Rompecabezas> {
                                           Center(
                                               child: Text(nombre,
                                                   style: TextStyle(
-                                                    fontSize: 40,
+                                                    fontSize: 30,
                                                   ))),
                                           BotonAudio(audio),
                                         ]))
@@ -267,7 +276,11 @@ class _RompecabezasState extends State<Rompecabezas> {
                   height: 10,
                 ),
                 armado
-                    ? Ganador() //______________________
+                    ? Ganador(id: widget.id, 
+                              id_game: 1, 
+                              id_escenario:widget.id_escenario,)
+                    
+                     //______________________
                     //aqui se pone el mensaje de felicitacion
                     : Container(
                         height: MediaQuery.of(context).size.height * 0.59,
@@ -432,6 +445,7 @@ class _RompecabezasState extends State<Rompecabezas> {
       },
     )..show();
   }
+  
 }
 
 

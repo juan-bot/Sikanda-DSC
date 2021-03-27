@@ -2,14 +2,16 @@ import 'package:audioplayers/audio_cache.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:achievement_view/achievement_view.dart';
 import 'package:flutter/material.dart';
-import 'package:rompecabezas_sika/AlertasEmergentes/AlertaGanadorRompecabezas.dart';
+import 'package:rompecabezas_sika/AlertasEmergentes/AlertaGanador.dart';
 
-import 'package:rompecabezas_sika/AlertasEmergentes/AlertaGanadorPalabras.dart';
+import 'package:rompecabezas_sika/AlertasEmergentes/AlertaGanadorNiveles.dart';
 import 'package:rompecabezas_sika/ContenidoIdioma/Intrucciones.dart';
 import '../Audio.dart';
 import '../Constantes.dart';
 
 class Relacionable extends StatefulWidget {
+  final int id;
+  final int id_escenario;
   final String imagen;
   final String mostrar;
   final String audio;
@@ -19,6 +21,8 @@ class Relacionable extends StatefulWidget {
 
   Relacionable(
       {this.imagenes,
+      this.id_escenario,
+      this.id,
       this.mostrar,
       this.opciones,
       this.correcta,
@@ -242,7 +246,7 @@ class _RelacionableState extends State<Relacionable> {
       body: !ready
           ? Container()
           : correct
-              ? Center(child: Ganador())
+              ? Center(child: GanadorNivel())
               : Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
