@@ -14,6 +14,11 @@ class Photo extends StatelessWidget {
         onTap: onTap,
         child: LayoutBuilder(
           builder: (BuildContext context, BoxConstraints size) {
+            /*return FittedBox(
+              child: Image.asset(photo),
+              fit: BoxFit.fill,
+            );*/
+
             return Image.asset(
               photo,
               fit: BoxFit.contain,

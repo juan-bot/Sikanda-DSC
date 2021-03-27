@@ -102,21 +102,21 @@ class ItemCardCocina extends StatelessWidget {
 
                     onPressed: () {
 
-                       Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) =>
-         
-                         Rompecabezas(
-                            id_escenario: id_escenario,
-                            id: id,
-                            imagen: imageName, //imagen del rompecabezas
-                            ren: 2, //Renglones rompecabezas
-                            col: 2,
-                            audio:audio,
-                            nombre:description,
-                            color:fondo
-                        )
-                       ));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) =>
+
+                              Rompecabezas(
+                                  id_escenario: id_escenario,
+                                  id: id,
+                                  imagen: imageName, //imagen del rompecabezas
+                                  ren: 2, //Renglones rompecabezas
+                                  col: 2,
+                                  audio:audio,
+                                  nombre:description,
+                                  color:fondo
+                              )
+                          ));
                     }
                 ),
                 const SizedBox(height: 16.0),
@@ -126,7 +126,7 @@ class ItemCardCocina extends StatelessWidget {
         ),
       ),
     );
-       }
+  }
   @override
   Widget build(BuildContext context) {
     print(cocina.id);

@@ -119,7 +119,7 @@ class ItemCardBanio extends StatelessWidget {
         ),
       ),
     );
-    
+
   }
 
   @override
@@ -170,7 +170,7 @@ class ItemCardBanio extends StatelessWidget {
                 Text(
                   banio.title,
                   style: TextStyle(
-                      color: kTextLightColor,
+                    color: kTextLightColor,
                   ),
                 ),
                 BotonAudio(AudioBanio[banio.id-1]),
