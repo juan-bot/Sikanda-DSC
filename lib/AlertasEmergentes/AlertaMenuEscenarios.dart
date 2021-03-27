@@ -1,11 +1,8 @@
 import 'package:audioplayers/audio_cache.dart';
-import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import '../Constantes.dart';
 import '../ContenidoIdioma/Intrucciones.dart';
 import '../escenarios.dart';
-
 class Escenario extends StatefulWidget {
   final String title;
   Escenario({Key key, this.title}) : super(key: key);
@@ -41,7 +38,9 @@ class Instruccion extends State<Escenario> {
               tooltip: 'Ver instrucciones',
               onPressed: () {
                 // UI with the changes.
-                child: SizedBox(height:MediaQuery.of(context).size.height*2 , child: RadialExpansionDemo());
+                child: SizedBox(height:MediaQuery.of(context).size.height*2 ,
+                    child: RadialExpansionDemo()
+                );
                 _showMyDialog();
               },
             )
@@ -50,7 +49,9 @@ class Instruccion extends State<Escenario> {
         //body:RadialExpansionDemo(),
         body: SingleChildScrollView(
           scrollDirection: Axis.vertical,
-          child: SizedBox(height:MediaQuery.of(context).size.height*1.5, child: RadialExpansionDemo()),
+          child: SizedBox(height:MediaQuery.of(context).size.height*1.5,
+              child: RadialExpansionDemo()
+          ),
         )
     );
   }

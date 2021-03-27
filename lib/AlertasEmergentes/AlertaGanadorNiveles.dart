@@ -3,8 +3,8 @@ import 'package:floating_text/floating_text.dart';
 import 'package:rompecabezas_sika/AlertasEmergentes/AlertaMenuEscenarios.dart';
 
 class GanadorNivel extends StatefulWidget {
-  
-  
+
+
   GanadorNivel(
       {Key key,
       })
@@ -23,7 +23,7 @@ class Instruccion extends State<GanadorNivel> {
 
   @override
   Widget build(BuildContext context) {
-    
+
     return Container(
         height: MediaQuery.of(context).size.height * .6,
         child: FittedBox(
@@ -81,43 +81,43 @@ class Instruccion extends State<GanadorNivel> {
                           child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
-                            TextButton(
-                                style: ButtonStyle(
-                                    backgroundColor:
+                                TextButton(
+                                    style: ButtonStyle(
+                                        backgroundColor:
                                         MaterialStateProperty.all<Color>(
                                             Colors.yellow[700]),
-                                    padding:
+                                        padding:
                                         MaterialStateProperty.all<EdgeInsets>(
                                             EdgeInsets.all(10)),
-                                    foregroundColor:
+                                        foregroundColor:
                                         MaterialStateProperty.all<Color>(
                                             Colors.yellow[700]),
-                                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                                        RoundedRectangleBorder(
-                                            borderRadius:
+                                        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                                            RoundedRectangleBorder(
+                                                borderRadius:
                                                 BorderRadius.circular(40.0),
-                                            side: BorderSide(
-                                                color: Colors.yellow[700])))),
-                                child: Text('Regresar al inicio',
-                                    style: TextStyle(
-                                      //fontFamily: "Love",
-                                      color: Colors.white,
-                                      letterSpacing: 0.5,
-                                      fontSize: 25,
-                                    )),
-                                onPressed: () {
-                                  Navigator.push(
-                                 context,
-                                MaterialPageRoute(
-                              builder: (context) => Escenario()
+                                                side: BorderSide(
+                                                    color: Colors.yellow[700])))),
+                                    child: Text('Regresar al inicio',
+                                        style: TextStyle(
+                                          //fontFamily: "Love",
+                                          color: Colors.white,
+                                          letterSpacing: 0.5,
+                                          fontSize: 25,
+                                        )),
+                                    onPressed: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) => Escenario()
 
 
-                            ));}),
-                            SizedBox(
-                              width: 10,
-                            ),
-                            
-                          ]))
+                                          ));}),
+                                SizedBox(
+                                  width: 10,
+                                ),
+
+                              ]))
                     ]))));
   }
 }

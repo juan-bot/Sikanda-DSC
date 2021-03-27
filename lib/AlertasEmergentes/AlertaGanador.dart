@@ -8,6 +8,8 @@ import 'package:rompecabezas_sika/Juegos/Adondepertenecen.dart';
 import 'package:rompecabezas_sika/Juegos/Palabras.dart';
 import 'package:rompecabezas_sika/Juegos/Tobjets.dart';
 
+import 'AlertaMenuEscenarios.dart';
+
 class Ganador extends StatefulWidget {
   final int id_escenario;
   final int id_game;
@@ -19,11 +21,12 @@ class Ganador extends StatefulWidget {
   final String imagen;
   Ganador(
       {Key key,
-      this.title,
-      this.imagen,
-      this.id,
-      this.id_game,
-      this.id_escenario})
+        this.title,
+        this.imagen,
+        this.id,
+        this.id_game,
+        this.id_escenario
+      })
       : super(key: key);
   @override
   Instruccion createState() => Instruccion(imagen: imagen);
@@ -97,64 +100,67 @@ class Instruccion extends State<Ganador> {
                           child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
-                            TextButton(
-                                style: ButtonStyle(
-                                    backgroundColor:
+                                TextButton(
+                                    style: ButtonStyle(
+                                        backgroundColor:
                                         MaterialStateProperty.all<Color>(
                                             Colors.yellow[700]),
-                                    padding:
+                                        padding:
                                         MaterialStateProperty.all<EdgeInsets>(
                                             EdgeInsets.all(10)),
-                                    foregroundColor:
+                                        foregroundColor:
                                         MaterialStateProperty.all<Color>(
                                             Colors.yellow[700]),
-                                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                                        RoundedRectangleBorder(
-                                            borderRadius:
+                                        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                                            RoundedRectangleBorder(
+                                                borderRadius:
                                                 BorderRadius.circular(40.0),
-                                            side: BorderSide(
-                                                color: Colors.yellow[700])))),
-                                child: Text('Regresar',
-                                    style: TextStyle(
-                                      //fontFamily: "Love",
-                                      color: Colors.white,
-                                      letterSpacing: 0.5,
-                                      fontSize: 25,
-                                    )),
-                                onPressed: () {
-                                  Navigator.of(context).pop();
-                                }),
-                            SizedBox(
-                              width: 10,
-                            ),
-                            TextButton(
-                                style: ButtonStyle(
-                                    backgroundColor:
+                                                side: BorderSide(
+                                                    color: Colors.yellow[700])))),
+                                    child: Text('Regresar',
+                                        style: TextStyle(
+                                          //fontFamily: "Love",
+                                          color: Colors.white,
+                                          letterSpacing: 0.5,
+                                          fontSize: 25,
+                                        )),
+                                    onPressed: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) => Escenario()));
+                                    }),
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                TextButton(
+                                    style: ButtonStyle(
+                                        backgroundColor:
                                         MaterialStateProperty.all<Color>(
                                             Colors.orange[900]),
-                                    padding:
+                                        padding:
                                         MaterialStateProperty.all<EdgeInsets>(
                                             EdgeInsets.all(10)),
-                                    foregroundColor:
+                                        foregroundColor:
                                         MaterialStateProperty.all<Color>(
                                             Colors.orange[900]),
-                                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                                        RoundedRectangleBorder(
-                                            borderRadius:
+                                        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                                            RoundedRectangleBorder(
+                                                borderRadius:
                                                 BorderRadius.circular(40.0),
-                                            side: BorderSide(
-                                                color: Colors.orange[900])))),
-                                child: Text('siguiente',
-                                    style: TextStyle(
-                                      //fontFamily: "Love",
-                                      color: Colors.white,
-                                      letterSpacing: 0.5,
-                                      fontSize: 25,
-                                    )),
-                                onPressed: () {
-                                  _detectaEscenario(context);
-                                })
-                          ]))
+                                                side: BorderSide(
+                                                    color: Colors.orange[900])))),
+                                    child: Text('siguiente',
+                                        style: TextStyle(
+                                          //fontFamily: "Love",
+                                          color: Colors.white,
+                                          letterSpacing: 0.5,
+                                          fontSize: 25,
+                                        )),
+                                    onPressed: () {
+                                      _detectaEscenario(context);
+                                    })
+                              ]))
                     ]))));
   }
 
@@ -167,14 +173,14 @@ class Instruccion extends State<Ganador> {
             context,
             MaterialPageRoute(
                 builder: (context) => BuscaObjeto(
-                      //juego Tobjetos
+                  //juego Tobjetos
 
-                      id: widget.id,
-                      objeto: objetos[widget.id].objeto,
-                      imagenes: objetos[widget.id].imagenes2,
-                      imgcorrecta: objetos[widget.id].imgcorrecta,
-                      id_escenario: widget.id_escenario,
-                    )),
+                  id: widget.id,
+                  objeto: objetos[widget.id].objeto,
+                  imagenes: objetos[widget.id].imagenes2,
+                  imgcorrecta: objetos[widget.id].imgcorrecta,
+                  id_escenario: widget.id_escenario,
+                )),
           );
         }
         break;
@@ -184,15 +190,15 @@ class Instruccion extends State<Ganador> {
             context,
             MaterialPageRoute(
                 builder: (context) => EstaEn(
-                      //Juego Adondepertenece
-                      id: widget.id,
-                      frase: objetos[widget.id].frase,
-                      lugar: objetos[widget.id].lugar,
-                      validos: objetos[widget.id].validos,
-                      imagenes: objetos[widget.id].imagenes3,
-                      imglugar: objetos[widget.id].imglugar,
-                      id_escenario: widget.id_escenario,
-                    )),
+                  //Juego Adondepertenece
+                  id: widget.id,
+                  frase: objetos[widget.id].frase,
+                  lugar: objetos[widget.id].lugar,
+                  validos: objetos[widget.id].validos,
+                  imagenes: objetos[widget.id].imagenes3,
+                  imglugar: objetos[widget.id].imglugar,
+                  id_escenario: widget.id_escenario,
+                )),
           );
         }
         break;
@@ -202,15 +208,15 @@ class Instruccion extends State<Ganador> {
             context,
             MaterialPageRoute(
                 builder: (context) => Relacionable(
-                      //juego palabras
-                      id: widget.id,
-                      mostrar: objetos[widget.id].mostrar,
-                      imagen: objetos[widget.id].imagen,
-                      opciones: objetos[widget.id].opciones,
-                      imagenes: objetos[widget.id].imagenes,
-                      correcta: objetos[widget.id].correcta,
-                      id_escenario: widget.id_escenario,
-                    )),
+                  //juego palabras
+                  id: widget.id,
+                  mostrar: objetos[widget.id].mostrar,
+                  imagen: objetos[widget.id].imagen,
+                  opciones: objetos[widget.id].opciones,
+                  imagenes: objetos[widget.id].imagenes,
+                  correcta: objetos[widget.id].correcta,
+                  id_escenario: widget.id_escenario,
+                )),
           );
         }
         break;
@@ -220,8 +226,8 @@ class Instruccion extends State<Ganador> {
             context,
             MaterialPageRoute(
                 builder: (context) => GanadorNivel()
-                      
-                    ),
+
+            ),
           );
         }
     }
@@ -252,13 +258,13 @@ class Instruccion extends State<Ganador> {
             context,
             MaterialPageRoute(
                 builder: (context) => BuscaObjeto(
-                      //juego Tobjetos
-                      id: widget.id,
-                      objeto: objetosBanio[widget.id].objeto,
-                      imagenes: objetosBanio[widget.id].imagenes2,
-                      imgcorrecta: objetosBanio[widget.id].imgcorrecta,
-                      id_escenario: widget.id_escenario,
-                    )),
+                  //juego Tobjetos
+                  id: widget.id,
+                  objeto: objetosBanio[widget.id].objeto,
+                  imagenes: objetosBanio[widget.id].imagenes2,
+                  imgcorrecta: objetosBanio[widget.id].imgcorrecta,
+                  id_escenario: widget.id_escenario,
+                )),
           );
         }
         break;
@@ -268,15 +274,15 @@ class Instruccion extends State<Ganador> {
             context,
             MaterialPageRoute(
                 builder: (context) => EstaEn(
-                      //Juego Adondepertenece
-                      id: widget.id,
-                      frase: objetosBanio[widget.id].frase,
-                      lugar: objetosBanio[widget.id].lugar,
-                      validos: objetosBanio[widget.id].validos,
-                      imagenes: objetosBanio[widget.id].imagenes3,
-                      imglugar: objetosBanio[widget.id].imglugar,
-                      id_escenario: widget.id_escenario,
-                    )),
+                  //Juego Adondepertenece
+                  id: widget.id,
+                  frase: objetosBanio[widget.id].frase,
+                  lugar: objetosBanio[widget.id].lugar,
+                  validos: objetosBanio[widget.id].validos,
+                  imagenes: objetosBanio[widget.id].imagenes3,
+                  imglugar: objetosBanio[widget.id].imglugar,
+                  id_escenario: widget.id_escenario,
+                )),
           );
         }
         break;
@@ -286,26 +292,26 @@ class Instruccion extends State<Ganador> {
             context,
             MaterialPageRoute(
                 builder: (context) => Relacionable(
-                      //juego palabras
-                      id: widget.id,
-                      mostrar: objetosBanio[widget.id].mostrar,
-                      imagen: objetosBanio[widget.id].imagen,
-                      opciones: objetosBanio[widget.id].opciones,
-                      imagenes: objetosBanio[widget.id].imagenes,
-                      correcta: objetosBanio[widget.id].correcta,
-                      id_escenario: widget.id_escenario,
-                    )),
+                  //juego palabras
+                  id: widget.id,
+                  mostrar: objetosBanio[widget.id].mostrar,
+                  imagen: objetosBanio[widget.id].imagen,
+                  opciones: objetosBanio[widget.id].opciones,
+                  imagenes: objetosBanio[widget.id].imagenes,
+                  correcta: objetosBanio[widget.id].correcta,
+                  id_escenario: widget.id_escenario,
+                )),
           );
         }
         break;
-    default:
+      default:
         {
           return Navigator.push(
             context,
             MaterialPageRoute(
                 builder: (context) => GanadorNivel()
-                      
-                    ),
+
+            ),
           );
         }
     }
@@ -320,13 +326,13 @@ class Instruccion extends State<Ganador> {
             context,
             MaterialPageRoute(
                 builder: (context) => BuscaObjeto(
-                      //juego Tobjetos
-                      id: widget.id,
-                      objeto: objetosRecam[widget.id].objeto,
-                      imagenes: objetosRecam[widget.id].imagenes2,
-                      imgcorrecta: objetosRecam[widget.id].imgcorrecta,
-                      id_escenario: widget.id_escenario,
-                    )),
+                  //juego Tobjetos
+                  id: widget.id,
+                  objeto: objetosRecam[widget.id].objeto,
+                  imagenes: objetosRecam[widget.id].imagenes2,
+                  imgcorrecta: objetosRecam[widget.id].imgcorrecta,
+                  id_escenario: widget.id_escenario,
+                )),
           );
         }
         break;
@@ -336,15 +342,15 @@ class Instruccion extends State<Ganador> {
             context,
             MaterialPageRoute(
                 builder: (context) => EstaEn(
-                      //Juego Adondepertenece
-                      id: widget.id,
-                      frase: objetosRecam[widget.id].frase,
-                      lugar: objetosRecam[widget.id].lugar,
-                      validos: objetosRecam[widget.id].validos,
-                      imagenes: objetosRecam[widget.id].imagenes3,
-                      imglugar: objetosRecam[widget.id].imglugar,
-                      id_escenario: widget.id_escenario,
-                    )),
+                  //Juego Adondepertenece
+                  id: widget.id,
+                  frase: objetosRecam[widget.id].frase,
+                  lugar: objetosRecam[widget.id].lugar,
+                  validos: objetosRecam[widget.id].validos,
+                  imagenes: objetosRecam[widget.id].imagenes3,
+                  imglugar: objetosRecam[widget.id].imglugar,
+                  id_escenario: widget.id_escenario,
+                )),
           );
         }
         break;
@@ -354,15 +360,15 @@ class Instruccion extends State<Ganador> {
             context,
             MaterialPageRoute(
                 builder: (context) => Relacionable(
-                      //juego palabras
-                      id: widget.id,
-                      mostrar: objetosRecam[widget.id].mostrar,
-                      imagen: objetosRecam[widget.id].imagen,
-                      opciones: objetosRecam[widget.id].opciones,
-                      imagenes: objetosRecam[widget.id].imagenes,
-                      correcta: objetosRecam[widget.id].correcta,
-                      id_escenario: widget.id_escenario,
-                    )),
+                  //juego palabras
+                  id: widget.id,
+                  mostrar: objetosRecam[widget.id].mostrar,
+                  imagen: objetosRecam[widget.id].imagen,
+                  opciones: objetosRecam[widget.id].opciones,
+                  imagenes: objetosRecam[widget.id].imagenes,
+                  correcta: objetosRecam[widget.id].correcta,
+                  id_escenario: widget.id_escenario,
+                )),
           );
         }
         break;
