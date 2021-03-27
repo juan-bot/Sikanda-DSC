@@ -1,5 +1,5 @@
-import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import '../../AlertasEmergentes/AlertaInstruccionesProductos.dart';
 import '../../Constantes.dart';
 import 'ItemCardObjetosBanio.dart';
@@ -63,7 +63,6 @@ class ObjetosBanio extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Padding(
-          //padding: const EdgeInsets.all(16.0),//EdgeInsets.only(top : 15.0),
           padding: EdgeInsets.only(top : 15.0,left: 40,bottom: 15),
           child: Text(
             "Baño",
@@ -77,7 +76,7 @@ class ObjetosBanio extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: kDefaultPaddin),
             child: GridView.builder(
-                itemCount: objetos.length,
+                itemCount: objetosBanio.length,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,//numero de columnas
                   mainAxisSpacing: kDefaultPaddin,
@@ -85,7 +84,7 @@ class ObjetosBanio extends StatelessWidget {
                   childAspectRatio: 0.75,
                 ),
                 itemBuilder: (context, index) => ItemCardBanio(
-                  banio: objetos[index],
+                  banio: objetosBanio[index],
                 )),
           ),
         ),
