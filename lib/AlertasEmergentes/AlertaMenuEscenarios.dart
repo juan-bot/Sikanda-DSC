@@ -49,8 +49,8 @@ class Instruccion extends State<Escenario> {
         //body:RadialExpansionDemo(),
         body: SingleChildScrollView(
           scrollDirection: Axis.vertical,
-          child: SizedBox(height:MediaQuery.of(context).size.height*1.5,
-              child: RadialExpansionDemo()
+          child: SizedBox(height:1260,
+              child:Center(child: RadialExpansionDemo())
           ),
         )
     );

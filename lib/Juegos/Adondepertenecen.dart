@@ -41,7 +41,6 @@ class _EstaEnState extends State<EstaEn> {
           title: Text(
             'Sikanda',
             style: TextStyle(
-              fontFamily: "Love",
               color: Colors.white,
               letterSpacing: 0.5,
               fontSize: 30,
@@ -277,9 +276,11 @@ class _EstaEnState extends State<EstaEn> {
             child: ListBody(
               children: <Widget>[
                 Text(
-                    '1._Toca una de las areas de la casa que te llame la atencion'),
+                    '1._Observa las imágenes que se te muestran'),
                 Text(
-                    '2._cada uno de ellos tiene objetos diferentes por explorar'),
+                    '2._Con tu dedo desliza las imagenes  que crees que hay en la imagen mostrada'),
+                    Text(
+                    '2._¡Iniciemos!'),
               ],
             ),
           ),

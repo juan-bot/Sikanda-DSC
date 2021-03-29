@@ -33,25 +33,27 @@ class ObjetosCocinaScreen extends State<ListarObjetosCocina>{
   AppBar buildAppBar(BuildContext context) {
     return AppBar(
       backgroundColor: Color(0xFF9D2929),
-      title: Text('Objetos',
-        style: TextStyle(
-          fontSize: 30,
-          fontFamily: "Love",
-          color: Colors.white,
-          letterSpacing: 0.5,
-        ),
-      ),
+      centerTitle: true,
+      title: Text('Cocina',
+        
+        style: Theme.of(context)
+                .textTheme
+                .headline5
+                .copyWith(fontWeight: FontWeight.bold,
+                color: Colors.white, fontSize: 30),
+          
+          ),
       actions: <Widget>[
-        IconButton(
+        Padding(padding:const EdgeInsets.all(5),child:IconButton(
           icon: Icon(
             Icons.help_outline,
-            size: 40,
+            size: 35,
           ),
           tooltip: 'Ver instrucciones',
           onPressed: () {
             MostrarInformacion(context);
           },
-        )
+        ))
       ],
     );
   }
@@ -64,13 +66,6 @@ class ObjetosCocina extends StatelessWidget {
       children: <Widget>[
         Padding(
           padding: EdgeInsets.only(top : 15.0,left: 40,bottom: 15),
-          child: Text(
-            "Cocina",
-            style: Theme.of(context)
-                .textTheme
-                .headline5
-                .copyWith(fontWeight: FontWeight.bold),
-          ),
         ),
         Expanded(
           child: Padding(
@@ -79,8 +74,8 @@ class ObjetosCocina extends StatelessWidget {
                 itemCount: objetos.length,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,//numero de columnas
-                  mainAxisSpacing: kDefaultPaddin,
-                  crossAxisSpacing: kDefaultPaddin,
+                 mainAxisSpacing: 0,
+                  crossAxisSpacing: 20,
                   childAspectRatio: 0.75,
                 ),
                 itemBuilder: (context, index) => ItemCardCocina(

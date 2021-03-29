@@ -32,26 +32,30 @@ class ObjetosRecamaraScreen extends State<ListarObjetosRecamara>{
   }
   AppBar buildAppBar(BuildContext context) {
     return AppBar(
-      backgroundColor: Color(0xFF9D2929),
-      title: Text('Objetos',
-        style: TextStyle(
-          fontSize: 30,
-          fontFamily: "Love",
-          color: Colors.white,
-          letterSpacing: 0.5,
-        ),
-      ),
+    backgroundColor: Color(0xFF9D2929),
+     centerTitle: true,
+      title: Text('Recamara',
+        
+        style: Theme.of(context)
+                .textTheme
+                .headline5
+                .copyWith(fontWeight: FontWeight.bold,
+                color: Colors.white, fontSize: 30),
+          
+          ),
       actions: <Widget>[
-        IconButton(
+        Padding(padding:const EdgeInsets.all(5),
+
+        child: IconButton(
           icon: Icon(
             Icons.help_outline,
-            size: 40,
+            size: 35,
           ),
           tooltip: 'Ver instrucciones',
           onPressed: () {
             MostrarInformacion(context);
           },
-        )
+        ))
       ],
     );
   }
@@ -64,13 +68,7 @@ class ObjetosRecamara extends StatelessWidget {
       children: <Widget>[
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: kDefaultPaddin),
-          child: Text(
-            "Recamara",
-            style: Theme.of(context)
-                .textTheme
-                .headline5
-                .copyWith(fontWeight: FontWeight.bold),
-          ),
+          
         ),
         Expanded(
           child: Padding(
@@ -79,8 +77,8 @@ class ObjetosRecamara extends StatelessWidget {
                 itemCount: objetosRecam.length,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,//numero de columnas
-                  mainAxisSpacing: kDefaultPaddin,
-                  crossAxisSpacing: kDefaultPaddin,
+                 mainAxisSpacing: 0,
+                  crossAxisSpacing: 20,
                   childAspectRatio: 0.75,
                 ),
                 itemBuilder: (context, index) => ItemCardRecamara(

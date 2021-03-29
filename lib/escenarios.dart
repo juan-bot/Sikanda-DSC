@@ -41,7 +41,7 @@ class RadialExpansionDemo extends StatelessWidget {
   static Widget _buildPage(BuildContext context, String imageName, String description, Color fondo,String audio) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.orange[900],
+      backgroundColor: Color(0xFF9D2929),
         title: Text('Volver',
           style: TextStyle(
             fontSize: 30,
@@ -53,6 +53,7 @@ class RadialExpansionDemo extends StatelessWidget {
         //leading: IconButton(icon: icon, onPressed: onPressed),
       ),
       body: Container(
+
         color: fondo,
         child: Center(
           child: Card(
@@ -85,19 +86,19 @@ class RadialExpansionDemo extends StatelessWidget {
 
                 TextButton(
                     style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all<Color>(Colors.orange[900]),
+                        backgroundColor: MaterialStateProperty.all<Color>(Color(0xFF9D2929)),
                         padding: MaterialStateProperty.all<EdgeInsets>(EdgeInsets.all(10)),
-                        foregroundColor: MaterialStateProperty.all<Color>(Colors.orange[800]),
+                        foregroundColor: MaterialStateProperty.all<Color>(Color(0xFF9D2929)),
                         shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                             RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(40.0),
-                                side: BorderSide(color: Colors.orange)
+                                side: BorderSide(color: Color(0xFF9D2929))
                             )
                         )
                     ),
                     child: Text('Explorar $description',
                         style: TextStyle(
-                          fontFamily: "Love",
+                          //fontFamily: "Love",
                           color: Colors.white,
                           letterSpacing: 0.5,
                           fontSize: 30,
@@ -144,6 +145,8 @@ class RadialExpansionDemo extends StatelessWidget {
   }
   Widget mundo(BuildContext context,String imageName, String name, Color color, String audio) {
     return Container(
+        height: 350,
+        child:FittedBox(
         child: Column(children: <Widget>[
           SizedBox(
             height: 20.0,
@@ -157,20 +160,14 @@ class RadialExpansionDemo extends StatelessWidget {
             ),
             child: Column(
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      name,
-                      style:
-                      TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
-                    ),
-                    BotonAudio(audio),
-                  ],
-                ),
                 Hero(
                   createRectTween: _createRectTween,
                   tag: imageName,
+                  child:Container(
+                    height: 200,
+                    width: 200,
+                    child:FittedBox(
+                      fit: BoxFit.fill,
                   child: Photo(
                     photo: imageName,
                     onTap: () {
@@ -190,13 +187,53 @@ class RadialExpansionDemo extends StatelessWidget {
                         ),
                       );
                     },
-                  ),
+                  ))),
                 ),
+                SizedBox(height: 10,),
+                Container(
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Container(
+                                  width: 200,
+                                  height: 50,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white, //),
+                                    borderRadius: BorderRadius.circular(8),
+                                  ),
+                                  child: Padding(
+                                      padding: const EdgeInsets.all(8),
+                                      child: Text(
+                                        name,
+                                        style: TextStyle(
+                                            color: kTextLightColor,
+                                            fontSize: 30),
+                                      )),
+                                ),
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                Container(
+                                  height: 50,
+                                  width: 50,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white, //),
+                                    borderRadius: BorderRadius.circular(80),
+                                  ),
+                                  child: Padding(
+                                      padding:
+                                          const EdgeInsets.only(bottom: 30),
+                                      child: BotonAudio(
+                                          audio)),
+                                )
+                              ],
+                            ),
+                          )
               ],
             ),
           ),
         ]
-        )
+        ))
     );
   }
   @override
@@ -216,7 +253,7 @@ class RadialExpansionDemo extends StatelessWidget {
               children: [//llamada para los escenarios
                 mundo(context, 'assets/images/cocina2.gif', 'Cocina',Colors.orange[800],escenarios[0]),
                 mundo(context, 'assets/images/baño2.gif', 'Baño',Color(0xFFFFC400),escenarios[1]),
-                mundo(context, 'assets/images/recamara2.gif', 'Recamara',Color(0xFF304FFE),escenarios[2]),
+                mundo(context, 'assets/images/recamara2.gif', 'Recámara',Color(0xFF01A2C6),escenarios[2]),
               ],
             ),
           ),

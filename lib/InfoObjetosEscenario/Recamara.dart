@@ -41,7 +41,7 @@ List<Recamara> objetosRecam = [
       title: "Almohada",
       size: 12,
       image: "assets/images/recamara/almohada.png",
-      color: Color(0xFF3D82AE),
+      color: Color(0xFF01A2C6),
       imagen: "assets/images/recamara/accion/1.jpg",
       mostrar: "Ruben usa una -- para dormir",
       opciones: [
@@ -93,7 +93,7 @@ List<Recamara> objetosRecam = [
       title: "Armario",
       size: 8,
       image: "assets/images/recamara/armario.png",
-      color: Color(0xFFD3A984),
+      color: Color(0xFFD15A05),
       imagen: "assets/images/recamara/accion/2.jpg",
       // el espacion donde ira la palabra se indica como --
       mostrar: "Karla guarda su ropa en el --",
@@ -147,7 +147,7 @@ List<Recamara> objetosRecam = [
       title: "Cama",
       size: 10,
       image: "assets/images/recamara/cama.png",
-      color: Color(0xFF989493),
+      color: Color(0xFF953d68),
       imagen: "assets/images/recamara/accion/3.jpg",
       mostrar: "Hector está durmiendo en la --",
       opciones: [
@@ -200,7 +200,7 @@ List<Recamara> objetosRecam = [
       title: "Cobija",
       size: 11,
       image: "assets/images/recamara/cobertor.png",
-      color: Color(0xFFE6B398),
+      color: Color(0xFFf9AC34),
       imagen: "assets/images/recamara/accion/4.jpg",
       mostrar: "Joaquín tiene frío y se cubre con el --",
       opciones: [
@@ -252,7 +252,7 @@ List<Recamara> objetosRecam = [
       title: "Espejo",
       size: 28,
       image: "assets/images/recamara/espejo.png",
-      color: Color(0xFFFB7883),
+      color: Color(0xFFad2c34),
       imagen: "assets/images/recamara/accion/5.jpg",
       mostrar: "Rosa se peina enfrente del --",
       opciones: [
@@ -304,7 +304,7 @@ List<Recamara> objetosRecam = [
       title: "Lampara",
       size: 12,
       image: "assets/images/recamara/lampara.png",
-      color: Color(0xFFAEAEAE),
+      color: Color(0xFF205134),
       imagen: "assets/images/recamara/accion/6.jpg",
       mostrar: "Carmen estudia con una --",
       opciones: [
