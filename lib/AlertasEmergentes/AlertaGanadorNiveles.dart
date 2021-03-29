@@ -50,7 +50,7 @@ class Instruccion extends State<GanadorNivel> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       FloatingText(
-                        text: 'Felicidades!!!',
+                        text: '¡Felicidades!',
                         repeat: false,
                         textStyle: TextStyle(
                           fontSize: 40,
@@ -67,7 +67,7 @@ class Instruccion extends State<GanadorNivel> {
                           ],
                         ),
                       ),
-                      Text("Has completado todos los niveles!", style: TextStyle(fontSize: 30),),
+                      Text("¡Has completado todos los niveles!", style: TextStyle(fontSize: 30),),
                       SizedBox(height: 10),
                       Container(
                         child: Image.asset(

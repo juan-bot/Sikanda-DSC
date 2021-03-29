@@ -332,7 +332,7 @@ class _RompecabezasState extends State<Rompecabezas> {
             show(context, "Prueba otra vez", Colors.red[200],
                 "assets/images/confundido.png");
           } else
-            show(context, "Muy bien!!", Colors.green[200],
+            show(context, "¡Muy bien!", Colors.green[200],
                 "assets/images/feliz.png");
 
           Image temp = names[int.parse(data)];

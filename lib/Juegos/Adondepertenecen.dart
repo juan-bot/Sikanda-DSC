@@ -114,7 +114,7 @@ class _EstaEnState extends State<EstaEn> {
                   Container(
                     width: ancho,
                     child: Material(
-                      color: Colors.yellow,
+                    color: Color(0xFFD15A05),
                       child: Text(
                         a[1],
                         textAlign: TextAlign.center,
@@ -150,7 +150,7 @@ class _EstaEnState extends State<EstaEn> {
                   Container(
                     width: ancho,
                     child: Material(
-                      color: Colors.yellow,
+                    color: Color(0xFFD15A05),
                       child: Text(
                         a[1],
                         textAlign: TextAlign.center,
@@ -175,7 +175,7 @@ class _EstaEnState extends State<EstaEn> {
           setState(() {
             widget.imagenes.removeAt(int.parse(data));
             contv++;
-            show(context, "Muy bien!!", Colors.green[200], "assets/images/feliz.png");
+            show(context, "¡Muy bien!", Colors.green[200], "assets/images/feliz.png");
           });
         else
           show(context, "Prueba de nuevo", Colors.red[200],
@@ -188,7 +188,7 @@ class _EstaEnState extends State<EstaEn> {
             child: Column(
               children: [
                 Container(
-                    color: Colors.yellow,
+                    color: Color(0xFFD15A05),
                     width: ancho * 2,
                     height: ancho * 2,
                     child: FittedBox(
@@ -197,7 +197,7 @@ class _EstaEnState extends State<EstaEn> {
                       ),
                     )),
                 Material(
-                  color: Colors.yellow,
+                 color: Color(0xFFD15A05),
                   child: Container(
                     width: ancho * 2,
                     child: Text(id,
@@ -229,7 +229,7 @@ class _EstaEnState extends State<EstaEn> {
                         ),
                       )),
                   Material(
-                    color: Colors.yellow,
+                    color: Color(0xFFD15A05),
                     child: Container(
                       width: ancho * 2,
                       child: Text(
