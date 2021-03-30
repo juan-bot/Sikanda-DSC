@@ -226,7 +226,7 @@ SizedBox(
                                       padding:
                                           const EdgeInsets.only(bottom: 30),
                                       child: BotonAudio(
-                                          AudioRecamara[banio.id - 1])),
+                                          AudioBanio[banio.id - 1])),
                                 )
                               ],
                             ),
