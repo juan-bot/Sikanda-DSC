@@ -23,7 +23,7 @@ class ItemCardBanio extends StatelessWidget {
   static Widget _buildPage(BuildContext context, String imageName, String description, Color fondo,String audio, int id, int id_escenario) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.orange[900],
+      backgroundColor: Color(0xFF9D2929),
         title: Text('Volver',
           style: TextStyle(
             fontSize: 30,
@@ -68,13 +68,13 @@ class ItemCardBanio extends StatelessWidget {
                 ),
                 TextButton(
                     style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all<Color>(Colors.orange[900]),
+                        backgroundColor: MaterialStateProperty.all<Color>(Color(0xFF9D2929)),
                         padding: MaterialStateProperty.all<EdgeInsets>(EdgeInsets.all(10)),
-                        foregroundColor: MaterialStateProperty.all<Color>(Colors.orange[800]),
+                        foregroundColor: MaterialStateProperty.all<Color>(Color(0xFF9D2929)),
                         shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                             RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(40.0),
-                                side: BorderSide(color: Colors.orange)
+                                side: BorderSide(color: Color(0xFF9D2929))
                             )
                         )
                     ),
@@ -83,7 +83,7 @@ class ItemCardBanio extends StatelessWidget {
                       children: [
                         Text('Jugar',
                             style: TextStyle(
-                              fontFamily: "Love",
+                              //fontFamily: "Love",
                               color: Colors.white,
                               letterSpacing: 0.5,
                               fontSize: 30,
@@ -128,18 +128,40 @@ class ItemCardBanio extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
+SizedBox(
+            height: 10,
+          ),
           Expanded(
             child: Container(
-              padding: EdgeInsets.all(kDefaultPaddin),
-              decoration: BoxDecoration(
-                color: banio.color,
-                borderRadius: BorderRadius.circular(26),
-              ),
-              child: Hero(
+                height: 200,
+                width: 150,
+                padding: EdgeInsets.all(12),
+                decoration: BoxDecoration(
+                  color: banio.color,
+                  borderRadius: BorderRadius.circular(26),
+                ),
+                child: FittedBox(
+                    //
+                    fit: BoxFit.fill,
+                    child: Column(
+                        //crossAxisAlignment: CrossAxisAlignment.center,
+
+                        children: [
+                          Container(
+                            alignment: Alignment.center,
+                            height: 100,              
+                            child: Hero(
                 createRectTween: _createRectTween,
                 tag: "${banio.id}",
-                child: Photo(
-                  photo: banio.image,
+               child: Material(
+                                    color: Theme.of(context)
+                                        .primaryColor
+                                        .withOpacity(0.0),
+                                    child: InkWell(
+                                      child: Container(
+                                        height: 100,
+                                        child: Image.asset(banio.image),
+                                      ),
                   onTap: () {
                     Navigator.of(context).push(
                       PageRouteBuilder<void>(
@@ -151,32 +173,69 @@ class ItemCardBanio extends StatelessWidget {
                                   opacity: opacityCurve.transform(animation.value),
                                   child: _buildPage(context, banio.image, banio.title, banio.color, AudioBanio[banio.id-1],(banio.id-1),2),
                                 );
-                              }
-                          );
+                              });
+                          
                         },
                       ),
                     );
                   },
-                ),
+                ))),
                 /*tag: "${banio.id}",
                 child: Image.asset(banio.image),*/
               ),
-            ),
+            
+          
+
+          SizedBox(
+                            height: 20,
+                          ),
+
+                          ////padding: const EdgeInsets.symmetric(
+                          //vertical: 8),
+                          Container(
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Container(
+                                  width: 140,
+                                  height: 50,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white, //),
+                                    borderRadius: BorderRadius.circular(8),
+                                  ),
+                                  child: Padding(
+                                      padding: const EdgeInsets.all(8),
+                                      child: Text(
+                                        banio.title,
+                                        style: TextStyle(
+                                            color: kTextLightColor,
+                                            fontSize: 30),
+                                      )),
+                                ),
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                Container(
+                                  height: 55,
+                                  width: 55,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white, //),
+                                    borderRadius: BorderRadius.circular(80),
+                                  ),
+                                  child: Padding(
+                                      padding:
+                                          const EdgeInsets.all(1),
+                                      child: BotonAudio(
+                                          AudioBanio[banio.id - 1])),
+                                )
+                              ],
+                            ),
+                          )
+                        ]))),
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: kDefaultPaddin / 4),
-            child: Row(
-              children: [
-                Text(
-                  banio.title,
-                  style: TextStyle(
-                    color: kTextLightColor,
-                  ),
-                ),
-                BotonAudio(AudioBanio[banio.id-1]),
-              ],
-            ),
-          ),
+          SizedBox(
+            height: 10,
+          )
         ],
       ),
     );

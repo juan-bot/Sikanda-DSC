@@ -41,7 +41,6 @@ class _EstaEnState extends State<EstaEn> {
           title: Text(
             'Sikanda',
             style: TextStyle(
-              fontFamily: "Love",
               color: Colors.white,
               letterSpacing: 0.5,
               fontSize: 30,
@@ -115,7 +114,7 @@ class _EstaEnState extends State<EstaEn> {
                   Container(
                     width: ancho,
                     child: Material(
-                      color: Colors.yellow,
+                    color: Color(0xFFD15A05),
                       child: Text(
                         a[1],
                         textAlign: TextAlign.center,
@@ -151,7 +150,7 @@ class _EstaEnState extends State<EstaEn> {
                   Container(
                     width: ancho,
                     child: Material(
-                      color: Colors.yellow,
+                    color: Color(0xFFD15A05),
                       child: Text(
                         a[1],
                         textAlign: TextAlign.center,
@@ -176,7 +175,7 @@ class _EstaEnState extends State<EstaEn> {
           setState(() {
             widget.imagenes.removeAt(int.parse(data));
             contv++;
-            show(context, "Muy bien!!", Colors.green[200], "assets/images/feliz.png");
+            show(context, "¡Muy bien!", Colors.green[200], "assets/images/feliz.png");
           });
         else
           show(context, "Prueba de nuevo", Colors.red[200],
@@ -189,7 +188,7 @@ class _EstaEnState extends State<EstaEn> {
             child: Column(
               children: [
                 Container(
-                    color: Colors.yellow,
+                    color: Color(0xFFD15A05),
                     width: ancho * 2,
                     height: ancho * 2,
                     child: FittedBox(
@@ -198,7 +197,7 @@ class _EstaEnState extends State<EstaEn> {
                       ),
                     )),
                 Material(
-                  color: Colors.yellow,
+                 color: Color(0xFFD15A05),
                   child: Container(
                     width: ancho * 2,
                     child: Text(id,
@@ -230,7 +229,7 @@ class _EstaEnState extends State<EstaEn> {
                         ),
                       )),
                   Material(
-                    color: Colors.yellow,
+                    color: Color(0xFFD15A05),
                     child: Container(
                       width: ancho * 2,
                       child: Text(
@@ -277,9 +276,11 @@ class _EstaEnState extends State<EstaEn> {
             child: ListBody(
               children: <Widget>[
                 Text(
-                    '1._Toca una de las areas de la casa que te llame la atencion'),
+                    '1._Observa las imágenes que se te muestran'),
                 Text(
-                    '2._cada uno de ellos tiene objetos diferentes por explorar'),
+                    '2._Con tu dedo desliza las imagenes  que crees que hay en la imagen mostrada'),
+                    Text(
+                    '2._¡Iniciemos!'),
               ],
             ),
           ),

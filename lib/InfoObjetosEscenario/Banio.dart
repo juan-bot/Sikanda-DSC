@@ -32,7 +32,7 @@ List<Banio> objetosBanio = [
       title: "Cepillo Dental",
       size: 12,
       image: "assets/images/banio/cepillo.png",
-      color: Color(0xFF3D82AE),
+      color: Color(0xFF01A2C6),
       ///////Juego Palabras/////////////
       imagen: "assets/images/banio/accion/1.jpg",
       mostrar: "Pedro usa un -- para lavarse los dientes",
@@ -69,15 +69,15 @@ List<Banio> objetosBanio = [
       imgcorrecta: "cepillo dental",
       ///////////////////juego AdondePertenecen////////////////
       imagenes3:[
-        "assets/images/banio/jabon.png--jabon--bano",
+        "assets/images/banio/jabon.png--jabon--baño",
         "assets/images/recamara/cobertor.png--cobertor--recamara",
-        "assets/images/banio/pasta.png--pasta dental--bano",
-        "assets/images/banio/cepillo.png--cepillo dental--bano",
+        "assets/images/banio/pasta.png--pasta dental--baño",
+        "assets/images/banio/cepillo.png--cepillo dental--baño",
         "assets/images/cocina/brocoli.png--brocoli--cocina",
-        "assets/images/banio/labavo.png--lavabo--bano",
+        "assets/images/banio/labavo.png--lavabo--baño",
       ],
       validos:4,
-      lugar:"bano",
+      lugar:"baño",
       frase:"el baño",
       imglugar: "assets/images/baño2.gif"
 
@@ -87,7 +87,7 @@ List<Banio> objetosBanio = [
       title: "Inodoro",
       size: 8,
       image: "assets/images/banio/inodoro.png",
-      color: Color(0xFFD3A984),
+      color: Color(0xFFD15A05),
       imagen: "assets/images/banio/accion/2.jpg",
       mostrar: "En el baño hay un --",
       opciones: [
@@ -124,15 +124,15 @@ List<Banio> objetosBanio = [
       imgcorrecta: "inodoro",
       ///////////////////juego AdondePertenecen////////////////
       imagenes3:[
-        "assets/images/banio/jabon.png--jabon--bano",
+        "assets/images/banio/jabon.png--jabon--baño",
         "assets/images/recamara/cobertor.png--cobertor--recamara",
-        "assets/images/banio/inodoro.png--inodoro--bano",
-        "assets/imagesrecamara/lampara.png--lampara--bano",
+        "assets/images/banio/inodoro.png--inodoro--baño",
+        "assets/imagesrecamara/lampara.png--lampara--baño",
         "assets/images/cocina/uva.png--uvas--cocina",
-        "assets/images/banio/labavo.png--lavabo--bano",
+        "assets/images/banio/labavo.png--lavabo--baño",
       ],
       validos:3,
-      lugar:"bano",
+      lugar:"baño",
       frase:"el baño",
       imglugar: "assets/images/baño2.gif"
 
@@ -143,7 +143,7 @@ List<Banio> objetosBanio = [
       title: "Jabon",
       size: 10,
       image: "assets/images/banio/jabon.png",
-      color: Color(0xFF989493),
+      color: Color(0xFF953d68),
       imagen: "assets/images/banio/accion/3.jpg",
       mostrar: "Dany se lava sus manos con --",
       opciones: [
@@ -180,15 +180,15 @@ List<Banio> objetosBanio = [
       imgcorrecta: "jabon",
       ///////////////////juego AdondePertenecen////////////////
       imagenes3:[
-        "assets/images/banio/jabon.png--jabon--bano",
+        "assets/images/banio/jabon.png--jabon--baño",
         "assets/images/recamara/cobertor.png--cobertor--recamara",
-        "assets/images/banio/inodoro.png--inodoro--bano",
+        "assets/images/banio/inodoro.png--inodoro--baño",
         "assets/images/cocina/fresa.png--fresa--cocina",
-        "assets/images/banio/pasta.png--pasta dental--bano",
-        "assets/images/banio/shampoo.png--shampoo--bano",
+        "assets/images/banio/pasta.png--pasta dental--baño",
+        "assets/images/banio/shampoo.png--shampoo--baño",
       ],
       validos:4,
-      lugar:"bano",
+      lugar:"baño",
       frase:"el baño",
       imglugar: "assets/images/baño2.gif"
 
@@ -198,7 +198,7 @@ List<Banio> objetosBanio = [
       title: "Labavo",
       size: 11,
       image: "assets/images/banio/labavo.png",
-      color: Color(0xFFE6B398),
+      color: Color(0xFFf9AC34),
       imagen: "assets/images/banio/accion/4.jpg",
       mostrar: "Ramon se lava su cara en el --",
       opciones: [
@@ -234,15 +234,15 @@ List<Banio> objetosBanio = [
       imgcorrecta: "lavabo",
       ///////////////////juego AdondePertenecen////////////////
       imagenes3:[
-        "assets/images/banio/cepillo.png--cepillo dental--bano",
+        "assets/images/banio/cepillo.png--cepillo dental--baño",
         "assets/images/recamara/espejo.png--espejo--recamara",
-        "assets/images/banio/shampoo.png--shampoo--bano",
+        "assets/images/banio/shampoo.png--shampoo--baño",
         "assets/images/recamara/armario.png--armario --recamara",
         "assets/images/cocina/brocoli.png--brocoli--cocina",
-        "assets/images/banio/labavo.png--lavabo--bano",
+        "assets/images/banio/labavo.png--lavabo--baño",
       ],
       validos:3,
-      lugar:"bano",
+      lugar:"baño",
       frase:"el baño",
       imglugar: "assets/images/baño2.gif"
 
@@ -252,7 +252,7 @@ List<Banio> objetosBanio = [
       title: "Pasta Dental",
       size: 28,
       image: "assets/images/banio/pasta.png",
-      color: Color(0xFFFB7883),
+      color: Color(0xFFad2c34),
       imagen: "assets/images/banio/accion/5.png",
       mostrar: "Adrian usa -- para lavar sus dientes.",
       opciones: [
@@ -288,15 +288,15 @@ List<Banio> objetosBanio = [
       imgcorrecta: "pasta dental",
       ///////////////////juego AdondePertenecen////////////////
       imagenes3:[
-        "assets/images/banio/jabon.png--jabon--bano",
+        "assets/images/banio/jabon.png--jabon--baño",
         "assets/images/recamara/cobertor.png--cobertor--recamara",
         "assets/images/cocina/lechuga.png--lechuga--cocina",
-        "assets/images/banio/pasta.png--pasta dental--bano",
+        "assets/images/banio/pasta.png--pasta dental--baño",
         "assets/images/cocina/brocoli.png--brocoli--cocina",
-        "assets/images/banio/labavo.png--lavabo--bano",
+        "assets/images/banio/labavo.png--lavabo--baño",
       ],
       validos:3,
-      lugar:"bano",
+      lugar:"baño",
       frase:"el baño",
       imglugar: "assets/images/baño2.gif"
 
@@ -306,7 +306,7 @@ List<Banio> objetosBanio = [
       title: "Shampoo",
       size: 12,
       image: "assets/images/banio/shampoo.png",
-      color: Color(0xFFAEAEAE),
+      color: Color(0xFF205134),
       imagen: "assets/images/banio/accion/6.png",
       mostrar: "Sara se lava el cabello con --",
       opciones: [
@@ -342,15 +342,15 @@ List<Banio> objetosBanio = [
       imgcorrecta: "shampoo",
       ///////////////////juego AdondePertenecen////////////////
       imagenes3:[
-        "assets/images/banio/shampoo.png--jabon--bano",
+        "assets/images/banio/shampoo.png--jabon--baño",
         "assets/images/recamara/cobertor.png--cobertor--recamara",
-        "assets/images/banio/pasta.png--pasta dental--bano",
-        "assets/images/banio/cepillo.png--cepillo--bano",
+        "assets/images/banio/pasta.png--pasta dental--baño",
+        "assets/images/banio/cepillo.png--cepillo--baño",
         "assets/images/cocina/fresa.png--fresa--cocina",
-        "assets/images/banio/labavo.png--lavabo--bano",
+        "assets/images/banio/labavo.png--lavabo--baño",
       ],
       validos:4,
-      lugar:"bano",
+      lugar:"baño",
       frase:"el baño",
       imglugar: "assets/images/baño2.gif"
 

@@ -41,7 +41,7 @@ List<Cocina> objetos = [
       title: "Uva",
       size: 12,
       image: "assets/images/cocina/uva.png",
-      color: Color(0xFF3D82AE),
+      color: Color(0xFF01A2C6),
       imagen: "assets/images/cocina/accion/1.png",
       mostrar: "Rosita come --",
       opciones: [
@@ -95,7 +95,7 @@ List<Cocina> objetos = [
       title: "Brocoli",
       size: 8,
       image: "assets/images/cocina/brocoli.png",
-      color: Color(0xFFD3A984),
+      color: Color(0xFFD15A05),
       imagen: "assets/images/cocina/accion/2.jpg",
       mostrar: "Pedro está comiendo un --",
       opciones: [
@@ -147,7 +147,7 @@ List<Cocina> objetos = [
       title: "Cuchara",
       size: 10,
       image: "assets/images/cocina/cuchara.png",
-      color: Color(0xFF989493),
+      color: Color(0xFF953d68),
       imagen: "assets/images/cocina/accion/3.jpg",
       mostrar: "La -- de Ana",
       opciones: [
@@ -199,7 +199,7 @@ List<Cocina> objetos = [
       title: "Fresa",
       size: 11,
       image: "assets/images/cocina/fresa.png",
-      color: Color(0xFFE6B398),
+      color: Color(0xFFf9AC34),
       imagen: "assets/images/cocina/accion/4.png",
       mostrar: "Adrian tiene una --",
       opciones: [
@@ -251,7 +251,7 @@ List<Cocina> objetos = [
       title: "Platano",
       size: 28,
       image: "assets/images/cocina/platano.png",
-      color: Color(0xFFFB7883),
+      color: Color(0xFFad2c34),
       imagen: "assets/images/cocina/accion/5.jpg",
       mostrar: "Teresa esta comiendo un --",
       opciones: [
@@ -305,7 +305,7 @@ List<Cocina> objetos = [
       title: "Plato",
       size: 12,
       image: "assets/images/cocina/plato.png",
-      color: Color(0xFFAEAEAE),
+      color: Color(0xFF205134),
       imagen: "assets/images/cocina/accion/6.jpg",
       mostrar: "En la mesa hay un --",
       opciones: [

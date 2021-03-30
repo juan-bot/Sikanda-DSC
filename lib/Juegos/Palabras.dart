@@ -138,6 +138,8 @@ class _RelacionableState extends State<Relacionable> {
         if (id == data)
           setState(() {
             correct = true;
+            show(context, "¡Muy bien!", Colors.green[200], "assets/images/feliz.png");
+
           });
         else
           setState(() {

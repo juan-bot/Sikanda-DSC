@@ -70,7 +70,7 @@ class Instruccion extends State<Ganador> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       FloatingText(
-                        text: 'Felicidades!!!',
+                        text: '¡Felicidades!',
                         repeat: false,
                         textStyle: TextStyle(
                           fontSize: 40,
@@ -150,7 +150,7 @@ class Instruccion extends State<Ganador> {
                                                 BorderRadius.circular(40.0),
                                                 side: BorderSide(
                                                     color: Colors.orange[900])))),
-                                    child: Text('siguiente',
+                                    child: Text('Siguiente',
                                         style: TextStyle(
                                           //fontFamily: "Love",
                                           color: Colors.white,

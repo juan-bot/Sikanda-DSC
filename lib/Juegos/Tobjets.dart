@@ -1,6 +1,7 @@
 import 'package:achievement_view/achievement_view.dart';
 import 'package:flutter/material.dart';
 import 'package:rompecabezas_sika/AlertasEmergentes/AlertaGanador.dart';
+import 'package:rompecabezas_sika/ContenidoIdioma/Intrucciones.dart';
 
 class BuscaObjeto extends StatefulWidget {
   final List<String> imagenes;
@@ -48,13 +49,19 @@ class _BuscaObjetoState extends State<BuscaObjeto> {
                   )
                 ],
               ),
-              decoration: BoxDecoration(border: Border.all(width: 1)),
+              decoration: BoxDecoration(
+                border: Border.all(width: 1),
+                
+              ),
             ),
             onTap: () {
               setState(() {
                 acertado = element.split("--")[1] == widget.imgcorrecta;
                 if(!acertado)
-                  show(context, "Intentalo de nuevo", Colors.red[200], "assets/images/confundido.png");
+                  show(context, "Inténtalo de nuevo", Colors.red[200], "assets/images/confundido.png");
+                else
+                  show(context, "¡Muy bien!", Colors.green[200], "assets/images/feliz.png");
+
               });
             },
           )
@@ -144,7 +151,7 @@ class _BuscaObjetoState extends State<BuscaObjeto> {
           content: SingleChildScrollView(
             child: ListBody(
               children: <Widget>[
-                //  Text(instrucciones[3]),
+                Text(instrucciones[4]),
               ],
             ),
           ),

@@ -33,26 +33,27 @@ class ObjetosBanioScreen extends State<ListarObjetosBanio>{
   AppBar buildAppBar(BuildContext context) {
     return AppBar(
       backgroundColor: Color(0xFF9D2929),
-      //backgroundColor: Colors.orange[900],
-      title: Text('Objetos',
-        style: TextStyle(
-          fontSize: 30,
-          fontFamily: "Love",
-          color: Colors.white,
-          letterSpacing: 0.5,
-        ),
-      ),
+    centerTitle: true,
+      title: Text('Baño',
+        
+        style: Theme.of(context)
+                .textTheme
+                .headline5
+                .copyWith(fontWeight: FontWeight.bold,
+                color: Colors.white, fontSize: 30),
+          
+          ),
       actions: <Widget>[
-        IconButton(
+        Padding(padding:const EdgeInsets.all(5),child:IconButton(
           icon: Icon(
             Icons.help_outline,
-            size: 40,
+            size: 35,
           ),
           tooltip: 'Ver instrucciones',
           onPressed: () {
             MostrarInformacion(context);
           },
-        )
+        ))
       ],
     );
   }
@@ -65,29 +66,24 @@ class ObjetosBanio extends StatelessWidget {
       children: <Widget>[
         Padding(
           padding: EdgeInsets.only(top : 15.0,left: 40,bottom: 15),
-          child: Text(
-            "Baño",
-            style: Theme.of(context)
-                .textTheme
-                .headline5
-                .copyWith(fontWeight: FontWeight.bold),
-          ),
+         
         ),
         Expanded(
+          child:Center(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: kDefaultPaddin),
             child: GridView.builder(
                 itemCount: objetosBanio.length,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,//numero de columnas
-                  mainAxisSpacing: kDefaultPaddin,
-                  crossAxisSpacing: kDefaultPaddin,
+                 mainAxisSpacing: 0,
+                  crossAxisSpacing: 20,
                   childAspectRatio: 0.75,
                 ),
                 itemBuilder: (context, index) => ItemCardBanio(
                   banio: objetosBanio[index],
                 )),
-          ),
+          )),
         ),
       ],
     );
