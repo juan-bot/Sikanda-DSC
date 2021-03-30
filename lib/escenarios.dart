@@ -214,15 +214,15 @@ class RadialExpansionDemo extends StatelessWidget {
                                   width: 10,
                                 ),
                                 Container(
-                                  height: 50,
-                                  width: 50,
+                                  height: 55,
+                                  width: 55,
                                   decoration: BoxDecoration(
                                     color: Colors.white, //),
                                     borderRadius: BorderRadius.circular(80),
                                   ),
                                   child: Padding(
                                       padding:
-                                          const EdgeInsets.only(bottom: 30),
+                                          const EdgeInsets.all(1),
                                       child: BotonAudio(
                                           audio)),
                                 )

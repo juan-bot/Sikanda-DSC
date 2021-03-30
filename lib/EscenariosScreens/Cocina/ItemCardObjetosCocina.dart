@@ -230,16 +230,17 @@ class ItemCardCocina extends StatelessWidget {
                                 SizedBox(
                                   width: 10,
                                 ),
-                                Container(
-                                  height: 50,
-                                  width: 50,
+                                
+                              Container(
+                                  height: 55,
+                                  width: 55,
                                   decoration: BoxDecoration(
                                     color: Colors.white, //),
                                     borderRadius: BorderRadius.circular(80),
                                   ),
                                   child: Padding(
                                       padding:
-                                          const EdgeInsets.only(bottom: 30),
+                                          const EdgeInsets.all(1),
                                       child: BotonAudio(
                                           AudioCocina[cocina.id - 1])),
                                 )
