@@ -9,7 +9,6 @@ import '../AlertasEmergentes/AlertaGanador.dart';
 import '../Audio.dart';
 import '../Constantes.dart';
 
-
 class Rompecabezas extends StatefulWidget {
   //------Estos indentificadores indican que tarjeta esta en cada
   //------posicion sirven para saber si estan correctos o no.
@@ -22,14 +21,14 @@ class Rompecabezas extends StatefulWidget {
   final int ren, col; //0
   Rompecabezas(
       {this.imagen,
-        this.id_escenario,
-        this.ren,
-        this.col,
-        this.audio,
-        this.nombre,
-        this.color,
-        this.imgn,
-        this.id});
+      this.id_escenario,
+      this.ren,
+      this.col,
+      this.audio,
+      this.nombre,
+      this.color,
+      this.imgn,
+      this.id});
 
   @override
   _RompecabezasState createState() => _RompecabezasState(
@@ -42,7 +41,12 @@ class _RompecabezasState extends State<Rompecabezas> {
   final String audio;
   final String nombre;
   final Color fondo;
-  _RompecabezasState({this.img, this.audio, this.nombre, this.fondo,});
+  _RompecabezasState({
+    this.img,
+    this.audio,
+    this.nombre,
+    this.fondo,
+  });
 
   List<Image> output = List<Image>.empty(growable: true);
   List<int> bytes = [];
@@ -76,9 +80,15 @@ class _RompecabezasState extends State<Rompecabezas> {
   leer(BuildContext context) async {
     var imageData = await rootBundle.load(widget.imagen);
     bytes = Uint8List.view(imageData.buffer);
+    int tamw = (MediaQuery.of(context).size.width).round() - widget.col;
+    int tamh = (MediaQuery.of(context).size.height).round() -
+        widget.ren -
+        200 -
+        (MediaQuery.of(context).size.height * 0.15).round();
+    if (tamw > tamh) tamw = tamh;
+
     splitImage(imglib.copyResize(imglib.decodeImage(bytes),
-        width: (MediaQuery.of(context).size.width).round() - widget.col,
-        height: (MediaQuery.of(context).size.width).round() - widget.ren));
+        width: tamw, height: tamw));
     setState(() {
       spliteready = true;
     });
@@ -200,93 +210,96 @@ class _RompecabezasState extends State<Rompecabezas> {
       body: !ready
           ? //if true
 //----------- Animacion de cargando
-      Container(
-        padding: EdgeInsets.all(20),
-        width: MediaQuery.of(context).size.width,
-        decoration: BoxDecoration(color: Colors.indigoAccent),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              "Cargando...",
-              style: TextStyle(color: Colors.white, fontSize: 40),
-            ),
-            SizedBox(
-              height: 40,
-            ),
-          ],
-        ),
-      )
-      //-------- Termina animacion de cargando ---
-          : Container(
-        width: double.infinity,
-        height: double.infinity,
-        child: Column(children: [
-          SizedBox(
-            height: 10,
-          ),
           Container(
+              padding: EdgeInsets.all(20),
               width: MediaQuery.of(context).size.width,
-              color: Colors.orange[100],
+              decoration: BoxDecoration(color: Colors.indigoAccent),
               child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Text(
-                      "Arma el rompecabezas",
-                      style: TextStyle(fontSize: 30, fontFamily: "Love"),
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Container(
-                        child: Row(
-
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Container(
-                                  padding: EdgeInsets.all(5),
-                                  margin: const EdgeInsets.all(5),
-                                  child: Image.asset(img)),
-                              Container(
-
-                                  child: Column(
-                                      mainAxisAlignment:
-                                      MainAxisAlignment.start,
-                                      children: [
-                                        Center(
-                                            child: Text(nombre,
-                                                style: TextStyle(
-                                                  fontSize: 30,
-                                                ))),
-                                        BotonAudio(audio),
-                                      ]))
-                            ]),
-                        color:
-                        fondo, //Colors.orange[100],                  //////////////////////////color//////////////////////////
-                        height: MediaQuery.of(context).size.height * 0.15,
-                        width: MediaQuery.of(context).size.width)
-                  ])),
-          SizedBox(
-            height: 10,
-          ),
-          armado
-              ? Ganador(id: widget.id, id_game: 1, id_escenario:widget.id_escenario)
-
-          //______________________
-          //aqui se pone el mensaje de felicitacion
-              : Container(
-            height: MediaQuery.of(context).size.height * 0.59,
-
-            ///revisar como se ven en otros telefonos
-            child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: (dragg ? colum : colum2)),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-        ]),
-      ),
+                children: <Widget>[
+                  Text(
+                    "Cargando...",
+                    style: TextStyle(color: Colors.white, fontSize: 40),
+                  ),
+                  SizedBox(
+                    height: 40,
+                  ),
+                ],
+              ),
+            )
+          //-------- Termina animacion de cargando ---
+          : Container(
+              width: double.infinity,
+              height: double.infinity,
+              child: Column(children: [
+                SizedBox(
+                  height: 10,
+                ),
+                Container(
+                    width: MediaQuery.of(context).size.width,
+                    color: Colors.orange[100],
+                    child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Text(
+                            "Arma el rompecabezas",
+                            style: TextStyle(fontSize: 30, fontFamily: "Love"),
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Container(
+                              child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    Container(
+                                        padding: EdgeInsets.all(5),
+                                        margin: const EdgeInsets.all(5),
+                                        child: Image.asset(img)),
+                                    Container(
+                                        child: Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.start,
+                                            children: [
+                                          Center(
+                                              child: Text(nombre,
+                                                  style: TextStyle(
+                                                    fontSize: 30,
+                                                  ))),
+                                          BotonAudio(audio),
+                                        ]))
+                                  ]),
+                              color:
+                                  fondo, //Colors.orange[100],                  //////////////////////////color//////////////////////////
+                              height: MediaQuery.of(context).size.height * 0.15,
+                              width: MediaQuery.of(context).size.width)
+                        ])),
+                SizedBox(
+                  height: 10,
+                ),
+                armado
+                    ? Ganador(
+                        id: widget.id,
+                        id_game: 1,
+                        id_escenario: widget.id_escenario)
+
+                    //______________________
+                    //aqui se pone el mensaje de felicitacion
+                    : Expanded(
+                        child: Container(
+                          // height: MediaQuery.of(context).size.height * 0.59,
+
+                          ///revisar como se ven en otros telefonos
+                          child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: (dragg ? colum : colum2)),
+                        ),
+                      ),
+                SizedBox(
+                  height: 10,
+                ),
+              ]),
+            ),
     );
   }
 
@@ -372,18 +385,18 @@ class _RompecabezasState extends State<Rompecabezas> {
       builder: (context, candidateData, List<dynamic> rejectedData) {
         return candidateData.isEmpty
             ? Container(
-            child: img,
-            width: ancho,
-            height: alto,
-            decoration: BoxDecoration(border: Border.all(width: 1)))
+                child: img,
+                width: ancho,
+                height: alto,
+                decoration: BoxDecoration(border: Border.all(width: 1)))
             : Opacity(
-          opacity: 0.7,
-          child: Container(
-              child: img,
-              width: ancho,
-              height: alto,
-              decoration: BoxDecoration(border: Border.all(width: 1))),
-        );
+                opacity: 0.7,
+                child: Container(
+                    child: img,
+                    width: ancho,
+                    height: alto,
+                    decoration: BoxDecoration(border: Border.all(width: 1))),
+              );
       },
     );
   }
@@ -437,5 +450,4 @@ class _RompecabezasState extends State<Rompecabezas> {
       },
     )..show();
   }
-
 }
