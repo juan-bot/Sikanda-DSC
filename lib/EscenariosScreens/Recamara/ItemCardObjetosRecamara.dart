@@ -222,7 +222,7 @@ class ItemCardRecamara extends StatelessWidget {
                                       padding:
                                           const EdgeInsets.only(bottom: 30),
                                       child: BotonAudio(
-                                          AudioCocina[recamara.id - 1])),
+                                          AudioRecamara[recamara.id - 1])),
                                 )
                               ],
                             ),
