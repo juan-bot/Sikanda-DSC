@@ -13,13 +13,13 @@ class EstaEn extends StatefulWidget {
 
   const EstaEn(
       {Key key,
-        this.id_escenario,
-        this.id,
-        this.imglugar,
-        this.validos,
-        this.lugar,
-        this.frase,
-        this.imagenes})
+      this.id_escenario,
+      this.id,
+      this.imglugar,
+      this.validos,
+      this.lugar,
+      this.frase,
+      this.imagenes})
       : super(key: key);
 
   @override
@@ -27,11 +27,7 @@ class EstaEn extends StatefulWidget {
 }
 
 class _EstaEnState extends State<EstaEn> {
-  List<Widget> objetos = [];
   int contv = 0;
-  int minpos = 10;
-  List<int> posiciones = [];
-  bool ready = false;
 
   @override
   Widget build(BuildContext context) {
@@ -78,22 +74,23 @@ class _EstaEnState extends State<EstaEn> {
             ),
             contv >= widget.validos
                 ? Container(
-                height: 300,
-                child: FittedBox(fit: BoxFit.fill,
-                    child: Ganador(
-                        id: widget.id,
-                        id_game: 3,
-                        id_escenario:widget.id_escenario)))
+                    height: 300,
+                    child: FittedBox(
+                        fit: BoxFit.fill,
+                        child: Ganador(
+                            id: widget.id,
+                            id_game: 3,
+                            id_escenario: widget.id_escenario)))
                 : Wrap(
-              alignment: WrapAlignment.center,
-              direction: Axis.horizontal,
-              spacing: 10.0,
-              runSpacing: 10.0,
-              children: List.generate(
-                  widget.imagenes.length,
-                      (index) => buildDragObjet(widget.imagenes[index], index,
-                      MediaQuery.of(context).size.width / 4)),
-            ),
+                    alignment: WrapAlignment.center,
+                    direction: Axis.horizontal,
+                    spacing: 10.0,
+                    runSpacing: 10.0,
+                    children: List.generate(
+                        widget.imagenes.length,
+                        (index) => buildDragObjet(widget.imagenes[index], index,
+                            MediaQuery.of(context).size.width / 4)),
+                  ),
             //objetos
           ],
         ));
@@ -114,7 +111,7 @@ class _EstaEnState extends State<EstaEn> {
                   Container(
                     width: ancho,
                     child: Material(
-                    color: Color(0xFFD15A05),
+                      color: Color(0xFFD15A05),
                       child: Text(
                         a[1],
                         textAlign: TextAlign.center,
@@ -144,13 +141,13 @@ class _EstaEnState extends State<EstaEn> {
                     height: ancho,
                     child: FittedBox(
                         child: Image.asset(
-                          a[0],
-                        )),
+                      a[0],
+                    )),
                   ),
                   Container(
                     width: ancho,
                     child: Material(
-                    color: Color(0xFFD15A05),
+                      color: Color(0xFFD15A05),
                       child: Text(
                         a[1],
                         textAlign: TextAlign.center,
@@ -175,7 +172,8 @@ class _EstaEnState extends State<EstaEn> {
           setState(() {
             widget.imagenes.removeAt(int.parse(data));
             contv++;
-            show(context, "¡Muy bien!", Colors.green[200], "assets/images/feliz.png");
+            show(context, "¡Muy bien!", Colors.green[200],
+                "assets/images/feliz.png");
           });
         else
           show(context, "Prueba de nuevo", Colors.red[200],
@@ -185,71 +183,72 @@ class _EstaEnState extends State<EstaEn> {
           List<dynamic> rejectedData) {
         return candidateData.isEmpty
             ? Container(
-            child: Column(
-              children: [
-                Container(
-                    color: Color(0xFFD15A05),
-                    width: ancho * 2,
-                    height: ancho * 2,
-                    child: FittedBox(
-                      child: Image.asset(
-                        widget.imglugar,
-                      ),
-                    )),
-                Material(
-                 color: Color(0xFFD15A05),
-                  child: Container(
-                    width: ancho * 2,
-                    child: Text(id,
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 15.0,
-                          fontWeight: FontWeight.bold,
+                child: Column(
+                  children: [
+                    Container(
+                        color: Color(0xFFD15A05),
+                        width: ancho * 2,
+                        height: ancho * 2,
+                        child: FittedBox(
+                          child: Image.asset(
+                            widget.imglugar,
+                          ),
                         )),
-                  ),
-                )
-              ],
-            ),
-            decoration: BoxDecoration(border: Border.all(width: 1)))
-            : Opacity(
-          opacity: 0.7,
-          child: Container(
-            //margin: const EdgeInsets.only(bottom: 10.0),
-            // ignore: deprecated_member_use
-            //color: Colors.yellow,
-              child: Column(
-                children: [
-                  Container(
-                      width: ancho * 2,
-                      height: ancho * 2,
-                      child: FittedBox(
-                        child: Image.asset(
-                          widget.imglugar,
-                        ),
-                      )),
-                  Material(
-                    color: Color(0xFFD15A05),
-                    child: Container(
-                      width: ancho * 2,
-                      child: Text(
-                        id,
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 15.0,
-                          fontWeight: FontWeight.bold,
-                        ),
+                    Material(
+                      color: Color(0xFFD15A05),
+                      child: Container(
+                        width: ancho * 2,
+                        child: Text(id,
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 15.0,
+                              fontWeight: FontWeight.bold,
+                            )),
                       ),
+                    )
+                  ],
+                ),
+                decoration: BoxDecoration(border: Border.all(width: 1)))
+            : Opacity(
+                opacity: 0.7,
+                child: Container(
+                    //margin: const EdgeInsets.only(bottom: 10.0),
+                    // ignore: deprecated_member_use
+                    //color: Colors.yellow,
+                    child: Column(
+                      children: [
+                        Container(
+                            width: ancho * 2,
+                            height: ancho * 2,
+                            child: FittedBox(
+                              child: Image.asset(
+                                widget.imglugar,
+                              ),
+                            )),
+                        Material(
+                          color: Color(0xFFD15A05),
+                          child: Container(
+                            width: ancho * 2,
+                            child: Text(
+                              id,
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 15.0,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        )
+                      ],
                     ),
-                  )
-                ],
-              ),
-              decoration: BoxDecoration(border: Border.all(width: 1))),
-        );
+                    decoration: BoxDecoration(border: Border.all(width: 1))),
+              );
       },
     );
   }
+
   void show(BuildContext context, String msj, Color col, String img) {
     AchievementView(
       context,
@@ -257,7 +256,9 @@ class _EstaEnState extends State<EstaEn> {
       color: col,
       title: msj,
       subTitle: " ",
-      textStyleTitle: TextStyle(fontSize: 25,),
+      textStyleTitle: TextStyle(
+        fontSize: 25,
+      ),
       isCircle: true,
       listener: (status) {
         print(status);
@@ -275,12 +276,10 @@ class _EstaEnState extends State<EstaEn> {
           content: SingleChildScrollView(
             child: ListBody(
               children: <Widget>[
-                Text(
-                    '1._Observa las imágenes que se te muestran'),
+                Text('1._Observa las imágenes que se te muestran'),
                 Text(
                     '2._Con tu dedo desliza las imagenes  que crees que hay en la imagen mostrada'),
-                    Text(
-                    '2._¡Iniciemos!'),
+                Text('2._¡Iniciemos!'),
               ],
             ),
           ),
@@ -296,5 +295,4 @@ class _EstaEnState extends State<EstaEn> {
       },
     );
   }
-
 }
