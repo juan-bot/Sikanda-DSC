@@ -18,7 +18,7 @@ NOTE: It's probably than Android Studio asks you to do update Dart SDK, you just
 STEEP 4:  To run project, you have 2 options: The first one is conecting a android device or use an android emulator. 
 You have to select your device prefered.
 
-![2](https://user-images.githubusercontent.com/56168229/114311018-a0f1f600-9ab2-11eb-9c74-e522891d8334.png)
+![2](https://user-images.githubusercontent.com/56168229/114311752-96852b80-9ab5-11eb-8870-bf715e935132.png)
 
 STEEP 5: Click on green play button to run project
 
