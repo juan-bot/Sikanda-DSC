@@ -16,7 +16,7 @@ STEEP 3: Search the project "Sikanda-DSC-main" in your files and select OK to op
 NOTE: It's probably than Android Studio asks you to do update Dart SDK, you just need to click on update and that's all.
 
 STEEP 4:  To run project, you have 2 options: The first one is conecting a android device or use an android emulator. 
-You have to select your device prefered.
+You have to select your preferred device.
 
 ![2](https://user-images.githubusercontent.com/56168229/114311752-96852b80-9ab5-11eb-8870-bf715e935132.png)
 
