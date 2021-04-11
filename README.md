@@ -1,6 +1,32 @@
 # SIKANDA
 
 Sikanda is an educative app for kids that have Down´s syndrome. This app lets to know their home through three scenarios: Kitchen, Bedroom and bathroom.We know it's very important to include all the kids in the state from Oaxaca, and we decided to include also the language Spanish, other two dialects: Mixteco and Zapoteco these languages come from of Oaxaca.
+# Instructions to run project
+
+NOTE: You need have Android Studio, Flutter installed and Dart installed in Android Studio.
+
+STEEP 1: Open Android Studio.
+
+STEEP 2: Select "Open an Existing Project".
+
+STEEP 3: Search the project "Sikanda-DSC-main" in your files and select OK to open project.
+
+![1](https://user-images.githubusercontent.com/56168229/114310397-4b1c4e80-9ab0-11eb-989c-b00441320e89.PNG)
+
+NOTE: It's probably than Android Studio asks you to do update Dart SDK, you just need to click on update and that's all.
+
+STEEP 4:  To run project, you have 2 options: The first one is conecting a android device or use an android emulator. 
+You have to select your device prefered.
+
+![2](https://user-images.githubusercontent.com/56168229/114311018-a0f1f600-9ab2-11eb-9c74-e522891d8334.png)
+
+STEEP 5: Click on green play button to run project
+
+![3](https://user-images.githubusercontent.com/56168229/114311312-dea34e80-9ab3-11eb-94c5-349d4f943eba.png)
+
+STEEP 6: Wait to compile project and Enjoy SIKANDA!
+
+![4](https://user-images.githubusercontent.com/56168229/114311284-c7646100-9ab3-11eb-8ad2-e83e1a8db333.png)
 
 # Application Screens 
 
