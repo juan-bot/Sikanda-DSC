@@ -35,7 +35,7 @@ import 'ContenidoIdioma/Intrucciones.dart';
         ]
     );
   }
-
+// dialog + audio
 Future<void> _showMyDialog(int i, BuildContext context ) async {
     AudioCache cache;
     cache = AudioCache(fixedPlayer: reproduceInstrucciones);
@@ -68,6 +68,7 @@ Future<void> _showMyDialog(int i, BuildContext context ) async {
       },
     );
   }
+  //only text 
    Future<void> _showMyDialogtext(BuildContext context, int i) async {
     //  AudioCache cache;
     //cache = AudioCache(fixedPlayer: reproduceInstrucciones);
