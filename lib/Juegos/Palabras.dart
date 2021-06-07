@@ -206,7 +206,7 @@ class _RelacionableState extends State<Relacionable> {
   Widget build(BuildContext context) {
     if (!ready) armadatos();
     return Scaffold(
-      appBar:getAppBar("sikanda...",3,context),
+      appBar:getAppBar("Sikanda",3,context),
       body: !ready
           ? Container()
           : correct

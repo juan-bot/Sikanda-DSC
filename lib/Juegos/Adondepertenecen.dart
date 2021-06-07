@@ -34,7 +34,7 @@ class _EstaEnState extends State<EstaEn> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: getAppBar("sikanda...",5,context),
+        appBar: getAppBar("Sikanda",5,context),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [

@@ -179,7 +179,7 @@ class _RompecabezasState extends State<Rompecabezas> {
       cargadatos(context);
     }
     return Scaffold(
-      appBar: getAppBar("sikanda...",2,context),
+      appBar: getAppBar("Sikanda",2,context),
       body: !ready
           ? //if true
 //----------- Animacion de cargando

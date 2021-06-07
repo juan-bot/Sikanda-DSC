@@ -10,7 +10,7 @@ import 'ContenidoIdioma/Intrucciones.dart';
       title: Text(title,
       style: TextStyle(
             fontSize: 30,
-            fontFamily: "Love",
+           // fontFamily: "Love",
             color: Colors.white,
             letterSpacing: 0.5,
           )),

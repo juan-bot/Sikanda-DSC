@@ -83,7 +83,7 @@ class _BuscaObjetoState extends State<BuscaObjeto> {
   Widget build(BuildContext context) {
     listo ? listo = true : carga(context);
     return Scaffold(
-        appBar:getAppBar("sikanda...",4,context),
+        appBar:getAppBar("Sikanda",4,context),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
