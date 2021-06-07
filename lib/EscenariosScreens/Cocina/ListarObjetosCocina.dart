@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:rompecabezas_sika/BaseAppBar.dart';
 import '../../AlertasEmergentes/AlertaInstruccionesProductos.dart';
 import '../../Constantes.dart';
 import 'ItemCardObjetosCocina.dart';
@@ -19,42 +20,15 @@ class ObjetosCocinaScreen extends State<ListarObjetosCocina>{
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance.addPostFrameCallback((_) => MostrarInformacion(context));
+    //WidgetsBinding.instance.addPostFrameCallback((_) => MostrarInformacion(context));
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       //backgroundColor: Colors.orange[800],
-      appBar: buildAppBar(context),
+      appBar: getAppBar("Cocina", 1, context),
       body: ObjetosCocina(),
-    );
-  }
-  AppBar buildAppBar(BuildContext context) {
-    return AppBar(
-      backgroundColor: Color(0xFF9D2929),
-      centerTitle: true,
-      title: Text('Cocina',
-        
-        style: Theme.of(context)
-                .textTheme
-                .headline5
-                .copyWith(fontWeight: FontWeight.bold,
-                color: Colors.white, fontSize: 30),
-          
-          ),
-      actions: <Widget>[
-        Padding(padding:const EdgeInsets.all(5),child:IconButton(
-          icon: Icon(
-            Icons.help_outline,
-            size: 35,
-          ),
-          tooltip: 'Ver instrucciones',
-          onPressed: () {
-            MostrarInformacion(context);
-          },
-        ))
-      ],
     );
   }
 }

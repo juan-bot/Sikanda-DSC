@@ -45,7 +45,6 @@ class RadialExpansionDemo extends StatelessWidget {
         title: Text('Volver',
           style: TextStyle(
             fontSize: 30,
-            fontFamily: "Love",
             color: Colors.white,
             letterSpacing: 0.5,
           ),

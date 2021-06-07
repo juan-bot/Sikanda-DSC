@@ -7,6 +7,7 @@ import 'ContenidoIdioma/Intrucciones.dart';
   AppBar getAppBar(String title, int i, BuildContext context) {
     return AppBar(
       backgroundColor: Color(0xFF9D2929),
+      centerTitle: true,
       title: Text(title,
       style: TextStyle(
             fontSize: 30,
