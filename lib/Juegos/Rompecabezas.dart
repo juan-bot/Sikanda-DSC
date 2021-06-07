@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'dart:typed_data';
-import 'package:audioplayers/audio_cache.dart';
 import 'package:flutter/services.dart';
 import 'package:image/image.dart' as imglib;
-import 'package:rompecabezas_sika/ContenidoIdioma/Intrucciones.dart';
 import 'package:achievement_view/achievement_view.dart';
 import '../AlertasEmergentes/AlertaGanador.dart';
 import '../Audio.dart';
-import '../Constantes.dart';
+import '../BaseAppBar.dart';
 
 class Rompecabezas extends StatefulWidget {
   //------Estos indentificadores indican que tarjeta esta en cada
@@ -164,7 +162,6 @@ class _RompecabezasState extends State<Rompecabezas> {
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance.addPostFrameCallback((_) => _showMyDialog());
   }
 
   @override
@@ -182,31 +179,7 @@ class _RompecabezasState extends State<Rompecabezas> {
       cargadatos(context);
     }
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Color(0xFF9D2929),
-        title: Text(
-          'Sikanda',
-          style: TextStyle(
-            fontFamily: "Love",
-            color: Colors.white,
-            letterSpacing: 0.5,
-            fontSize: 30,
-          ),
-        ),
-        actions: <Widget>[
-          IconButton(
-            icon: Icon(
-              Icons.help_outline,
-              size: 40,
-            ),
-            tooltip: 'Ver instrucciones',
-            onPressed: () {
-              // UI with the changes.
-              _showMyDialog();
-            },
-          )
-        ],
-      ),
+      appBar: getAppBar("sikanda...",2,context),
       body: !ready
           ? //if true
 //----------- Animacion de cargando
@@ -401,39 +374,7 @@ class _RompecabezasState extends State<Rompecabezas> {
     );
   }
 
-  Future<void> _showMyDialog() async {
-    AudioCache cache;
-    cache = AudioCache(fixedPlayer: reproduceInstrucciones);
-    cache.loop(intruccionesAux[2]);
-    auxAudioInstrucciones = true;
-    return showDialog<void>(
-      context: context,
-      barrierDismissible: false, // user must tap button!
-      builder: (BuildContext context) {
-        return AlertDialog(
-          title: Text('Instrucciones'),
-          content: SingleChildScrollView(
-            child: ListBody(
-              children: <Widget>[
-                Text(instrucciones[2]),
-              ],
-            ),
-          ),
-          actions: <Widget>[
-            TextButton(
-              child: Text('cerrar'),
-              onPressed: () {
-                auxAudioInstrucciones = false;
-                reproduceInstrucciones.stop();
-                Navigator.of(context).pop();
-              },
-            ),
-          ],
-        );
-      },
-    );
-  }
-
+ 
   void show(BuildContext context, String msj, Color col, String img) {
     AchievementView(
       context,

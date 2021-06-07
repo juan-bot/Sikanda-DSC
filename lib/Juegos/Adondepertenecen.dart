@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:achievement_view/achievement_view.dart';
 import 'package:rompecabezas_sika/AlertasEmergentes/AlertaGanador.dart';
 
+import '../BaseAppBar.dart';
+
 class EstaEn extends StatefulWidget {
   final int id_escenario;
   final int id;
@@ -32,30 +34,7 @@ class _EstaEnState extends State<EstaEn> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Color(0xFF9D2929),
-          title: Text(
-            'Sikanda',
-            style: TextStyle(
-              color: Colors.white,
-              letterSpacing: 0.5,
-              fontSize: 30,
-            ),
-          ),
-          actions: <Widget>[
-            IconButton(
-              icon: Icon(
-                Icons.help_outline,
-                size: 40,
-              ),
-              tooltip: 'Ver instrucciones',
-              onPressed: () {
-                // UI with the changes.
-                showMyDialog(context);
-              },
-            )
-          ],
-        ),
+        appBar: getAppBar("sikanda...",5,context),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
@@ -266,33 +245,5 @@ class _EstaEnState extends State<EstaEn> {
     )..show();
   }
 
-  Future<void> showMyDialog(BuildContext context) async {
-    return showDialog<void>(
-      context: context,
-      barrierDismissible: false, // user must tap button!
-      builder: (BuildContext context) {
-        return AlertDialog(
-          title: Text('Instrucciones'),
-          content: SingleChildScrollView(
-            child: ListBody(
-              children: <Widget>[
-                Text('1._Observa las imágenes que se te muestran'),
-                Text(
-                    '2._Con tu dedo desliza las imagenes  que crees que hay en la imagen mostrada'),
-                Text('2._¡Iniciemos!'),
-              ],
-            ),
-          ),
-          actions: <Widget>[
-            TextButton(
-              child: Text('cerrar'),
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
-            ),
-          ],
-        );
-      },
-    );
-  }
+ 
 }

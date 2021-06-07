@@ -1,7 +1,8 @@
 import 'package:achievement_view/achievement_view.dart';
 import 'package:flutter/material.dart';
 import 'package:rompecabezas_sika/AlertasEmergentes/AlertaGanador.dart';
-import 'package:rompecabezas_sika/ContenidoIdioma/Intrucciones.dart';
+
+import '../BaseAppBar.dart';
 
 class BuscaObjeto extends StatefulWidget {
   final List<String> imagenes;
@@ -82,31 +83,7 @@ class _BuscaObjetoState extends State<BuscaObjeto> {
   Widget build(BuildContext context) {
     listo ? listo = true : carga(context);
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Color(0xFF9D2929),
-          title: Text(
-            'Sikanda',
-            style: TextStyle(
-              fontFamily: "Love",
-              color: Colors.white,
-              letterSpacing: 0.5,
-              fontSize: 30,
-            ),
-          ),
-          actions: <Widget>[
-            IconButton(
-              icon: Icon(
-                Icons.help_outline,
-                size: 40,
-              ),
-              tooltip: 'Ver instrucciones',
-              onPressed: () {
-                // UI with the changes.
-                _showMyDialog();
-              },
-            )
-          ],
-        ),
+        appBar:getAppBar("sikanda...",4,context),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
@@ -137,38 +114,7 @@ class _BuscaObjetoState extends State<BuscaObjeto> {
           ],
         ));
   }
-  Future<void> _showMyDialog() async {
-    //  AudioCache cache;
-    //cache = AudioCache(fixedPlayer: reproduceInstrucciones);
-    // cache.loop(intruccionesAux[3]);
-    //auxAudioInstrucciones=true;
-    return showDialog<void>(
-      context: context,
-      barrierDismissible: false, // user must tap button!
-      builder: (BuildContext context) {
-        return AlertDialog(
-          title: Text('Instrucciones'),
-          content: SingleChildScrollView(
-            child: ListBody(
-              children: <Widget>[
-                Text(instrucciones[4]),
-              ],
-            ),
-          ),
-          actions: <Widget>[
-            TextButton(
-              child: Text('cerrar'),
-              onPressed: () {
-                // auxAudioInstrucciones=false;
-                //reproduceInstrucciones.stop();
-                Navigator.of(context).pop();
-              },
-            ),
-          ],
-        );
-      },
-    );
-  }
+  
   void show(BuildContext context, String msj, Color col, String img) {
     AchievementView(
       context,
