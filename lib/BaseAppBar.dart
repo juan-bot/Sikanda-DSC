@@ -15,7 +15,9 @@ import 'ContenidoIdioma/Intrucciones.dart';
             letterSpacing: 0.5,
           )),
       actions: <Widget>[
-          IconButton(
+          Padding(padding:const EdgeInsets.only(right: 10.0),
+          child:IconButton(
+            
             icon: Icon(
               Icons.help_outline,
               size: 40,
@@ -28,7 +30,7 @@ import 'ContenidoIdioma/Intrucciones.dart';
               else
               _showMyDialogtext(context, i);
             },
-          )
+          ))
         ]
     );
   }
