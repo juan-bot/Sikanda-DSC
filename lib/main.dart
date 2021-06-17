@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:splash_screen_view/SplashScreenView.dart';
+import 'Lifecycle.dart';
 import 'SeleccionIdiomas.dart';
 
 void main() async => {
@@ -14,12 +15,14 @@ class MyApp extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Center(
-        child: SplashScreen(),
-      ),
-    ) ;
+    return LifeCycleManager(
+        child: MaterialApp(
+          debugShowCheckedModeBanner: false,
+          home: Center(
+            child: SplashScreen(),
+          ),
+        )
+    );
   }
 }
 //pagina presentacion del logo y nombre del juego

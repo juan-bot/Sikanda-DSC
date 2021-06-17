@@ -27,11 +27,13 @@ class AudioBtn extends State<BotonAudio> {
   @override
   Widget build(BuildContext context) {
     reproduceFrases.onPlayerCompletion.listen((event) {
-      setState(() {
-        playBtn = Icons.volume_up;
-        playing = false;
-        auxAudio=false;
-      });
+      if(mounted){
+        setState(() {
+          playBtn = Icons.volume_up;
+          playing = false;
+          auxAudio=false;
+        });
+      }
     });
     return IconButton(
       iconSize: 40.0,
