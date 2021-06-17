@@ -86,7 +86,7 @@ flutter:
     - assets/audio/zapoteco/cocina/
     - assets/audio/zapoteco/recamara/
     - assets/audio/espaniol/instrucciones/
-   # - assets/audio/mixteco/instrucciones/
+    - assets/audio/mixteco/instrucciones/
     - assets/audio/zapoteco/instrucciones/
     - assets/audio/espaniol/frasesJuegoPalabras/Banio/
     - assets/audio/espaniol/frasesJuegoPalabras/Cocina/

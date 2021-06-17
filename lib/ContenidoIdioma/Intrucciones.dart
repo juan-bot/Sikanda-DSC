@@ -17,17 +17,17 @@ List<String> intruccionesEsp=[
 ];
 
 List<String> intruccionesMixteco=[
-  "audio/espaniol/instrucciones/1.m4a",
-  "audio/espaniol/instrucciones/2.m4a",
-  "audio/espaniol/instrucciones/3.m4a",
-  "audio/espaniol/instrucciones/4.m4a"
+  "audio/mixteco/instrucciones/1.mp3",
+  "audio/mixteco/instrucciones/2.mp3",
+  "audio/mixteco/instrucciones/3.mp3",
+  "audio/mixteco/instrucciones/4.mp3"
 ];
 
 List<String> intruccionesZapoteco=[
   "audio/zapoteco/instrucciones/1.mp3",
   "audio/zapoteco/instrucciones/2.mp3",
   "audio/zapoteco/instrucciones/3.mp3",
-  "audio/zapoteco/instrucciones/4.mp3"
+  "audio/zapoteco/instrucciones/3.mp3"
 ];
 
 List<String> escenariosEsp=[
