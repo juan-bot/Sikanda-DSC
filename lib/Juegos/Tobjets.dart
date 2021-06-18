@@ -1,7 +1,9 @@
 import 'package:achievement_view/achievement_view.dart';
 import 'package:flutter/material.dart';
 import 'package:rompecabezas_sika/AlertasEmergentes/AlertaGanador.dart';
+import 'package:rompecabezas_sika/ContenidoIdioma/Intrucciones.dart';
 
+import '../Audio.dart';
 import '../BaseAppBar.dart';
 
 class BuscaObjeto extends StatefulWidget {
@@ -10,8 +12,9 @@ class BuscaObjeto extends StatefulWidget {
   final int id;
   final String imgcorrecta;
   final String objeto;
+  final Color fondo;
   const BuscaObjeto(
-      {this.objeto,  this.imgcorrecta,  this.imagenes, this.id, this.id_escenario})
+      {this.objeto,  this.imgcorrecta,  this.imagenes, this.id, this.id_escenario, this.fondo})
       : super();
 
   @override
@@ -85,24 +88,60 @@ class _BuscaObjetoState extends State<BuscaObjeto> {
     return Scaffold(
         appBar:getAppBar("Sikanda",4,context),
         body: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-            Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
-              Container(
-                width: MediaQuery.of(context).size.width,
-                child: Center(child:Text(
-                  'Encuentra ' + widget.objeto ,
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 30.0,
-                    fontWeight: FontWeight.bold,
-                  ),
+            Container(
+              decoration: BoxDecoration(
+                color:widget.fondo,
+                borderRadius: BorderRadius.only(
+                  bottomRight: Radius.circular(45.0),
+                  bottomLeft: Radius.circular(45.0),
                 ),
-                ),)
-            ]),
+                //color: Colors.amber,
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text(
+                    'Encuentra ' + widget.objeto ,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 30.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Container(
+                    height: 55,
+                    width: 55,
+                    margin: const EdgeInsets.only(top: 5),
+                    decoration: BoxDecoration(
+                      color: Colors.white, //),
+                      borderRadius: BorderRadius.circular(50),
+                    ),
+                    child: Padding(
+                        padding: const EdgeInsets.all(1),
+                        child: BotonAudio(intruccionesAux[1])
+                    ),
+                  ),
+                ],
+              ),
+
+              padding: const EdgeInsets.only(top: 5),
+              height: MediaQuery.of(context).size.height * 0.15,
+              width: MediaQuery.of(context).size.width,
+              //color: widget.fondo,
+            ),
+            SizedBox(
+              height: 40,//padding top
+            ),
             acertado
                 ? Center(
-                child: Ganador(id:widget.id,id_game: 2, id_escenario: widget.id_escenario)
+                child:
+                Ganador(
+                    id:widget.id,id_game: 2,
+                    id_escenario: widget.id_escenario,
+                    fondo:widget.fondo
+                )
 
             )
                 : Wrap(
@@ -112,7 +151,8 @@ class _BuscaObjetoState extends State<BuscaObjeto> {
               children: objetos,
             )
           ],
-        ));
+        )
+    );
   }
   
   void show(BuildContext context, String msj, Color col, String img) {

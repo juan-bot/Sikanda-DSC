@@ -232,7 +232,19 @@ class _RelacionableState extends State<Relacionable> {
               child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    BotonAudio(juegoPalabras[widget.id])
+                    Container(
+                      height: 55,
+                      width: 55,
+                      margin: const EdgeInsets.only(top: 5),
+                      decoration: BoxDecoration(
+                        color: Colors.amber, //),
+                        borderRadius: BorderRadius.circular(50),
+                      ),
+                      child: Padding(
+                          padding: const EdgeInsets.all(1),
+                          child: BotonAudio(juegoPalabras[widget.id])
+                      ),
+                    ),
                   ]
               )
           ),   //    audio de la accion

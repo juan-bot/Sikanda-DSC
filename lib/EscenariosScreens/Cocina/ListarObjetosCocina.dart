@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:rompecabezas_sika/BaseAppBar.dart';
-import '../../AlertasEmergentes/AlertaInstruccionesProductos.dart';
 import '../../Constantes.dart';
 import 'ItemCardObjetosCocina.dart';
 import '../../InfoObjetosEscenario/Cocina.dart';

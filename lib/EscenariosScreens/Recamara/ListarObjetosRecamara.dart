@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:rompecabezas_sika/BaseAppBar.dart';
-import '../../AlertasEmergentes/AlertaInstruccionesProductos.dart';
 import '../../Constantes.dart';
 import '../../InfoObjetosEscenario/Recamara.dart';
 import 'ItemCardObjetosRecamara.dart';

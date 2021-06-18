@@ -205,48 +205,69 @@ class _RompecabezasState extends State<Rompecabezas> {
               width: double.infinity,
               height: double.infinity,
               child: Column(children: [
-                SizedBox(
-                  height: 10,
-                ),
                 Container(
                     width: MediaQuery.of(context).size.width,
-                    color: Colors.orange[100],
+                    //color: Colors.orange[100],
+                    decoration: BoxDecoration(
+                      color:fondo,
+                      borderRadius: BorderRadius.only(
+                        bottomRight: Radius.circular(135.0),
+                      ),
+                      //color: Colors.amber,
+                    ),
                     child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           Text(
                             "Arma el rompecabezas",
-                            style: TextStyle(fontSize: 30, fontFamily: "Love"),
+                            style: TextStyle(
+                                fontSize: 30,
+                                //fontFamily: "Love",
+                                color: Colors.white
+                            ),
                           ),
                           SizedBox(
                             height: 10,
                           ),
                           Container(
-                              child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: [
-                                    Container(
-                                        padding: EdgeInsets.all(5),
-                                        margin: const EdgeInsets.all(5),
-                                        child: Image.asset(img)),
-                                    Container(
-                                        child: Column(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.start,
-                                            children: [
-                                          Center(
-                                              child: Text(nombre,
-                                                  style: TextStyle(
-                                                    fontSize: 30,
-                                                  ))),
-                                          BotonAudio(audio),
-                                        ]))
-                                  ]),
-                              color:
-                                  fondo, //Colors.orange[100],                  //////////////////////////color//////////////////////////
-                              height: MediaQuery.of(context).size.height * 0.15,
-                              width: MediaQuery.of(context).size.width)
-                        ])),
+                            child: Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Container(
+                                      padding: EdgeInsets.all(5),
+                                      margin: const EdgeInsets.all(5),
+                                      child: Image.asset(img)
+                                  ),
+                                  Column(
+                                    children: [
+                                      Text(nombre,
+                                          style: TextStyle(
+                                            fontSize: 30,
+                                            color: Colors.white,
+                                          )
+                                      ),
+                                      Container(
+                                        height: 55,
+                                        width: 55,
+                                        decoration: BoxDecoration(
+                                          color: Colors.white, //),
+                                          borderRadius: BorderRadius.circular(50),
+                                        ),
+                                        child: Padding(
+                                            padding:
+                                            const EdgeInsets.all(1),
+                                            child: BotonAudio(audio)),
+                                      ),
+                                    ],
+                                  ),
+                                ]
+                            ),
+                            height: MediaQuery.of(context).size.height * 0.15,
+                            width: MediaQuery.of(context).size.width,
+                          )
+                        ]
+                    )
+                ),
                 SizedBox(
                   height: 10,
                 ),
@@ -254,8 +275,9 @@ class _RompecabezasState extends State<Rompecabezas> {
                     ? Ganador(
                         id: widget.id,
                         id_game: 1,
-                        id_escenario: widget.id_escenario)
-
+                        id_escenario: widget.id_escenario,
+                        fondo:fondo
+                )
                     //______________________
                     //aqui se pone el mensaje de felicitacion
                     : Expanded(

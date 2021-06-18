@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:achievement_view/achievement_view.dart';
 import 'package:rompecabezas_sika/AlertasEmergentes/AlertaGanador.dart';
+import 'package:rompecabezas_sika/ContenidoIdioma/Intrucciones.dart';
 
+import '../Audio.dart';
 import '../BaseAppBar.dart';
 
 class EstaEn extends StatefulWidget {
@@ -12,7 +14,7 @@ class EstaEn extends StatefulWidget {
   final String lugar;
   final String frase;
   final String imglugar;
-
+  final Color fondo;
   const EstaEn(
       {Key key,
       this.id_escenario,
@@ -21,67 +23,106 @@ class EstaEn extends StatefulWidget {
       this.validos,
       this.lugar,
       this.frase,
-      this.imagenes})
+      this.imagenes,
+        this.fondo})
       : super(key: key);
-
   @override
   _EstaEnState createState() => _EstaEnState();
-
-
 }
- 
-
-
 class _EstaEnState extends State<EstaEn>{
-  
   int contv = 0;
-
   @override
   Widget build(BuildContext context) {
-
-      
   return Scaffold(
         appBar: getAppBar("Sikanda",5,context),
         body: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Text(
-              "¿Que hay en " + widget.frase + "?",
-              style: TextStyle(
-                fontSize: 30,
+            Container(
+              decoration: BoxDecoration(
+                color:widget.fondo,
+                borderRadius: BorderRadius.only(
+                  bottomRight: Radius.circular(45.0),
+                  bottomLeft: Radius.circular(45.0),
+                ),
+                //color: Colors.amber,
               ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text(
+                    "¿Que hay en " + widget.frase + "?",
+                    style: TextStyle(
+                      fontSize: 30,
+                      color: Colors.white,
+                    ),
+                  ),
+                  Container(
+                    height: 55,
+                    width: 55,
+                    margin: const EdgeInsets.only(top: 5),
+                    decoration: BoxDecoration(
+                      color: Colors.white, //),
+                      borderRadius: BorderRadius.circular(50),
+                    ),
+                    child: Padding(
+                        padding: const EdgeInsets.all(1),
+                        child: BotonAudio(intruccionesAux[1])
+                    ),
+                  ),
+                ],
+              ),
+              padding: const EdgeInsets.only(top: 5),
+              height: MediaQuery.of(context).size.height * 0.15,
+              width: MediaQuery.of(context).size.width,
+              //color: widget.fondo,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                buildDragTarget(
-                    MediaQuery.of(context).size.width / 5, widget.lugar)
-              ],
-            ),
-            contv >= widget.validos
-                ? Container(key: UniqueKey(),
-                    height: 300,
-                    child: FittedBox(
-                        fit: BoxFit.fill,
-                        child: Ganador(
+            Container(
+              padding: const EdgeInsets.only(top: 35),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      buildDragTarget(MediaQuery.of(context).size.width / 5, widget.lugar)
+                    ],
+                  ),
+                  contv >= widget.validos
+                    ? Container(
+                      key: UniqueKey(),
+                        height: 300,
+                        child: FittedBox(
+                          fit: BoxFit.fill,
+                          child: Ganador(
                             id: widget.id,
                             id_game: 3,
-                            id_escenario: widget.id_escenario)))
-                : Wrap(key: UniqueKey(),
-                    alignment: WrapAlignment.center,
-                    direction: Axis.horizontal,
-                    spacing: 10.0,
-                    runSpacing: 10.0,
-                    children: List.generate(
-                        widget.imagenes.length,
-                        (index) => buildDragObjet(widget.imagenes[index], index,
-                            MediaQuery.of(context).size.width / 4)),
-                  ),
-            //objetos
-          ],
-        ));
+                            id_escenario: widget.id_escenario
+                          )
+                        )
+                    )
+                    :Container(
+                      padding: const EdgeInsets.only(top: 35),
+                       child: Wrap(
+                        key: UniqueKey(),
+                        alignment: WrapAlignment.center,
+                        direction: Axis.horizontal,
+                        spacing: 10.0,
+                        runSpacing: 10.0,
+                        children: List.generate(
+                            widget.imagenes.length,
+                                (index) => buildDragObjet(widget.imagenes[index], index,
+                                MediaQuery.of(context).size.width / 4)
+                        ),
+                      ),
+                    ),
+                  //objetos
+                  ]
+                ),
+              ),
+            ]
+          )
+    );
   }
-  
 
   Draggable<String> buildDragObjet(img, pos, ancho) {
     List<String> a = img.split("--");

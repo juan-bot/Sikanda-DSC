@@ -19,13 +19,15 @@ class Ganador extends StatefulWidget {
   final Recamara recamara = null;
   final String title;
   final String imagen;
+  final Color fondo;
   Ganador(
       {Key key,
         this.title,
         this.imagen,
         this.id,
         this.id_game,
-        this.id_escenario
+        this.id_escenario,
+        this.fondo
       })
       : super(key: key);
   @override
@@ -175,12 +177,12 @@ class Instruccion extends State<Ganador> {
             MaterialPageRoute(
                 builder: (context) => BuscaObjeto(
                   //juego Tobjetos
-
                   id: widget.id,
                   objeto: objetos[widget.id].objeto,
                   imagenes: objetos[widget.id].imagenes2,
                   imgcorrecta: objetos[widget.id].imgcorrecta,
                   id_escenario: widget.id_escenario,
+                    fondo:widget.fondo
                 )),
           );
         }
@@ -201,6 +203,7 @@ class Instruccion extends State<Ganador> {
                   imagenes: imagenes,
                   imglugar: objetos[widget.id].imglugar,
                   id_escenario: widget.id_escenario,
+                    fondo:widget.fondo
                 )),
           );
         }
@@ -267,6 +270,7 @@ class Instruccion extends State<Ganador> {
                   imagenes: objetosBanio[widget.id].imagenes2,
                   imgcorrecta: objetosBanio[widget.id].imgcorrecta,
                   id_escenario: widget.id_escenario,
+                    fondo:widget.fondo
                 )),
           );
         }
@@ -288,6 +292,7 @@ class Instruccion extends State<Ganador> {
                   imagenes: imagenes,
                   imglugar: objetosBanio[widget.id].imglugar,
                   id_escenario: widget.id_escenario,
+                    fondo:widget.fondo
                 )),
           );
         }
@@ -338,6 +343,7 @@ class Instruccion extends State<Ganador> {
                   imagenes: objetosRecam[widget.id].imagenes2,
                   imgcorrecta: objetosRecam[widget.id].imgcorrecta,
                   id_escenario: widget.id_escenario,
+                    fondo:widget.fondo
                 )),
           );
         }
@@ -357,6 +363,7 @@ class Instruccion extends State<Ganador> {
                   imagenes: imagenes,
                   imglugar: objetosRecam[widget.id].imglugar,
                   id_escenario: widget.id_escenario,
+                    fondo:widget.fondo
                 )),
           );
         }
