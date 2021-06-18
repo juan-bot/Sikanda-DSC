@@ -68,6 +68,7 @@ flutter:
     - assets/images/
     - assets/audio/
     - assets/images/cocina/
+    - assets/images/instrucciones/
     - assets/images/banio/
     - assets/images/banio/accion/
     - assets/images/cocina/accion/

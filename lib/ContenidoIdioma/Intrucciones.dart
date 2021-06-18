@@ -1,12 +1,12 @@
 ///////////////////// Intrucciones de cada pantalla //////////////////////
 List<String> instrucciones=[
-  "1.	Observa las imágenes\n\n2.Cada imagen tiene objetos diferentes por explorar y sonidos.\n\n3.	Toca la bocina para escuchar su pronunciación.\n\n4.	Toca la imagen que más te llame la atención para comenzar.",
-  "1. Observa las imágenes\n\n2.	Toca la bocina para escuchar su pronunciación.\n\n3.	Cada imagen tiene una actividad a realizar. \n\n4.	Toca la imagen que más te llame la atención para comenzar.",
-  "1.	Observa la imagen que aparece por 10 segundos.\n\n2.	Trata de armar la imagen nuevamente\n\n3.	Con tu dedo arrastra la imagen hasta para armarla.\n\n4.	INICIEMOS!",
-  "1.	Observa la imagen.\n\n2.	Escucha el audio\n\n3.	Presiona la bocina para escuchar el audio\n\n4.	Arrastra con tu dedo la palabra al espacio vacío para completar la frase que escuchaste..",
-  "1. Observa las imagenes.\n\n2. Selecciona la imagen que se te pide con tu dedo\n\n3. ¡Iniciemos!",
-  "1. Observa las imágenes que se te muestran.\n\n2. Con tu dedo desliza las imagenes  que crees que hay en la imagen mostrada\n\n3. ¡Iniciemos!"
-];
+  "assets/images/instrucciones/ins1.jpg",
+  "assets/images/instrucciones/ins2.jpg",
+  "assets/images/instrucciones/ins3.gif",
+  "assets/images/instrucciones/ins4.gif",
+  "assets/images/instrucciones/ins5.jpg",
+  "assets/images/instrucciones/ins6.gif",
+ ];
 
 
 List<String> intruccionesAux;

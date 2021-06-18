@@ -51,7 +51,8 @@ Future<void> _showMyDialog(int i, BuildContext context ) async {
           content: SingleChildScrollView(
             child: ListBody(
               children: <Widget>[
-                Text(instrucciones[i]),
+                //Text(instrucciones[i]),
+                Image.asset(instrucciones[i]),
               ],
             ),
           ),
@@ -84,7 +85,7 @@ Future<void> _showMyDialog(int i, BuildContext context ) async {
           content: SingleChildScrollView(
             child: ListBody(
               children: <Widget>[
-                Text(instrucciones[i]),
+                Image.asset(instrucciones[i]),
               ],
             ),
           ),
