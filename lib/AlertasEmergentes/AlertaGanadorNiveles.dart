@@ -106,13 +106,9 @@ class Instruccion extends State<GanadorNivel> {
                                           fontSize: 25,
                                         )),
                                     onPressed: () {
-                                      Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                              builder: (context) => Escenario()
 
-
-                                          ));}),
+                                      Navigator.of(context).pushNamedAndRemoveUntil('/escenario', (Route<dynamic> route) => false)
+                                      ;}),
                                 SizedBox(
                                   width: 10,
                                 ),

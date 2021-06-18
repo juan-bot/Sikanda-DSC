@@ -34,7 +34,8 @@ List<Banio> objetosBanio = [
       image: "assets/images/banio/cepillo.png",
       color: Color(0xFF01A2C6),
       ///////Juego Palabras/////////////
-      imagen: "assets/images/banio/accion/1.jpg",
+      ///
+      imagen: "assets/images/banio/accion/5.png",
       mostrar: "Pedro usa un -- para lavarse los dientes",
       opciones: [
         "manzana",
@@ -127,7 +128,7 @@ List<Banio> objetosBanio = [
         "assets/images/banio/jabon.png--jabon--baño",
         "assets/images/recamara/cobertor.png--cobertor--recamara",
         "assets/images/banio/inodoro.png--inodoro--baño",
-        "assets/imagesrecamara/lampara.png--lampara--baño",
+        "assets/images/recamara/lampara.png--lampara--baño",
         "assets/images/cocina/uva.png--uvas--cocina",
         "assets/images/banio/labavo.png--lavabo--baño",
       ],

@@ -26,14 +26,21 @@ class EstaEn extends StatefulWidget {
 
   @override
   _EstaEnState createState() => _EstaEnState();
-}
 
-class _EstaEnState extends State<EstaEn> {
+
+}
+ 
+
+
+class _EstaEnState extends State<EstaEn>{
+  
   int contv = 0;
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+
+      
+  return Scaffold(
         appBar: getAppBar("Sikanda",5,context),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -52,7 +59,7 @@ class _EstaEnState extends State<EstaEn> {
               ],
             ),
             contv >= widget.validos
-                ? Container(
+                ? Container(key: UniqueKey(),
                     height: 300,
                     child: FittedBox(
                         fit: BoxFit.fill,
@@ -60,7 +67,7 @@ class _EstaEnState extends State<EstaEn> {
                             id: widget.id,
                             id_game: 3,
                             id_escenario: widget.id_escenario)))
-                : Wrap(
+                : Wrap(key: UniqueKey(),
                     alignment: WrapAlignment.center,
                     direction: Axis.horizontal,
                     spacing: 10.0,
@@ -74,6 +81,7 @@ class _EstaEnState extends State<EstaEn> {
           ],
         ));
   }
+  
 
   Draggable<String> buildDragObjet(img, pos, ancho) {
     List<String> a = img.split("--");
@@ -85,7 +93,7 @@ class _EstaEnState extends State<EstaEn> {
                   Container(
                     width: ancho,
                     height: ancho,
-                    child: FittedBox(child: Image.asset(a[0])),
+                    child: FittedBox ( child: Image.asset(a[0])),
                   ),
                   Container(
                     width: ancho,
@@ -151,6 +159,9 @@ class _EstaEnState extends State<EstaEn> {
           setState(() {
             widget.imagenes.removeAt(int.parse(data));
             contv++;
+            print("pprueeeeebaaaa2S");
+      print(widget.imagenes);
+
             show(context, "¡Muy bien!", Colors.green[200],
                 "assets/images/feliz.png");
           });
@@ -161,7 +172,7 @@ class _EstaEnState extends State<EstaEn> {
       builder: (BuildContext context, List<String> candidateData,
           List<dynamic> rejectedData) {
         return candidateData.isEmpty
-            ? Container(
+            ? Container(key: UniqueKey(),
                 child: Column(
                   children: [
                     Container(
@@ -191,7 +202,7 @@ class _EstaEnState extends State<EstaEn> {
                 decoration: BoxDecoration(border: Border.all(width: 1)))
             : Opacity(
                 opacity: 0.7,
-                child: Container(
+                child: Container(key: UniqueKey(),
                     //margin: const EdgeInsets.only(bottom: 10.0),
                     // ignore: deprecated_member_use
                     //color: Colors.yellow,
@@ -226,6 +237,7 @@ class _EstaEnState extends State<EstaEn> {
               );
       },
     );
+    
   }
 
   void show(BuildContext context, String msj, Color col, String img) {

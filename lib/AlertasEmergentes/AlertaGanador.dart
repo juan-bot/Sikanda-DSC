@@ -125,10 +125,11 @@ class Instruccion extends State<Ganador> {
                                           fontSize: 25,
                                         )),
                                     onPressed: () {
-                                      Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                              builder: (context) => Escenario()));
+                                     // Navigator.of(context).pushReplacementNamed('/escenario');
+
+
+                                      Navigator.of(context).pushNamedAndRemoveUntil('/escenario', (Route<dynamic> route) => false);
+
                                     }),
                                 SizedBox(
                                   width: 10,
@@ -169,7 +170,7 @@ class Instruccion extends State<Ganador> {
       case 1:
         {
           //siguiente nivel
-          return Navigator.push(
+          return Navigator.pushReplacement(
             context,
             MaterialPageRoute(
                 builder: (context) => BuscaObjeto(
@@ -185,8 +186,10 @@ class Instruccion extends State<Ganador> {
         }
         break;
       case 2:
-        {
-          return Navigator.push(
+        { 
+          var imagenes = objetos[widget.id].imagenes3.map((v) => v).toList();
+
+          return Navigator.pushReplacement(
             context,
             MaterialPageRoute(
                 builder: (context) => EstaEn(
@@ -195,7 +198,7 @@ class Instruccion extends State<Ganador> {
                   frase: objetos[widget.id].frase,
                   lugar: objetos[widget.id].lugar,
                   validos: objetos[widget.id].validos,
-                  imagenes: objetos[widget.id].imagenes3,
+                  imagenes: imagenes,
                   imglugar: objetos[widget.id].imglugar,
                   id_escenario: widget.id_escenario,
                 )),
@@ -204,7 +207,7 @@ class Instruccion extends State<Ganador> {
         break;
       case 3:
         {
-          return Navigator.push(
+          return Navigator.pushReplacement(
             context,
             MaterialPageRoute(
                 builder: (context) => Relacionable(
@@ -221,7 +224,7 @@ class Instruccion extends State<Ganador> {
         }
         break;
       default:
-        {
+        { 
           return Navigator.push(
             context,
             MaterialPageRoute(
@@ -254,7 +257,7 @@ class Instruccion extends State<Ganador> {
       case 1:
         {
           //siguiente nivel
-          return Navigator.push(
+          return Navigator.pushReplacement(
             context,
             MaterialPageRoute(
                 builder: (context) => BuscaObjeto(
@@ -270,16 +273,19 @@ class Instruccion extends State<Ganador> {
         break;
       case 2:
         {
-          return Navigator.push(
+          var imagenes = objetosBanio[widget.id].imagenes3.map((v) => v).toList();
+
+          return 
+          Navigator.pushReplacement(
             context,
-            MaterialPageRoute(
-                builder: (context) => EstaEn(
+            new MaterialPageRoute(
+                builder: (context) =>new  EstaEn(
                   //Juego Adondepertenece
                   id: widget.id,
                   frase: objetosBanio[widget.id].frase,
                   lugar: objetosBanio[widget.id].lugar,
                   validos: objetosBanio[widget.id].validos,
-                  imagenes: objetosBanio[widget.id].imagenes3,
+                  imagenes: imagenes,
                   imglugar: objetosBanio[widget.id].imglugar,
                   id_escenario: widget.id_escenario,
                 )),
@@ -288,7 +294,7 @@ class Instruccion extends State<Ganador> {
         break;
       case 3:
         {
-          return Navigator.push(
+          return Navigator.pushReplacement(
             context,
             MaterialPageRoute(
                 builder: (context) => Relacionable(
@@ -316,13 +322,13 @@ class Instruccion extends State<Ganador> {
         }
     }
   }
-
+ 
   _nextLevelRecamara(BuildContext context) {
     switch (widget.id_game) {
       case 1:
         {
           //siguiente nivel
-          return Navigator.push(
+          return Navigator.pushReplacement(
             context,
             MaterialPageRoute(
                 builder: (context) => BuscaObjeto(
@@ -337,8 +343,9 @@ class Instruccion extends State<Ganador> {
         }
         break;
       case 2:
-        {
-          return Navigator.push(
+        { var imagenes = objetosRecam[widget.id].imagenes3.map((v) => v).toList();
+
+          return Navigator.pushReplacement(
             context,
             MaterialPageRoute(
                 builder: (context) => EstaEn(
@@ -347,7 +354,7 @@ class Instruccion extends State<Ganador> {
                   frase: objetosRecam[widget.id].frase,
                   lugar: objetosRecam[widget.id].lugar,
                   validos: objetosRecam[widget.id].validos,
-                  imagenes: objetosRecam[widget.id].imagenes3,
+                  imagenes: imagenes,
                   imglugar: objetosRecam[widget.id].imglugar,
                   id_escenario: widget.id_escenario,
                 )),
@@ -356,7 +363,7 @@ class Instruccion extends State<Ganador> {
         break;
       case 3:
         {
-          return Navigator.push(
+          return Navigator.pushReplacement(
             context,
             MaterialPageRoute(
                 builder: (context) => Relacionable(

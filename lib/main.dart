@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:rompecabezas_sika/AlertasEmergentes/AlertaMenuEscenarios.dart';
 import 'package:splash_screen_view/SplashScreenView.dart';
 import 'SeleccionIdiomas.dart';
 
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget{
       home: Center(
         child: SplashScreen(),
       ),
+      routes: {'/escenario':(_)=>Escenario()},
     ) ;
   }
 }
