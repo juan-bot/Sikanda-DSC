@@ -238,11 +238,9 @@ class RadialExpansionDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     timeDilation = 2.0; // 1.0 is normal animation speed.
-    Size size = MediaQuery.of(context).size;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children:[
-        
               //llamada para los escenarios
                 mundo(context, 'assets/images/cocina2.gif', 'Cocina',Colors.orange[800],escenarios[0]),
                 mundo(context, 'assets/images/baño2.gif', 'Baño',Color(0xFFFFC400),escenarios[1]),
