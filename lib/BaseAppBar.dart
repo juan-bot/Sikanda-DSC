@@ -8,7 +8,7 @@ import 'ContenidoIdioma/Intrucciones.dart';
     return AppBar(
       backgroundColor: Color(0xFF9D2929),
       centerTitle: true,
-      automaticallyImplyLeading: false,
+      //automaticallyImplyLeading: false,
       title: Text(title,
       style: TextStyle(
             fontSize: 30,
