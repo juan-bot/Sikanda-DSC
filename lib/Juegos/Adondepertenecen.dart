@@ -72,12 +72,12 @@ class _EstaEnState extends State<EstaEn>{
                 ],
               ),
               padding: const EdgeInsets.only(top: 5),
-              height: MediaQuery.of(context).size.height * 0.15,
+              height: MediaQuery.of(context).size.height * 0.17,
               width: MediaQuery.of(context).size.width,
               //color: widget.fondo,
             ),
             Container(
-              padding: const EdgeInsets.only(top: 35),
+              padding: const EdgeInsets.only(top: 10),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -101,7 +101,7 @@ class _EstaEnState extends State<EstaEn>{
                         )
                     )
                     :Container(
-                      padding: const EdgeInsets.only(top: 35),
+                      padding: const EdgeInsets.only(top: 10),
                        child: Wrap(
                         key: UniqueKey(),
                         alignment: WrapAlignment.center,

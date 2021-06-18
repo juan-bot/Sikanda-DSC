@@ -125,14 +125,13 @@ class _BuscaObjetoState extends State<BuscaObjeto> {
                   ),
                 ],
               ),
-
               padding: const EdgeInsets.only(top: 5),
-              height: MediaQuery.of(context).size.height * 0.15,
+              height: MediaQuery.of(context).size.height * 0.18,
               width: MediaQuery.of(context).size.width,
               //color: widget.fondo,
             ),
             SizedBox(
-              height: 40,//padding top
+              height: 20,//padding top
             ),
             acertado
                 ? Center(

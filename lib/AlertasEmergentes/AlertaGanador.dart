@@ -127,7 +127,7 @@ class Instruccion extends State<Ganador> {
                                           fontSize: 25,
                                         )),
                                     onPressed: () {
-                                     // Navigator.of(context).pushReplacementNamed('/escenario');
+                                      // Navigator.of(context).pushReplacementNamed('/escenario');
 
 
                                       Navigator.of(context).pushNamedAndRemoveUntil('/escenario', (Route<dynamic> route) => false);
@@ -177,18 +177,18 @@ class Instruccion extends State<Ganador> {
             MaterialPageRoute(
                 builder: (context) => BuscaObjeto(
                   //juego Tobjetos
-                  id: widget.id,
-                  objeto: objetos[widget.id].objeto,
-                  imagenes: objetos[widget.id].imagenes2,
-                  imgcorrecta: objetos[widget.id].imgcorrecta,
-                  id_escenario: widget.id_escenario,
+                    id: widget.id,
+                    objeto: objetos[widget.id].objeto,
+                    imagenes: objetos[widget.id].imagenes2,
+                    imgcorrecta: objetos[widget.id].imgcorrecta,
+                    id_escenario: widget.id_escenario,
                     fondo:widget.fondo
                 )),
           );
         }
         break;
       case 2:
-        { 
+        {
           var imagenes = objetos[widget.id].imagenes3.map((v) => v).toList();
 
           return Navigator.pushReplacement(
@@ -196,13 +196,13 @@ class Instruccion extends State<Ganador> {
             MaterialPageRoute(
                 builder: (context) => EstaEn(
                   //Juego Adondepertenece
-                  id: widget.id,
-                  frase: objetos[widget.id].frase,
-                  lugar: objetos[widget.id].lugar,
-                  validos: objetos[widget.id].validos,
-                  imagenes: imagenes,
-                  imglugar: objetos[widget.id].imglugar,
-                  id_escenario: widget.id_escenario,
+                    id: widget.id,
+                    frase: objetos[widget.id].frase,
+                    lugar: objetos[widget.id].lugar,
+                    validos: objetos[widget.id].validos,
+                    imagenes: imagenes,
+                    imglugar: objetos[widget.id].imglugar,
+                    id_escenario: widget.id_escenario,
                     fondo:widget.fondo
                 )),
           );
@@ -227,7 +227,7 @@ class Instruccion extends State<Ganador> {
         }
         break;
       default:
-        { 
+        {
           return Navigator.push(
             context,
             MaterialPageRoute(
@@ -265,11 +265,11 @@ class Instruccion extends State<Ganador> {
             MaterialPageRoute(
                 builder: (context) => BuscaObjeto(
                   //juego Tobjetos
-                  id: widget.id,
-                  objeto: objetosBanio[widget.id].objeto,
-                  imagenes: objetosBanio[widget.id].imagenes2,
-                  imgcorrecta: objetosBanio[widget.id].imgcorrecta,
-                  id_escenario: widget.id_escenario,
+                    id: widget.id,
+                    objeto: objetosBanio[widget.id].objeto,
+                    imagenes: objetosBanio[widget.id].imagenes2,
+                    imgcorrecta: objetosBanio[widget.id].imgcorrecta,
+                    id_escenario: widget.id_escenario,
                     fondo:widget.fondo
                 )),
           );
@@ -279,22 +279,22 @@ class Instruccion extends State<Ganador> {
         {
           var imagenes = objetosBanio[widget.id].imagenes3.map((v) => v).toList();
 
-          return 
-          Navigator.pushReplacement(
-            context,
-            new MaterialPageRoute(
-                builder: (context) =>new  EstaEn(
-                  //Juego Adondepertenece
-                  id: widget.id,
-                  frase: objetosBanio[widget.id].frase,
-                  lugar: objetosBanio[widget.id].lugar,
-                  validos: objetosBanio[widget.id].validos,
-                  imagenes: imagenes,
-                  imglugar: objetosBanio[widget.id].imglugar,
-                  id_escenario: widget.id_escenario,
-                    fondo:widget.fondo
-                )),
-          );
+          return
+            Navigator.pushReplacement(
+              context,
+              new MaterialPageRoute(
+                  builder: (context) =>new  EstaEn(
+                    //Juego Adondepertenece
+                      id: widget.id,
+                      frase: objetosBanio[widget.id].frase,
+                      lugar: objetosBanio[widget.id].lugar,
+                      validos: objetosBanio[widget.id].validos,
+                      imagenes: imagenes,
+                      imglugar: objetosBanio[widget.id].imglugar,
+                      id_escenario: widget.id_escenario,
+                      fondo:widget.fondo
+                  )),
+            );
         }
         break;
       case 3:
@@ -327,7 +327,7 @@ class Instruccion extends State<Ganador> {
         }
     }
   }
- 
+
   _nextLevelRecamara(BuildContext context) {
     switch (widget.id_game) {
       case 1:
@@ -338,12 +338,12 @@ class Instruccion extends State<Ganador> {
             MaterialPageRoute(
                 builder: (context) => BuscaObjeto(
                   //juego Tobjetos
-                  id: widget.id,
-                  objeto: objetosRecam[widget.id].objeto,
-                  imagenes: objetosRecam[widget.id].imagenes2,
-                  imgcorrecta: objetosRecam[widget.id].imgcorrecta,
-                  id_escenario: widget.id_escenario,
-                  fondo:widget.fondo
+                    id: widget.id,
+                    objeto: objetosRecam[widget.id].objeto,
+                    imagenes: objetosRecam[widget.id].imagenes2,
+                    imgcorrecta: objetosRecam[widget.id].imgcorrecta,
+                    id_escenario: widget.id_escenario,
+                    fondo:widget.fondo
                 )),
           );
         }
@@ -351,11 +351,11 @@ class Instruccion extends State<Ganador> {
       case 2:
         { var imagenes = objetosRecam[widget.id].imagenes3.map((v) => v).toList();
 
-          return Navigator.pushReplacement(
-            context,
-            MaterialPageRoute(
-                builder: (context) => EstaEn(
-                  //Juego Adondepertenece
+        return Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+              builder: (context) => EstaEn(
+                //Juego Adondepertenece
                   id: widget.id,
                   frase: objetosRecam[widget.id].frase,
                   lugar: objetosRecam[widget.id].lugar,
@@ -363,9 +363,9 @@ class Instruccion extends State<Ganador> {
                   imagenes: imagenes,
                   imglugar: objetosRecam[widget.id].imglugar,
                   id_escenario: widget.id_escenario,
-                    fondo:widget.fondo
-                )),
-          );
+                  fondo:widget.fondo
+              )),
+        );
         }
         break;
       case 3:
