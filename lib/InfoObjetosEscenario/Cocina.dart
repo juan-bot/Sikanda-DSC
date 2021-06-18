@@ -342,7 +342,7 @@ List<Cocina> objetos = [
       ///////////////////juego AdondePertenecen////////////////
       imagenes3: [
         "assets/images/recamara/cobertor.png--cobertor--recamara",
-        "assets/images/cocina/cucahra.png--cuchara--cocina",
+        "assets/images/cocina/cuchara.png--cuchara--cocina",
         "assets/images/banio/cepillo.png--inodoro--bano",
         "assets/images/cocina/fresa.png--fresa--cocina",
         "assets/images/banio/labavo.png--lavabo--bano",

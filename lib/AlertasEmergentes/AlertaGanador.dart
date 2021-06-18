@@ -343,7 +343,7 @@ class Instruccion extends State<Ganador> {
                   imagenes: objetosRecam[widget.id].imagenes2,
                   imgcorrecta: objetosRecam[widget.id].imgcorrecta,
                   id_escenario: widget.id_escenario,
-                    fondo:widget.fondo
+                  fondo:widget.fondo
                 )),
           );
         }
