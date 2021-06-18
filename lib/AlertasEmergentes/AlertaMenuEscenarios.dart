@@ -19,11 +19,9 @@ class Instruccion extends State<Escenario> {
         appBar: getAppBar("Sikanda", 0, context),
         //body:RadialExpansionDemo(),
         body: SingleChildScrollView(
-          scrollDirection: Axis.vertical,
-          child: SizedBox(height:1260,
-              child:Center(child: RadialExpansionDemo())
-          ),
-        )
+          scrollDirection: Axis.vertical,    
+          padding: new EdgeInsets.all(10.0),
+          child:  RadialExpansionDemo()),
     );
   }
   

@@ -240,23 +240,13 @@ class RadialExpansionDemo extends StatelessWidget {
     timeDilation = 2.0; // 1.0 is normal animation speed.
     Size size = MediaQuery.of(context).size;
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: <Widget>[
-        Padding(
-          padding: new EdgeInsets.all(10.0),
-        ),
-        Expanded(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: kDefaultPaddin),
-            child: Column(
-              children: [//llamada para los escenarios
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children:[
+        
+              //llamada para los escenarios
                 mundo(context, 'assets/images/cocina2.gif', 'Cocina',Colors.orange[800],escenarios[0]),
                 mundo(context, 'assets/images/baño2.gif', 'Baño',Color(0xFFFFC400),escenarios[1]),
-                mundo(context, 'assets/images/recamara2.gif', 'Recámara',Color(0xFF01A2C6),escenarios[2]),
-              ],
-            ),
-          ),
-        ),
+                mundo(context, 'assets/images/recamara2.gif', 'Recámara',Color(0xFF01A2C6),escenarios[2]),      
       ],
     );
   }
