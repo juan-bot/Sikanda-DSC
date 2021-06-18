@@ -90,7 +90,7 @@ class _EstaEnState extends State<EstaEn>{
                   contv >= widget.validos
                     ? Container(
                       key: UniqueKey(),
-                        height: 300,
+                        height: 270,
                         child: FittedBox(
                           fit: BoxFit.fill,
                           child: Ganador(
