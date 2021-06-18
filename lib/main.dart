@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:rompecabezas_sika/AlertasEmergentes/AlertaMenuEscenarios.dart';
 import 'package:splash_screen_view/SplashScreenView.dart';
+import 'Lifecycle.dart';
 import 'SeleccionIdiomas.dart';
 
 void main() async => {
@@ -15,13 +16,16 @@ class MyApp extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Center(
-        child: SplashScreen(),
-      ),
-      routes: {'/escenario':(_)=>Escenario()},
-    ) ;
+
+    return LifeCycleManager(
+        child: MaterialApp(
+          debugShowCheckedModeBanner: false,
+          home: Center(
+            child: SplashScreen(),
+          ),
+                routes: {'/escenario':(_)=>Escenario()},
+        )
+    );
   }
 }
 //pagina presentacion del logo y nombre del juego
