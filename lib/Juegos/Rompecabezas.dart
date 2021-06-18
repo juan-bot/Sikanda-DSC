@@ -269,7 +269,7 @@ class _RompecabezasState extends State<Rompecabezas> {
                     )
                 ),
                 SizedBox(
-                  height: 10,
+                  height: 0,
                 ),
                 armado
                     ? Ganador(
