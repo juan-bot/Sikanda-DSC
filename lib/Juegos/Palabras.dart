@@ -279,7 +279,7 @@ class _RelacionableState extends State<Relacionable> {
   void show(BuildContext context, String msj, Color col, String img) {
     AchievementView(
       context,
-      duration: const Duration(milliseconds:10),
+      duration: const Duration(microseconds:1),
       icon: Image.asset(img),
       color: col,
       title: msj,
