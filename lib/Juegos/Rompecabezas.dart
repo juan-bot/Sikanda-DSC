@@ -400,6 +400,7 @@ class _RompecabezasState extends State<Rompecabezas> {
   void show(BuildContext context, String msj, Color col, String img) {
     AchievementView(
       context,
+      duration: const Duration(milliseconds:10),
       icon: Image.asset(img),
       color: col,
       title: msj,

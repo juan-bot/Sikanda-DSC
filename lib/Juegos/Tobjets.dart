@@ -157,6 +157,7 @@ class _BuscaObjetoState extends State<BuscaObjeto> {
   void show(BuildContext context, String msj, Color col, String img) {
     AchievementView(
       context,
+      duration: const Duration(milliseconds:10),
       icon: Image.asset(img),
       color: col,
       title: msj,
