@@ -28,7 +28,7 @@ class ItemCardCocina extends StatelessWidget {
       String description, Color fondo, String audio, int id, int id_escenario) {
     return Scaffold(
       appBar: AppBar(
-      backgroundColor: Color(0xFF9D2929),
+        backgroundColor: Color(0xFF9D2929),
         title: Text(
           'Volver',
           style: TextStyle(
@@ -74,17 +74,18 @@ class ItemCardCocina extends StatelessWidget {
                 ),
                 TextButton(
                     style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all<Color>(
-                            Color(0xFF9D2929)),
+                        backgroundColor:
+                            MaterialStateProperty.all<Color>(Color(0xFF9D2929)),
                         padding: MaterialStateProperty.all<EdgeInsets>(
                             EdgeInsets.all(10)),
-                        foregroundColor: MaterialStateProperty.all<Color>(
-                            Color(0xFF9D2929)),
+                        foregroundColor:
+                            MaterialStateProperty.all<Color>(Color(0xFF9D2929)),
                         shape:
                             MaterialStateProperty.all<RoundedRectangleBorder>(
                                 RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(40.0),
-                                    side: BorderSide(color: Color(0xFF9D2929))))),
+                                    side:
+                                        BorderSide(color: Color(0xFF9D2929))))),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -163,6 +164,12 @@ class ItemCardCocina extends StatelessWidget {
                                     child: InkWell(
                                       child: Container(
                                         height: 100,
+                                        width: 195,
+                                        decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(20),
+                                          color: Colors.white,
+                                        ),
                                         child: Image.asset(cocina.image),
                                       ),
                                       onTap: () {
@@ -230,8 +237,7 @@ class ItemCardCocina extends StatelessWidget {
                                 SizedBox(
                                   width: 10,
                                 ),
-                                
-                              Container(
+                                Container(
                                   height: 55,
                                   width: 55,
                                   decoration: BoxDecoration(
@@ -239,8 +245,7 @@ class ItemCardCocina extends StatelessWidget {
                                     borderRadius: BorderRadius.circular(80),
                                   ),
                                   child: Padding(
-                                      padding:
-                                          const EdgeInsets.all(1),
+                                      padding: const EdgeInsets.all(1),
                                       child: BotonAudio(
                                           AudioCocina[cocina.id - 1])),
                                 )

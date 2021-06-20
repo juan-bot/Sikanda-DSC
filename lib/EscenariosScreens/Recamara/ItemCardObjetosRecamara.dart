@@ -16,15 +16,19 @@ class ItemCardRecamara extends StatelessWidget {
     this.recamara,
     this.press,
   }) : super(key: key);
-  static const opacityCurve = const Interval(0.0, 0.75, curve: Curves.fastOutSlowIn);
+  static const opacityCurve =
+      const Interval(0.0, 0.75, curve: Curves.fastOutSlowIn);
   static RectTween _createRectTween(Rect begin, Rect end) {
     return MaterialRectCenterArcTween(begin: begin, end: end);
   }
-  static Widget _buildPage(BuildContext context, String imageName, String description, Color fondo,String audio,int id, int id_escenario) {
+
+  static Widget _buildPage(BuildContext context, String imageName,
+      String description, Color fondo, String audio, int id, int id_escenario) {
     return Scaffold(
       appBar: AppBar(
-      backgroundColor: Color(0xFF9D2929),
-        title: Text('Volver',
+        backgroundColor: Color(0xFF9D2929),
+        title: Text(
+          'Volver',
           style: TextStyle(
             fontSize: 30,
             fontFamily: "Love",
@@ -68,16 +72,18 @@ class ItemCardRecamara extends StatelessWidget {
                 ),
                 TextButton(
                     style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all<Color>(Color(0xFF9D2929)),
-                        padding: MaterialStateProperty.all<EdgeInsets>(EdgeInsets.all(10)),
-                        foregroundColor: MaterialStateProperty.all<Color>(Color(0xFF9D2929)),
-                        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                            RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(40.0),
-                                side: BorderSide(color: Color(0xFF9D2929))
-                            )
-                        )
-                    ),
+                        backgroundColor:
+                            MaterialStateProperty.all<Color>(Color(0xFF9D2929)),
+                        padding: MaterialStateProperty.all<EdgeInsets>(
+                            EdgeInsets.all(10)),
+                        foregroundColor:
+                            MaterialStateProperty.all<Color>(Color(0xFF9D2929)),
+                        shape:
+                            MaterialStateProperty.all<RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(40.0),
+                                    side:
+                                        BorderSide(color: Color(0xFF9D2929))))),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -87,8 +93,7 @@ class ItemCardRecamara extends StatelessWidget {
                               color: Colors.white,
                               letterSpacing: 0.5,
                               fontSize: 30,
-                            )
-                        ),
+                            )),
                         Icon(
                           Icons.play_arrow,
                           color: Colors.white,
@@ -97,21 +102,19 @@ class ItemCardRecamara extends StatelessWidget {
                       ],
                     ),
                     onPressed: () {
-                      final route=MaterialPageRoute(builder: (context){
+                      final route = MaterialPageRoute(builder: (context) {
                         return Rompecabezas(
                             id_escenario: id_escenario,
                             id: id,
                             imagen: imageName, //imagen del rompecabezas
                             ren: 2, //Renglones rompecabezas
                             col: 2,
-                            audio:audio,
-                            nombre:description,
-                            color:fondo
-                        );
+                            audio: audio,
+                            nombre: description,
+                            color: fondo);
                       });
                       Navigator.push(context, route);
-                    }
-                ),
+                    }),
                 const SizedBox(height: 16.0),
               ],
             ),
@@ -119,15 +122,15 @@ class ItemCardRecamara extends StatelessWidget {
         ),
       ),
     );
-
   }
+
   @override
   Widget build(BuildContext context) {
     return Container(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-           SizedBox(
+          SizedBox(
             height: 10,
           ),
           Expanded(
@@ -136,10 +139,10 @@ class ItemCardRecamara extends StatelessWidget {
                 width: 150,
                 padding: EdgeInsets.all(12),
                 decoration: BoxDecoration(
-                color: recamara.color,
-                borderRadius: BorderRadius.circular(26),
-              ),
-               child: FittedBox(
+                  color: recamara.color,
+                  borderRadius: BorderRadius.circular(26),
+                ),
+                child: FittedBox(
                     //
                     fit: BoxFit.fill,
                     child: Column(
@@ -149,40 +152,60 @@ class ItemCardRecamara extends StatelessWidget {
                           Container(
                             alignment: Alignment.center,
                             height: 100,
-              child: Hero(
-                createRectTween: _createRectTween,
-                tag: "${recamara.id}",
-                child: Material(
+                            child: Hero(
+                                createRectTween: _createRectTween,
+                                tag: "${recamara.id}",
+                                child: Material(
                                     color: Theme.of(context)
                                         .primaryColor
                                         .withOpacity(0.0),
                                     child: InkWell(
                                       child: Container(
                                         height: 100,
+                                        width: 195,
+                                        decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(20),
+                                          color: Colors.white,
+                                        ),
                                         child: Image.asset(recamara.image),
                                       ),
-                  onTap: () {
-                    Navigator.of(context).push(
-                      PageRouteBuilder<void>(
-                        pageBuilder: (BuildContext context, Animation<double> animation, Animation<double> secondaryAnimation) {
-                          return AnimatedBuilder(
-                              animation: animation,
-                              builder: (BuildContext context, Widget child) {
-                                return Opacity(
-                                  opacity: opacityCurve.transform(animation.value),
-                                  child: _buildPage(context, recamara.image, recamara.title, recamara.color, AudioRecamara[recamara.id-1],(recamara.id-1),3),
-                                );
-                              });
-                          
-                        },
-                      ),
-                    );
-                  },
-                ))),
-                /*tag: "${banio.id}",
+                                      onTap: () {
+                                        Navigator.of(context).push(
+                                          PageRouteBuilder<void>(
+                                            pageBuilder: (BuildContext context,
+                                                Animation<double> animation,
+                                                Animation<double>
+                                                    secondaryAnimation) {
+                                              return AnimatedBuilder(
+                                                  animation: animation,
+                                                  builder:
+                                                      (BuildContext context,
+                                                          Widget child) {
+                                                    return Opacity(
+                                                      opacity: opacityCurve
+                                                          .transform(
+                                                              animation.value),
+                                                      child: _buildPage(
+                                                          context,
+                                                          recamara.image,
+                                                          recamara.title,
+                                                          recamara.color,
+                                                          AudioRecamara[
+                                                              recamara.id - 1],
+                                                          (recamara.id - 1),
+                                                          3),
+                                                    );
+                                                  });
+                                            },
+                                          ),
+                                        );
+                                      },
+                                    ))),
+                            /*tag: "${banio.id}",
                 child: Image.asset(banio.image),*/
-              ),
-            SizedBox(
+                          ),
+                          SizedBox(
                             height: 20,
                           ),
 
@@ -219,8 +242,7 @@ class ItemCardRecamara extends StatelessWidget {
                                     borderRadius: BorderRadius.circular(80),
                                   ),
                                   child: Padding(
-                                      padding:
-                                          const EdgeInsets.all(1),
+                                      padding: const EdgeInsets.all(1),
                                       child: BotonAudio(
                                           AudioRecamara[recamara.id - 1])),
                                 )
