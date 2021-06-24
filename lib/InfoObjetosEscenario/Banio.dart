@@ -171,7 +171,7 @@ List<Banio> objetosBanio = [
         "assets/images/banio/jabon.png--jabon",
         "assets/images/recamara/cama.png--cama",
         "assets/images/cocina/plato.png--plato",
-        "assets/images/cocina/mesa.png--cuchra",
+        "assets/images/cocina/mesa.png--mesa",
         "assets/images/banio/cepillo.png--cepillo dental",
         "assets/images/recamara/lampara.png--lampara",
         "assets/images/cocina/vaso.png--vaso",
