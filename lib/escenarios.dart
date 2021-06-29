@@ -242,9 +242,9 @@ class RadialExpansionDemo extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children:[
               //llamada para los escenarios
-                mundo(context, 'assets/images/cocina2.gif', 'Cocina',Colors.orange[800],escenarios[0]),
-                mundo(context, 'assets/images/baño2.gif', 'Baño',Color(0xFFFFC400),escenarios[1]),
-                mundo(context, 'assets/images/recamara2.gif', 'Recámara',Color(0xFF01A2C6),escenarios[2]),      
+                mundo(context, 'assets/images/cocina.png', 'Cocina',Colors.orange[800],escenarios[0]),
+                mundo(context, 'assets/images/baño.png', 'Baño',Color(0xFFFFC400),escenarios[1]),
+                mundo(context, 'assets/images/recamara.png', 'Recámara',Color(0xFF01A2C6),escenarios[2]),
       ],
     );
   }
