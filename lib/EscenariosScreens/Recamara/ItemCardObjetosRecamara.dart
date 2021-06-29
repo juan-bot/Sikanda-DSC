@@ -1,8 +1,5 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:rompecabezas_sika/InfoObjetosEscenario/Recamara.dart';
-import 'package:rompecabezas_sika/Juegos/Palabras.dart';
 import 'package:rompecabezas_sika/Juegos/Rompecabezas.dart';
 import '../../Audio.dart';
 import '../../Constantes.dart';

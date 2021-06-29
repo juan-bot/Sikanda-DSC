@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:floating_text/floating_text.dart';
-import 'package:rompecabezas_sika/AlertasEmergentes/AlertaMenuEscenarios.dart';
 
 class GanadorNivel extends StatefulWidget {
 

@@ -8,7 +8,6 @@ import 'package:rompecabezas_sika/Juegos/Adondepertenecen.dart';
 import 'package:rompecabezas_sika/Juegos/Palabras.dart';
 import 'package:rompecabezas_sika/Juegos/Tobjets.dart';
 
-import 'AlertaMenuEscenarios.dart';
 
 class Ganador extends StatefulWidget {
   final int id_escenario;

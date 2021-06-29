@@ -89,14 +89,14 @@ List<Cocina> objetos = [
       validos: 3,
       lugar: "cocina",
       frase: "la cocina ",
-      imglugar: "assets/images/cocina2.gif"),
+      imglugar: "assets/images/cocina.png"),
   Cocina(
       id: 2,
       title: "Cazuela",
       size: 8,
       image: "assets/images/cocina/cazuela.png",
       color: Color(0xFFD15A05),
-      imagen: "assets/images/cocina/accion/2.jpg",
+      imagen: "assets/images/cocina/accion/2.png",
       mostrar: "Pedro está comiendo un --",
       opciones: [
         "vaso",
@@ -141,14 +141,14 @@ List<Cocina> objetos = [
       validos: 3,
       lugar: "cocina",
       frase: "la cocina ",
-      imglugar: "assets/images/cocina2.gif"),
+      imglugar: "assets/images/cocina.png"),
   Cocina(
       id: 3,
       title: "Vaso",
       size: 10,
       image: "assets/images/cocina/vaso.png",
       color: Color(0xFF953d68),
-      imagen: "assets/images/cocina/accion/3.jpg",
+      imagen: "assets/images/cocina/accion/3.png",
       mostrar: "El -- de Ana",
       opciones: [
         "mesa",
@@ -193,7 +193,7 @@ List<Cocina> objetos = [
       validos: 4,
       lugar: "cocina",
       frase: "la cocina ",
-      imglugar: "assets/images/cocina2.gif"),
+      imglugar: "assets/images/cocina.png"),
   Cocina(
       id: 4,
       title: "Mesa",
@@ -252,7 +252,7 @@ List<Cocina> objetos = [
       size: 28,
       image: "assets/images/cocina/taza.png",
       color: Color(0xFFad2c34),
-      imagen: "assets/images/cocina/accion/5.jpg",
+      imagen: "assets/images/cocina/accion/5.png",
       mostrar: "Teresa esta comiendo un --",
       opciones: [
         "vaso",
@@ -299,14 +299,14 @@ List<Cocina> objetos = [
       validos: 3,
       lugar: "cocina",
       frase: "la cocina ",
-      imglugar: "assets/images/cocina2.gif"),
+      imglugar: "assets/images/cocina.png"),
   Cocina(
       id: 6,
       title: "Plato",
       size: 12,
       image: "assets/images/cocina/plato.png",
       color: Color(0xFF205134),
-      imagen: "assets/images/cocina/accion/6.jpg",
+      imagen: "assets/images/cocina/accion/6.png",
       mostrar: "En la mesa hay un --",
       opciones: [
         "vaso",
@@ -351,5 +351,5 @@ List<Cocina> objetos = [
       validos: 3,
       lugar: "cocina",
       frase: "la cocina ",
-      imglugar: "assets/images/cocina2.gif"),
+      imglugar: "assets/images/cocina.png"),
 ];

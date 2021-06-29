@@ -35,7 +35,7 @@ List<Banio> objetosBanio = [
       color: Color(0xFF01A2C6),
       ///////Juego Palabras/////////////
       ///
-      imagen: "assets/images/banio/accion/5.png",
+      imagen: "assets/images/banio/accion/1.png",
       mostrar: "Pedro usa un -- para lavarse los dientes",
       opciones: [
         "mesa",
@@ -80,7 +80,7 @@ List<Banio> objetosBanio = [
       validos:4,
       lugar:"baño",
       frase:"el baño",
-      imglugar: "assets/images/baño2.gif"
+      imglugar: "assets/images/baño.png"
 
   ),
   Banio(
@@ -89,7 +89,7 @@ List<Banio> objetosBanio = [
       size: 8,
       image: "assets/images/banio/inodoro.png",
       color: Color(0xFFD15A05),
-      imagen: "assets/images/banio/accion/2.jpg",
+      imagen: "assets/images/banio/accion/2.png",
       mostrar: "En el baño hay un --",
       opciones: [
         "cazuela",
@@ -135,7 +135,7 @@ List<Banio> objetosBanio = [
       validos:3,
       lugar:"baño",
       frase:"el baño",
-      imglugar: "assets/images/baño2.gif"
+      imglugar: "assets/images/baño.png"
 
 
   ),
@@ -145,7 +145,7 @@ List<Banio> objetosBanio = [
       size: 10,
       image: "assets/images/banio/jabon.png",
       color: Color(0xFF953d68),
-      imagen: "assets/images/banio/accion/3.jpg",
+      imagen: "assets/images/banio/accion/3.png",
       mostrar: "Dany se lava sus manos con --",
       opciones: [
         "vaso",
@@ -191,7 +191,7 @@ List<Banio> objetosBanio = [
       validos:4,
       lugar:"baño",
       frase:"el baño",
-      imglugar: "assets/images/baño2.gif"
+      imglugar: "assets/images/baño.png"
 
   ),
   Banio(
@@ -200,7 +200,7 @@ List<Banio> objetosBanio = [
       size: 11,
       image: "assets/images/banio/labavo.png",
       color: Color(0xFFf9AC34),
-      imagen: "assets/images/banio/accion/4.jpg",
+      imagen: "assets/images/banio/accion/4.png",
       mostrar: "Ramon se lava su cara en el --",
       opciones: [
         "mesa",
@@ -245,7 +245,7 @@ List<Banio> objetosBanio = [
       validos:3,
       lugar:"baño",
       frase:"el baño",
-      imglugar: "assets/images/baño2.gif"
+      imglugar: "assets/images/baño.png"
 
   ),
   Banio(
@@ -299,7 +299,7 @@ List<Banio> objetosBanio = [
       validos:3,
       lugar:"baño",
       frase:"el baño",
-      imglugar: "assets/images/baño2.gif"
+      imglugar: "assets/images/baño.png"
 
   ),
   Banio(
@@ -353,7 +353,7 @@ List<Banio> objetosBanio = [
       validos:4,
       lugar:"baño",
       frase:"el baño",
-      imglugar: "assets/images/baño2.gif"
+      imglugar: "assets/images/baño.png"
 
   ),
 ];

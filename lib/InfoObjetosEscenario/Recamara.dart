@@ -42,7 +42,7 @@ List<Recamara> objetosRecam = [
       size: 12,
       image: "assets/images/recamara/almohada.png",
       color: Color(0xFF01A2C6),
-      imagen: "assets/images/recamara/accion/1.jpg",
+      imagen: "assets/images/recamara/accion/1.png",
       mostrar: "Ruben usa una -- para dormir",
       opciones: [
         "cazuela",
@@ -87,14 +87,14 @@ List<Recamara> objetosRecam = [
       validos: 3,
       lugar: "recamara",
       frase: "la recamara ",
-      imglugar: "assets/images/recamara2.gif"),
+      imglugar: "assets/images/recamara.png"),
   Recamara(
       id: 2,
       title: "Armario",
       size: 8,
       image: "assets/images/recamara/armario.png",
       color: Color(0xFFD15A05),
-      imagen: "assets/images/recamara/accion/2.jpg",
+      imagen: "assets/images/recamara/accion/2.png",
       // el espacion donde ira la palabra se indica como --
       mostrar: "Karla guarda su ropa en el --",
       opciones: [
@@ -141,14 +141,14 @@ List<Recamara> objetosRecam = [
       validos: 4,
       lugar: "recamara",
       frase: "la recamara ",
-      imglugar: "assets/images/recamara2.gif"),
+      imglugar: "assets/images/recamara.png"),
   Recamara(
       id: 3,
       title: "Cama",
       size: 10,
       image: "assets/images/recamara/cama.png",
       color: Color(0xFF953d68),
-      imagen: "assets/images/recamara/accion/3.jpg",
+      imagen: "assets/images/recamara/accion/3.png",
       mostrar: "Hector está durmiendo en la --",
       opciones: [
         "vaso",
@@ -194,14 +194,14 @@ List<Recamara> objetosRecam = [
       validos: 3,
       lugar: "recamara",
       frase: "la recamara ",
-      imglugar: "assets/images/recamara2.gif"),
+      imglugar: "assets/images/recamara.png"),
   Recamara(
       id: 4,
       title: "Cobija",
       size: 11,
       image: "assets/images/recamara/cobertor.png",
       color: Color(0xFFf9AC34),
-      imagen: "assets/images/recamara/accion/4.jpg",
+      imagen: "assets/images/recamara/accion/4.png",
       mostrar: "Joaquín tiene frío y se cubre con el --",
       opciones: [
         "mesa",
@@ -246,14 +246,14 @@ List<Recamara> objetosRecam = [
       validos: 4,
       lugar: "recamara",
       frase: "la recamara ",
-      imglugar: "assets/images/recamara2.gif"),
+      imglugar: "assets/images/recamara.png"),
   Recamara(
       id: 5,
       title: "Espejo",
       size: 28,
       image: "assets/images/recamara/espejo.png",
       color: Color(0xFFad2c34),
-      imagen: "assets/images/recamara/accion/5.jpg",
+      imagen: "assets/images/recamara/accion/5.png",
       mostrar: "Rosa se peina enfrente del --",
       opciones: [
         "vaso",
@@ -298,14 +298,14 @@ List<Recamara> objetosRecam = [
       validos: 3,
       lugar: "recamara",
       frase: "la recamara ",
-      imglugar: "assets/images/recamara2.gif"),
+      imglugar: "assets/images/recamara.png"),
   Recamara(
       id: 6,
       title: "Lampara",
       size: 12,
       image: "assets/images/recamara/lampara.png",
       color: Color(0xFF205134),
-      imagen: "assets/images/recamara/accion/6.jpg",
+      imagen: "assets/images/recamara/accion/6.png",
       mostrar: "Carmen estudia con una --",
       opciones: [
         "estufa",
@@ -350,5 +350,5 @@ List<Recamara> objetosRecam = [
       validos: 3,
       lugar: "recamara",
       frase: "la recamara ",
-      imglugar: "assets/images/recamara2.gif"),
+      imglugar: "assets/images/recamara.png"),
 ];
