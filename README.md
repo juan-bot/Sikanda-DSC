@@ -32,65 +32,69 @@ STEEP 6: Wait to compile project and Enjoy SIKANDA!
 
 Splash screen
 
-![Screenshot_20210330_154931_com example rompecabezas_sika](https://user-images.githubusercontent.com/56168229/113063664-eb9a7680-9172-11eb-9154-a4cf139af840.jpg)
+![0](https://user-images.githubusercontent.com/56168229/123891052-f0abc500-d91d-11eb-9743-c6a0eb112a91.png)
 
 Choose a language
 
-![Screenshot_20210330_154941_com example rompecabezas_sika](https://user-images.githubusercontent.com/56168229/113063681-f1905780-9172-11eb-8e97-57fe22396c7a.jpg)
+![01](https://user-images.githubusercontent.com/56168229/123891064-f6090f80-d91d-11eb-82c9-dd247941ab9d.png)
 
 Read and listen instructions
 
-![Screenshot_20210330_154946_com example rompecabezas_sika](https://user-images.githubusercontent.com/56168229/113063703-f8b76580-9172-11eb-977b-59153cdfc933.jpg)
+![1](https://user-images.githubusercontent.com/56168229/123889591-711cf680-d91b-11eb-8414-45bc386c908e.png)
 
 Choose and explore a stage
 
-![Screenshot_20210330_154952_com example rompecabezas_sika](https://user-images.githubusercontent.com/56168229/113063727-0371fa80-9173-11eb-9ecc-3dcb5d0dccb5.jpg)
-![Screenshot_20210330_154957_com example rompecabezas_sika](https://user-images.githubusercontent.com/56168229/113063835-28666d80-9173-11eb-9e68-4e842547f911.jpg)
-![Screenshot_20210330_155003_com example rompecabezas_sika](https://user-images.githubusercontent.com/56168229/113063879-3caa6a80-9173-11eb-9eb4-fdb821883118.jpg)
+![2](https://user-images.githubusercontent.com/56168229/123889644-914cb580-d91b-11eb-8cfd-7059c8c9f33b.png)
+![3](https://user-images.githubusercontent.com/56168229/123889672-9e69a480-d91b-11eb-83ba-e55f0ba17229.png)
+![4](https://user-images.githubusercontent.com/56168229/123889718-afb2b100-d91b-11eb-8524-8a8642497f72.png)
 
 Instructions
 
-![Screenshot_20210330_155014_com example rompecabezas_sika](https://user-images.githubusercontent.com/56168229/113063890-416f1e80-9173-11eb-9afc-24fa62d01e15.jpg)
+![5](https://user-images.githubusercontent.com/56168229/123889861-ebe61180-d91b-11eb-8d8b-9eb5c088ce99.png)
 
 Show objects of the chosen stage
 
-![Screenshot_20210330_165707_com example rompecabezas_sika](https://user-images.githubusercontent.com/56168229/113067402-81390480-9179-11eb-95af-7902c7eaf3d2.jpg)
+![6](https://user-images.githubusercontent.com/56168229/123890002-22bc2780-d91c-11eb-981c-2603ca9b40e2.png)
+![7](https://user-images.githubusercontent.com/56168229/123890025-2bacf900-d91c-11eb-8a18-d9ab78a8efef.png)
 
-
-![Screenshot_20210330_155023_com example rompecabezas_sika](https://user-images.githubusercontent.com/56168229/113064051-885d1400-9173-11eb-9357-9d454cbf288c.jpg)
 
 Listen and read instructions for the game
 
-![Screenshot_20210330_155029_com example rompecabezas_sika](https://user-images.githubusercontent.com/56168229/113064502-57311380-9174-11eb-8784-8c3e028b6f78.jpg)
+![8](https://user-images.githubusercontent.com/56168229/123890098-4bdcb800-d91c-11eb-8448-ddf5723ef26c.png)
 
 Puzzle game
 
-![Screenshot_20210330_165733_com example rompecabezas_sika](https://user-images.githubusercontent.com/56168229/113067301-52229300-9179-11eb-84bc-108a05121dd3.jpg)
+![9](https://user-images.githubusercontent.com/56168229/123890141-5dbe5b00-d91c-11eb-8bb2-ea78c9384337.png)
+
 
 Message when completing a game
 
-![Screenshot_20210330_155040_com example rompecabezas_sika](https://user-images.githubusercontent.com/56168229/113064636-a0816300-9174-11eb-8a53-f1065f46e2fc.jpg)
+![10](https://user-images.githubusercontent.com/56168229/123890191-6d3da400-d91c-11eb-9d40-b0ecc95bf485.png)
+
+Search the correct image
+
+![11](https://user-images.githubusercontent.com/56168229/123890316-9fe79c80-d91c-11eb-8039-88e45a58fd1b.png)
 
 Select by pressing the correct image
 
-![Screenshot_20210330_155050_com example rompecabezas_sika](https://user-images.githubusercontent.com/56168229/113064690-bd1d9b00-9174-11eb-8851-66a35701f5e6.jpg)
+![12](https://user-images.githubusercontent.com/56168229/123890497-e9d08280-d91c-11eb-8cd7-72ca657fbcdf.png)
 
 Drag the correct image to the stage
 
-![Screenshot_20210330_164708_com example rompecabezas_sika](https://user-images.githubusercontent.com/56168229/113066698-38cd1700-9178-11eb-9466-c38920b43045.jpg)
-
+![13](https://user-images.githubusercontent.com/56168229/123890482-e50bce80-d91c-11eb-97f4-6dad4f9fedc5.png)
 
 Read or listen game instructions
 
-![Screenshot_20210330_155124_com example rompecabezas_sika](https://user-images.githubusercontent.com/56168229/113064773-ec340c80-9174-11eb-9645-e13bc7118c07.jpg)
+![15](https://user-images.githubusercontent.com/56168229/123890581-108eb900-d91d-11eb-9442-6ebba89f4ec1.png)
 
 Complete the sentence game.
 
-![Screenshot_20210330_155129_com example rompecabezas_sika](https://user-images.githubusercontent.com/56168229/113064811-ffdf7300-9174-11eb-8395-3fd37924bdab.jpg)
+![16](https://user-images.githubusercontent.com/56168229/123890661-33b96880-d91d-11eb-8631-1f24e3ef8158.png)
 
 You completed all the games!!
 
-![Screenshot_20210330_155133_com example rompecabezas_sika](https://user-images.githubusercontent.com/56168229/113064837-0a017180-9175-11eb-97fb-e42fa7c20944.jpg)
+![ult](https://user-images.githubusercontent.com/56168229/123891098-05885880-d91e-11eb-9479-bf3e75b7deae.png)
+
 This project is a starting point for a Flutter application.
 
 A few resources to get you started if this is your first Flutter project:
