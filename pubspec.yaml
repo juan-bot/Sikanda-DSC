@@ -98,7 +98,7 @@ flutter:
     - assets/audio/zapoteco/frasesJuegoPalabras/Banio/
     - assets/audio/zapoteco/frasesJuegoPalabras/Cocina/
     - assets/audio/zapoteco/frasesJuegoPalabras/Recamara/
-
+    - assets/audio/juegos/
   fonts:
     - family: Love
       fonts:

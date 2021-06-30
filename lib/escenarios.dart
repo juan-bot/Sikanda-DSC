@@ -5,7 +5,6 @@ import 'Constantes.dart';
 import 'EscenariosScreens/Banio/ListarObjetosBanio.dart';
 import 'EscenariosScreens/Cocina/ListarObjetosCocina.dart';
 import 'EscenariosScreens/Recamara/ListarObjetosRecamara.dart';
-import 'dart:math' as math;
 
 class Photo extends StatelessWidget {
   Photo({ Key key, this.photo, this.color, this.onTap }) : super(key: key);

@@ -1,6 +1,8 @@
 import 'package:achievement_view/achievement_view.dart';
+import 'package:audioplayers/audio_cache.dart';
 import 'package:flutter/material.dart';
 import 'package:rompecabezas_sika/AlertasEmergentes/AlertaGanador.dart';
+import 'package:rompecabezas_sika/ContenidoIdioma/FrasesJuegos.dart';
 import 'package:rompecabezas_sika/ContenidoIdioma/Intrucciones.dart';
 
 import '../Audio.dart';
@@ -25,7 +27,9 @@ class _BuscaObjetoState extends State<BuscaObjeto> {
   List<Widget> objetos = [];
   bool acertado = false;
   bool listo = false;
+  AudioCache cache;
   void carga(BuildContext context) {
+    cache = AudioCache(fixedPlayer: FrasesAnimo);
     double ancho = MediaQuery.of(context).size.width / 4;
     widget.imagenes.forEach((element) {
       objetos.add(
@@ -61,10 +65,16 @@ class _BuscaObjetoState extends State<BuscaObjeto> {
             onTap: () {
               setState(() {
                 acertado = element.split("--")[1] == widget.imgcorrecta;
-                if(!acertado)
+                if(!acertado){
+                  cache.play(animo[2]);
                   show(context, "Inténtalo de nuevo", Colors.red[200], "assets/images/confundido.png");
-                else
+                }
+
+                else{
+                  cache.play(animo[3]);
                   show(context, "¡Muy bien!", Colors.green[200], "assets/images/feliz.png");
+                }
+
 
               });
             },
@@ -120,7 +130,7 @@ class _BuscaObjetoState extends State<BuscaObjeto> {
                     ),
                     child: Padding(
                         padding: const EdgeInsets.all(1),
-                        child: BotonAudio(intruccionesAux[1])
+                        child: BotonAudio(animo[5])
                     ),
                   ),
                 ],

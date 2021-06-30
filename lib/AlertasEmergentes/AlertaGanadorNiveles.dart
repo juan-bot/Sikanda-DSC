@@ -1,5 +1,8 @@
+import 'package:audioplayers/audio_cache.dart';
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:floating_text/floating_text.dart';
+import 'package:rompecabezas_sika/ContenidoIdioma/FrasesJuegos.dart';
 
 class GanadorNivel extends StatefulWidget {
 
@@ -14,15 +17,21 @@ class GanadorNivel extends StatefulWidget {
 
 class Instruccion extends State<GanadorNivel> {
   String imagen;
+  AudioCache cache;
+  AudioPlayer reproduce = AudioPlayer();
+
   Instruccion({this.imagen});
   @override
   void initState() {
     super.initState();
+    cache = AudioCache(fixedPlayer: reproduce);
+
   }
 
   @override
   Widget build(BuildContext context) {
-
+    FrasesAnimo.stop();
+    cache.play(animo[0]);
     return Container(
         height: MediaQuery.of(context).size.height * .6,
         child: FittedBox(

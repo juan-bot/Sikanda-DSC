@@ -1,6 +1,9 @@
+import 'package:audioplayers/audio_cache.dart';
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:floating_text/floating_text.dart';
 import 'package:rompecabezas_sika/AlertasEmergentes/AlertaGanadorNiveles.dart';
+import 'package:rompecabezas_sika/ContenidoIdioma/FrasesJuegos.dart';
 import 'package:rompecabezas_sika/InfoObjetosEscenario/Banio.dart';
 import 'package:rompecabezas_sika/InfoObjetosEscenario/Cocina.dart';
 import 'package:rompecabezas_sika/InfoObjetosEscenario/Recamara.dart';
@@ -35,16 +38,22 @@ class Ganador extends StatefulWidget {
 
 class Instruccion extends State<Ganador> {
   String imagen;
+  AudioCache cache;
+  AudioPlayer reproduce = AudioPlayer();
   Instruccion({this.imagen});
   @override
   void initState() {
     super.initState();
+    cache = AudioCache(fixedPlayer: reproduce);
+
   }
 
   @override
   Widget build(BuildContext context) {
     print(objetos[widget.id].imagenes);
     print(objetos[widget.id].id);
+    FrasesAnimo.stop();
+    cache.play(animo[1]);
     return Container(
         height: MediaQuery.of(context).size.height * .6,
         child: FittedBox(

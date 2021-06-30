@@ -1,9 +1,12 @@
+import 'package:audioplayers/audio_cache.dart';
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'dart:typed_data';
 import 'package:flutter/services.dart';
 import 'package:image/image.dart' as imglib;
 import 'package:achievement_view/achievement_view.dart';
 import '../AlertasEmergentes/AlertaGanador.dart';
+import '../ContenidoIdioma/FrasesJuegos.dart';
 import '../Audio.dart';
 import '../BaseAppBar.dart';
 
@@ -327,6 +330,8 @@ class _RompecabezasState extends State<Rompecabezas> {
   }
 
   DragTarget<String> buildDragTarget(img, id) {
+    AudioCache cache;
+    cache = AudioCache(fixedPlayer: FrasesAnimo);
     return DragTarget(
       onAccept: (data) {
         setState(() {
@@ -336,12 +341,17 @@ class _RompecabezasState extends State<Rompecabezas> {
           posiciones[id] = t1;
           error = false;
           if (posiciones[id] != id) {
+            cache.play(animo[2]);
             error = true;
-            show(context, "Prueba otra vez", Colors.red[200],
+            show(context, "Inténtalo de nuevo", Colors.red[200],
                 "assets/images/confundido.png");
-          } else
+
+          } else{
+            cache.play(animo[3]);
             show(context, "¡Muy bien!", Colors.green[200],
                 "assets/images/feliz.png");
+          }
+
 
           Image temp = names[int.parse(data)];
           names[int.parse(data)] = names[id];

@@ -1,6 +1,8 @@
+import 'package:audioplayers/audio_cache.dart';
 import 'package:flutter/material.dart';
 import 'package:achievement_view/achievement_view.dart';
 import 'package:rompecabezas_sika/AlertasEmergentes/AlertaGanador.dart';
+import 'package:rompecabezas_sika/ContenidoIdioma/FrasesJuegos.dart';
 import 'package:rompecabezas_sika/ContenidoIdioma/Intrucciones.dart';
 
 import '../Audio.dart';
@@ -66,7 +68,7 @@ class _EstaEnState extends State<EstaEn>{
                     ),
                     child: Padding(
                         padding: const EdgeInsets.all(1),
-                        child: BotonAudio(intruccionesAux[1])
+                        child: BotonAudio(animo[4])
                     ),
                   ),
                 ],
@@ -140,7 +142,7 @@ class _EstaEnState extends State<EstaEn>{
                   Container(
                     width: ancho,
                     child: Material(
-                      color: Color(0xFFD15A05),
+                      //color: Color(0xFFD15A05),
                       child: Text(
                         a[1],
                         textAlign: TextAlign.center,
@@ -195,6 +197,8 @@ class _EstaEnState extends State<EstaEn>{
   }
 
   DragTarget<String> buildDragTarget(ancho, id) {
+    AudioCache cache;
+    cache = AudioCache(fixedPlayer: FrasesAnimo);
     return DragTarget(
       onAccept: (data) {
         if (widget.imagenes[int.parse(data)].split("--")[2] == id)
@@ -203,13 +207,16 @@ class _EstaEnState extends State<EstaEn>{
             contv++;
             print("pprueeeeebaaaa2S");
       print(widget.imagenes);
-
+            cache.play(animo[3]);
             show(context, "¡Muy bien!", Colors.green[200],
                 "assets/images/feliz.png");
           });
-        else
+        else{
+          cache.play(animo[2]);
           show(context, "Prueba de nuevo", Colors.red[200],
               "assets/images/confundido.png");
+        }
+
       },
       builder: (BuildContext context, List<String> candidateData,
           List<dynamic> rejectedData) {
@@ -218,7 +225,7 @@ class _EstaEnState extends State<EstaEn>{
                 child: Column(
                   children: [
                     Container(
-                        color: Color(0xFFD15A05),
+                        //color: Color(0xFFD15A05),
                         width: ancho * 2,
                         height: ancho * 2,
                         child: FittedBox(
@@ -227,14 +234,14 @@ class _EstaEnState extends State<EstaEn>{
                           ),
                         )),
                     Material(
-                      color: Color(0xFFD15A05),
+                      //color: Color(0xFFD15A05),
                       child: Container(
                         width: ancho * 2,
                         child: Text(id,
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               color: Colors.black,
-                              fontSize: 15.0,
+                              fontSize: 17.0,
                               fontWeight: FontWeight.bold,
                             )),
                       ),
@@ -259,15 +266,15 @@ class _EstaEnState extends State<EstaEn>{
                               ),
                             )),
                         Material(
-                          color: Color(0xFFD15A05),
+                          //color: Color(0xFFD15A05),
                           child: Container(
                             width: ancho * 2,
                             child: Text(
                               id,
                               textAlign: TextAlign.center,
                               style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 15.0,
+                                color: Colors.white,
+                                fontSize: 25.0,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),

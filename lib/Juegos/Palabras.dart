@@ -1,6 +1,8 @@
 import 'package:achievement_view/achievement_view.dart';
+import 'package:audioplayers/audio_cache.dart';
 import 'package:flutter/material.dart';
 import 'package:rompecabezas_sika/AlertasEmergentes/AlertaGanadorNiveles.dart';
+import 'package:rompecabezas_sika/ContenidoIdioma/FrasesJuegos.dart';
 import '../Audio.dart';
 import '../BaseAppBar.dart';
 import '../Constantes.dart';
@@ -125,6 +127,8 @@ class _RelacionableState extends State<Relacionable> {
   }
 
   DragTarget<String> buildDragTarget(id) {
+    AudioCache cache;
+    cache = AudioCache(fixedPlayer: FrasesAnimo);
     return DragTarget(
       onAccept: (data) {
         setState(() {
@@ -137,11 +141,12 @@ class _RelacionableState extends State<Relacionable> {
           setState(() {
             correct = true;
             show(context, "¡Muy bien!", Colors.green[200], "assets/images/feliz.png");
-
+            cache.play(animo[3]);
           });
         else
           setState(() {
-            show(context, "Prueba otra vez", Colors.red[100],
+            cache.play(animo[2]);
+            show(context, "Inténtalo de nuevo", Colors.red[100],
                 "assets/images/confundido.png");
           });
       },

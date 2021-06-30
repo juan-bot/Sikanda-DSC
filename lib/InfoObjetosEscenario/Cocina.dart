@@ -245,7 +245,7 @@ List<Cocina> objetos = [
       validos: 3,
       lugar: "cocina",
       frase: "la cocina ",
-      imglugar: "assets/images/cocina2.gif"),
+      imglugar: "assets/images/cocina.png"),
   Cocina(
       id: 5,
       title: "Taza",
